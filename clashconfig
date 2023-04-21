@@ -1,0 +1,552 @@
+####################################
+# åˆ›å»ºè€…ï¼šv2rayse.com
+# å®¢æˆ·ç«¯ï¼šClash
+# åˆ›å»ºæ—¶é—´ï¼š18-04-2023 19:05:35
+# ä½¿ç”¨æ¨¡ç‰ˆï¼šmostafafilterchi
+# èŠ‚ç‚¹æ•°é‡ï¼š62
+####################################
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 1.1.1.1
+    - 4.2.2.4
+    - 119.29.29.29
+    - 223.5.5.5
+    - 8.8.8.8
+    - 1.0.0.1
+    - 114.114.114.114
+    - 9.9.9.9
+    - 119.28.28.28
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://doh.pub/dns-query
+    - dhcp://en0
+    - tls://dns.rubyfish.cn:853
+    - tls://dot.pub:853
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - 1.1.1.1
+    - 8.8.4.4
+    - 112.215.203.254
+    - 8.8.8.8
+    - 1.0.0.1
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+    - tcp://1.1.1.1
+    - tcp://1.1.1.1#en0
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 198.18.0.0/15
+      - 240.0.0.0/4
+      - 64:ff9b:1::/48
+      - fc00::/7
+      - fe80::/64
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+rule-providers:
+  iran:
+    type: http
+    behavior: classical
+    url: >-
+      https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules.yaml
+    path: ./ruleset/iran.yaml
+    interval: 432000
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    path: ./ruleset/steam.yaml
+    interval: 432000
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    path: ./ruleset/add.yaml
+    interval: 432000
+  Purification:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    path: ./ruleset/Purification.yaml
+    interval: 432000
+  Global:
+    type: http
+    behavior: classical
+    url: >-
+      https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    path: ./ruleset/Global.yaml
+    interval: 432000
+
+proxies:
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_1","type":"vmess","server":"www.speedtest.net","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_2","type":"vmess","server":"KOSeMADAR-PUBLISHER.ddns.net","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_3","type":"vmess","server":"cf.naixii.top","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_4","type":"vmess","server":"ir8.seeb.shop","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_5","type":"vmess","server":"usamd.ptuu.gq","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_6","type":"vmess","server":"i.badboys.gq","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_7","type":"vmess","server":"mtn.anahid.beauty","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_8","type":"vmess","server":"niaa.ddns.net","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_9","type":"vmess","server":"mci.tahermollaei.pw","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_10","type":"vmess","server":"mtn.tahermollaei.pw","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡¨ðŸ‡³_CN_mostafavpn_11","type":"vmess","server":"cloudflare.quest","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_12","type":"vmess","server":"cm.db-link.in","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_13","type":"vmess","server":"mci1.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_14","type":"vmess","server":"mci2.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_15","type":"vmess","server":"mci3.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡±ðŸ‡º_LU_mostafavpn_16","type":"vmess","server":"mci4.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_17","type":"vmess","server":"mci5.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡©ðŸ‡ª_DE_mostafavpn_18","type":"vmess","server":"mci6.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡·ðŸ‡º_RU_mostafavpn_19","type":"vmess","server":"mci7.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ªðŸ‡¸_ES_mostafavpn_20","type":"vmess","server":"mtn1.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_21","type":"vmess","server":"mtn2.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_22","type":"vmess","server":"mtn3.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡²ðŸ‡¾_MY_mostafavpn_23","type":"vmess","server":"mtn4.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_24","type":"vmess","server":"mtn5.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_25","type":"vmess","server":"mtn6.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_26","type":"vmess","server":"mtn7.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_27","type":"vmess","server":"mtn8.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_28","type":"vmess","server":"mtn9.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_29","type":"vmess","server":"mkh1.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_30","type":"vmess","server":"mkh2.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡¨ðŸ‡¾_CY_mostafavpn_31","type":"vmess","server":"mkh3.blanku.me","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_32","type":"vmess","server":"mtn.iraniancp.autos","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_33","type":"vmess","server":"support.cloudflare.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_34","type":"vmess","server":"maeve.ns.cloudflare.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_35","type":"vmess","server":"mci.iraniancp.autos","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_36","type":"vmess","server":"mci.movielandz.cloud","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_37","type":"vmess","server":"sht.movielandz.cloud","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡³ðŸ‡±_NL_mostafavpn_38","type":"vmess","server":"mtn.movielandz.cloud","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_39","type":"vmess","server":"mkh.movielandz.cloud","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ªðŸ‡¸_ES_mostafavpn_40","type":"vmess","server":"mtn.pipieen.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_41","type":"vmess","server":"mci.pipieen.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_42","type":"vmess","server":"segaro.ddns.net","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_43","type":"vmess","server":"nazario.top","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_44","type":"vmess","server":"ma7ta.online","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_45","type":"vmess","server":"hamedgeek.top","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_46","type":"vmess","server":"adihnrr.eu.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_47","type":"vmess","server":"jangal.icu","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_48","type":"vmess","server":"boby66600.eu.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_49","type":"vmess","server":"fastynet.cloud","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_50","type":"vmess","server":"vcdn.online","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_51","type":"vmess","server":"cjmahdi.online","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_52","type":"vmess","server":"sciencedirect.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_53","type":"vmess","server":"doi.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_54","type":"vmess","server":"1.cinomerip.lol","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_55","type":"vmess","server":"opensource.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_56","type":"vmess","server":"joomla.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_57","type":"vmess","server":"aboutcookies.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_58","type":"vmess","server":"cogocast.net","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_59","type":"vmess","server":"domainmarket.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_60","type":"vmess","server":"digg.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_61","type":"vmess","server":"junade.ns.cloudflare.com","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+  - {"name":"ðŸ‡ºðŸ‡¸_US_mostafavpn_62","type":"vmess","server":"jquery.org","port":443,"cipher":"auto","uuid":"E97A1F83-B0C6-48E5-82E1-556292153FA7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Dusseldorf.kotick.site"}}}
+proxy-groups:
+  - name: ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+    type: select
+    proxies:
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - DIRECT
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_1
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_2
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_3
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_4
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_5
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_6
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_7
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_8
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_9
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_10
+      - ðŸ‡¨ðŸ‡³_CN_mostafavpn_11
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_12
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_13
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_14
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_15
+      - ðŸ‡±ðŸ‡º_LU_mostafavpn_16
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_17
+      - ðŸ‡©ðŸ‡ª_DE_mostafavpn_18
+      - ðŸ‡·ðŸ‡º_RU_mostafavpn_19
+      - ðŸ‡ªðŸ‡¸_ES_mostafavpn_20
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_21
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_22
+      - ðŸ‡²ðŸ‡¾_MY_mostafavpn_23
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_24
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_25
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_26
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_27
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_28
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_29
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_30
+      - ðŸ‡¨ðŸ‡¾_CY_mostafavpn_31
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_32
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_33
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_34
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_35
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_36
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_37
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_38
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_39
+      - ðŸ‡ªðŸ‡¸_ES_mostafavpn_40
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_41
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_42
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_43
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_44
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_45
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_46
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_47
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_48
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_49
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_50
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_51
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_52
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_53
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_54
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_55
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_56
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_57
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_58
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_59
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_60
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_61
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_62
+  - name: â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_1
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_2
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_3
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_4
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_5
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_6
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_7
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_8
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_9
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_10
+      - ðŸ‡¨ðŸ‡³_CN_mostafavpn_11
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_12
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_13
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_14
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_15
+      - ðŸ‡±ðŸ‡º_LU_mostafavpn_16
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_17
+      - ðŸ‡©ðŸ‡ª_DE_mostafavpn_18
+      - ðŸ‡·ðŸ‡º_RU_mostafavpn_19
+      - ðŸ‡ªðŸ‡¸_ES_mostafavpn_20
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_21
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_22
+      - ðŸ‡²ðŸ‡¾_MY_mostafavpn_23
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_24
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_25
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_26
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_27
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_28
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_29
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_30
+      - ðŸ‡¨ðŸ‡¾_CY_mostafavpn_31
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_32
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_33
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_34
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_35
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_36
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_37
+      - ðŸ‡³ðŸ‡±_NL_mostafavpn_38
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_39
+      - ðŸ‡ªðŸ‡¸_ES_mostafavpn_40
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_41
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_42
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_43
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_44
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_45
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_46
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_47
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_48
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_49
+      - ðŸ³ï¸â€ðŸŒˆ_UN_mostafavpn_50
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_51
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_52
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_53
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_54
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_55
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_56
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_57
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_58
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_59
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_60
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_61
+      - ðŸ‡ºðŸ‡¸_US_mostafavpn_62
+  - name: ðŸŽ® Ø§Ø³ØªÛŒÙ…
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - name: ðŸ›‘ Ø±Ù‡Ú¯ÛŒØ±ÛŒ Ø¬Ù‡Ø§Ù†ÛŒ
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - name: ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - name: ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - name: ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - â™»ï¸ Ø®ÙˆØ¯Ú©Ø§Ø± (Ø¨Ù‡ØªØ±ÛŒÙ† Ù¾ÛŒÙ†Ú¯)
+      - ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+
+rules:
+  - GEOIP,IR,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - DOMAIN-SUFFIX,ir,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - RULE-SET,iran,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - DOMAIN-KEYWORD,freeserver.top,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - DOMAIN-KEYWORD,sermovie.xyz,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - DOMAIN-KEYWORD,mobo-dl-filter-nakon.xyz,ðŸ‡®ðŸ‡· Ø³Ø§ÛŒØªØ§ÛŒ Ø§ÛŒØ±Ø§Ù†ÛŒ
+  - RULE-SET,steam,ðŸŽ® Ø§Ø³ØªÛŒÙ…
+  - RULE-SET,add,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª
+  - IP-CIDR,23.109.87.42/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.109.87.101/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,35.232.188.118/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,37.1.209.213/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.96/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.97/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.98/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.99/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.100/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.101/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.102/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.77.227.103/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.136/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.137/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.138/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.139/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.140/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.141/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.142/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,51.89.187.143/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,162.252.214.4/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,167.99.31.227/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,167.206.10.148/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,203.195.121.11/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.89.50.180/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.91.3.114/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.234.217.11/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.234.217.12/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,23.244.43.212/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,60.190.139.164/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,103.21.91.144/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,104.197.140.120/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,104.198.198.188/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,104.203.72.254/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,104.203.214.3/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,104.233.177.93/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,107.148.199.181/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,107.165.206.26/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,107.172.176.197/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,107.183.137.18/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,107.187.122.172/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,108.171.248.234/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,119.29.207.87/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,120.27.34.156/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,121.40.25.88/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,122.114.239.160/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,134.73.54.252/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,136.0.56.196/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,137.175.69.92/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,142.0.129.74/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,146.148.85.61/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,154.196.143.171/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,156.232.37.2/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,156.246.162.2/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,163.197.136.33/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,163.197.167.236/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,164.155.185.254/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,172.121.4.251/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,172.121.4.252/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,174.139.53.195/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,180.76.171.28/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,211.167.105.131/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,213.232.113.250/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,216.172.154.226/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,220.115.251.25/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,221.204.213.222/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,222.186.12.235/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,0.0.0.1/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,35.194.26.233/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,35.239.57.233/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,45.32.105.134/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,77.162.125.199/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,185.165.169.108/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - IP-CIDR,185.193.38.148/32,ðŸ†Ž ØªØ¨Ù„ÛŒØºØ§Øª,no-resolve
+  - RULE-SET,Purification,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡
+  - IP-CIDR,101.227.200.0/24,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,101.227.200.11/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,101.227.200.28/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,101.227.97.240/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,124.192.153.42/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,117.177.248.17/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,117.177.248.41/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.176.139/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.176.176/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.180/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.182/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.184/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.43/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.47/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.177.80/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.182.101/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.182.102/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.182.11/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - IP-CIDR,223.87.182.52/32,ðŸƒ ØªØµÙÛŒÙ‡ Ø¨Ø±Ù†Ø§Ù…Ù‡,no-resolve
+  - RULE-SET,Global,ðŸ›‘ Ø±Ù‡Ú¯ÛŒØ±ÛŒ Ø¬Ù‡Ø§Ù†ÛŒ
+# é•¿é£Žç½‘ç«™ï¼Œè‡ªåŠ¨æ³¨å…¥
+  - DOMAIN-SUFFIX,v2rayse.com,ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - DOMAIN-SUFFIX,cff.pw,ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - DOMAIN-SUFFIX,vpnse.org,ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - DOMAIN-SUFFIX,cfmem.com,ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
+  - MATCH,ðŸš€ Ø§Ù†ØªØ®Ø§Ø¨ Ù¾Ø±ÙˆÚ©Ø³ÛŒ
