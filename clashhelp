@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：25-04-2023 09:05:15
+# 创建时间：25-04-2023 09:12:42
 # 使用模版：mostafafilterchi
-# 节点数量：62
+# 节点数量：13
 ####################################
 port: 7890
 socks-port: 7891
@@ -219,55 +219,6 @@ proxies:
   - {"name":"🇯🇵JP-150.230.96.103-1710","type":"trojan","server":"jgwdj3.gaox.ml","port":443,"udp":true,"password":"da777aae-defb-41d0-a183-2c27da2b4677","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇸🇬SG-20.205.233.156-2127","type":"trojan","server":"lin1gbd-fvb2cndjisd.559xp5.cn","port":443,"udp":true,"password":"2918d735-e06c-47d1-9207-d3d18f0f1b6f","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇰🇷KR-138.2.113.84-1709","type":"trojan","server":"jgwcc3.gaox.ml","port":443,"udp":true,"password":"b291d129-ee55-4801-a9b8-b5316e5c37b7","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸US-34.222.118.200-0983","type":"ss","server":"34.222.118.200","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-54.180.82.158-0119","type":"ss","server":"playweb.ml","port":6983,"password":"Hucloud12","cipher":"chacha20-ietf"}
-  - {"name":"🇨🇦CA-134.195.196.85-3979","type":"ss","server":"134.195.196.85","port":2375,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9968","type":"ss","server":"134.195.196.85","port":8888,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9943","type":"ss","server":"134.195.196.85","port":8881,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9900","type":"ss","server":"134.195.196.85","port":5001,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9956","type":"ss","server":"134.195.196.85","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9991","type":"ss","server":"134.195.196.85","port":8091,"password":"PCnnH6SQSnfoS27","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9978","type":"ss","server":"134.195.196.85","port":8008,"password":"XKFKl2rULjIp74","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9982","type":"ss","server":"134.195.196.85","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9942","type":"ss","server":"134.195.196.85","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-3785","type":"ss","server":"134.195.196.85","port":8119,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-3826","type":"ss","server":"134.195.196.85","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.85-9970","type":"ss","server":"134.195.196.85","port":3306,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
-  - {"name":"🇵🇱PL-51.77.53.200-10973","type":"ss","server":"ak1654.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":8009,"password":"XKFKl2rULjIp74","cipher":"aes-256-gcm"}
-  - {"name":"🇵🇱PL-51.77.53.200-10974","type":"ss","server":"51.77.53.200","port":8009,"password":"XKFKl2rULjIp74","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.149-5464","type":"ss","server":"134.195.196.149","port":8090,"password":"PCnnH6SQSnfoS27","cipher":"aes-256-gcm"}
-  - {"name":"🇨🇦CA-134.195.196.149-3974","type":"ss","server":"134.195.196.149","port":3306,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
-  - {"name":"🇵🇱PL-51.77.53.200-10959","type":"ss","server":"ak1603.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
-  - {"name":"🇸🇬SG-18.136.205.181-15813","type":"ss","server":"18.136.205.181","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬SG-18.141.175.31-16561","type":"ss","server":"18.141.175.31","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬SG-54.169.206.218-9496","type":"ss","server":"54.169.206.218","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-43.201.14.240-2771","type":"ss","server":"43.201.14.240","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇵🇪PE-190.120.229.28-10951","type":"ss","server":"190.120.229.28","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇵🇦PA-138.186.142.4-10950","type":"ss","server":"138.186.142.4","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-3.35.235.247-9330","type":"ss","server":"3.35.235.247","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-52.79.173.199-9329","type":"ss","server":"52.79.173.199","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬SG-13.215.183.79-2635","type":"ss","server":"13.215.183.79","port":443,"password":"doub.io","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬SG-54.169.68.211-1043","type":"ss","server":"54.169.68.211","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇸🇬SG-176.97.65.241-3032","type":"ss","server":"176.97.65.241","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇮🇸IS-37.235.49.152-10494","type":"ss","server":"37.235.49.152","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇲🇰MK-46.183.185.15-10880","type":"ss","server":"46.183.185.15","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇮🇸IS-37.235.49.162-10493","type":"ss","server":"37.235.49.162","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇮🇱IL-193.182.144.183-10482","type":"ss","server":"193.182.144.183","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇲🇰MK-46.183.185.37-10879","type":"ss","server":"46.183.185.37","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇲🇩MD-192.121.87.147-10878","type":"ss","server":"192.121.87.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇭🇷HR-46.183.184.61-10479","type":"ss","server":"46.183.184.61","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-43.200.6.15-2893","type":"ss","server":"43.200.6.15","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇺🇾UY-179.27.200.28-3010","type":"ss","server":"179.27.200.28","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇨🇦CA-134.195.196.149-3792","type":"ss","server":"134.195.196.149","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
-  - {"name":"🇯🇵JP-43.206.240.195-1021","type":"ss","server":"43.206.240.195","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇯🇵JP-13.230.148.231-1020","type":"ss","server":"13.230.148.231","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇱🇻LV-192.36.41.28-10877","type":"ss","server":"192.36.41.28","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇲🇹MT-171.22.254.17-10881","type":"ss","server":"171.22.254.17","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
-  - {"name":"🇰🇷KR-13.125.222.34-0107","type":"ss","server":"13.125.222.34","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-  - {"name":"🇨🇳CN-60.190.81.148-1312","type":"ssr","server":"usa1.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
-  - {"name":"🇯🇵JP-43.207.153.80-0161","type":"ssr","server":"jp-am48-6.eqnode.net","port":8081,"password":"eAokbaDN6","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
-  - {"name":"🇯🇵JP-43.207.153.80-16878","type":"ssr","server":"jp-am48-6.eqnode.net","port":8081,"password":"eAokbaDN6","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
-  - {"name":"🇯🇵JP-43.207.153.80-18823","type":"ssr","server":"jp-am48-6.eqnode.net","port":8081,"password":"eAokbaDN6","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin","obfs-param":"PT09JSXvv70=","protocol-param":"PT09JSXvv70="}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
@@ -287,55 +238,6 @@ proxy-groups:
       - 🇯🇵JP-150.230.96.103-1710
       - 🇸🇬SG-20.205.233.156-2127
       - 🇰🇷KR-138.2.113.84-1709
-      - 🇺🇸US-34.222.118.200-0983
-      - 🇰🇷KR-54.180.82.158-0119
-      - 🇨🇦CA-134.195.196.85-3979
-      - 🇨🇦CA-134.195.196.85-9968
-      - 🇨🇦CA-134.195.196.85-9943
-      - 🇨🇦CA-134.195.196.85-9900
-      - 🇨🇦CA-134.195.196.85-9956
-      - 🇨🇦CA-134.195.196.85-9991
-      - 🇨🇦CA-134.195.196.85-9978
-      - 🇨🇦CA-134.195.196.85-9982
-      - 🇨🇦CA-134.195.196.85-9942
-      - 🇨🇦CA-134.195.196.85-3785
-      - 🇨🇦CA-134.195.196.85-3826
-      - 🇨🇦CA-134.195.196.85-9970
-      - 🇵🇱PL-51.77.53.200-10973
-      - 🇵🇱PL-51.77.53.200-10974
-      - 🇨🇦CA-134.195.196.149-5464
-      - 🇨🇦CA-134.195.196.149-3974
-      - 🇵🇱PL-51.77.53.200-10959
-      - 🇸🇬SG-18.136.205.181-15813
-      - 🇸🇬SG-18.141.175.31-16561
-      - 🇸🇬SG-54.169.206.218-9496
-      - 🇰🇷KR-43.201.14.240-2771
-      - 🇵🇪PE-190.120.229.28-10951
-      - 🇵🇦PA-138.186.142.4-10950
-      - 🇰🇷KR-3.35.235.247-9330
-      - 🇰🇷KR-52.79.173.199-9329
-      - 🇸🇬SG-13.215.183.79-2635
-      - 🇸🇬SG-54.169.68.211-1043
-      - 🇸🇬SG-176.97.65.241-3032
-      - 🇮🇸IS-37.235.49.152-10494
-      - 🇲🇰MK-46.183.185.15-10880
-      - 🇮🇸IS-37.235.49.162-10493
-      - 🇮🇱IL-193.182.144.183-10482
-      - 🇲🇰MK-46.183.185.37-10879
-      - 🇲🇩MD-192.121.87.147-10878
-      - 🇭🇷HR-46.183.184.61-10479
-      - 🇰🇷KR-43.200.6.15-2893
-      - 🇺🇾UY-179.27.200.28-3010
-      - 🇨🇦CA-134.195.196.149-3792
-      - 🇯🇵JP-43.206.240.195-1021
-      - 🇯🇵JP-13.230.148.231-1020
-      - 🇱🇻LV-192.36.41.28-10877
-      - 🇲🇹MT-171.22.254.17-10881
-      - 🇰🇷KR-13.125.222.34-0107
-      - 🇨🇳CN-60.190.81.148-1312
-      - 🇯🇵JP-43.207.153.80-0161
-      - 🇯🇵JP-43.207.153.80-16878
-      - 🇯🇵JP-43.207.153.80-18823
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -355,55 +257,6 @@ proxy-groups:
       - 🇯🇵JP-150.230.96.103-1710
       - 🇸🇬SG-20.205.233.156-2127
       - 🇰🇷KR-138.2.113.84-1709
-      - 🇺🇸US-34.222.118.200-0983
-      - 🇰🇷KR-54.180.82.158-0119
-      - 🇨🇦CA-134.195.196.85-3979
-      - 🇨🇦CA-134.195.196.85-9968
-      - 🇨🇦CA-134.195.196.85-9943
-      - 🇨🇦CA-134.195.196.85-9900
-      - 🇨🇦CA-134.195.196.85-9956
-      - 🇨🇦CA-134.195.196.85-9991
-      - 🇨🇦CA-134.195.196.85-9978
-      - 🇨🇦CA-134.195.196.85-9982
-      - 🇨🇦CA-134.195.196.85-9942
-      - 🇨🇦CA-134.195.196.85-3785
-      - 🇨🇦CA-134.195.196.85-3826
-      - 🇨🇦CA-134.195.196.85-9970
-      - 🇵🇱PL-51.77.53.200-10973
-      - 🇵🇱PL-51.77.53.200-10974
-      - 🇨🇦CA-134.195.196.149-5464
-      - 🇨🇦CA-134.195.196.149-3974
-      - 🇵🇱PL-51.77.53.200-10959
-      - 🇸🇬SG-18.136.205.181-15813
-      - 🇸🇬SG-18.141.175.31-16561
-      - 🇸🇬SG-54.169.206.218-9496
-      - 🇰🇷KR-43.201.14.240-2771
-      - 🇵🇪PE-190.120.229.28-10951
-      - 🇵🇦PA-138.186.142.4-10950
-      - 🇰🇷KR-3.35.235.247-9330
-      - 🇰🇷KR-52.79.173.199-9329
-      - 🇸🇬SG-13.215.183.79-2635
-      - 🇸🇬SG-54.169.68.211-1043
-      - 🇸🇬SG-176.97.65.241-3032
-      - 🇮🇸IS-37.235.49.152-10494
-      - 🇲🇰MK-46.183.185.15-10880
-      - 🇮🇸IS-37.235.49.162-10493
-      - 🇮🇱IL-193.182.144.183-10482
-      - 🇲🇰MK-46.183.185.37-10879
-      - 🇲🇩MD-192.121.87.147-10878
-      - 🇭🇷HR-46.183.184.61-10479
-      - 🇰🇷KR-43.200.6.15-2893
-      - 🇺🇾UY-179.27.200.28-3010
-      - 🇨🇦CA-134.195.196.149-3792
-      - 🇯🇵JP-43.206.240.195-1021
-      - 🇯🇵JP-13.230.148.231-1020
-      - 🇱🇻LV-192.36.41.28-10877
-      - 🇲🇹MT-171.22.254.17-10881
-      - 🇰🇷KR-13.125.222.34-0107
-      - 🇨🇳CN-60.190.81.148-1312
-      - 🇯🇵JP-43.207.153.80-0161
-      - 🇯🇵JP-43.207.153.80-16878
-      - 🇯🇵JP-43.207.153.80-18823
   - name: 🎮 استیم
     type: select
     proxies:
