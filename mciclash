@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：26-04-2023 05:35:03
+# 创建时间：26-04-2023 06:10:03
 # 使用模版：mostafafilterchi
-# 节点数量：13
+# 节点数量：18
 ####################################
 port: 7890
 socks-port: 7891
@@ -206,31 +206,36 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇩🇪_DE_mostafa_1","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2awC9dbRzuO0vxwNFt2","headers":{"host":"sahnama.comhttp/1.1"}}}
-  - {"name":"🇩🇪_DE_mostafa_2","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
-  - {"name":"🇩🇪_DE_mostafa_3","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"tcp"}
-  - {"name":"🇩🇪_DE_mostafa_4","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"2awC9dbRzuO0FKxZlUcf"}}
-  - {"name":"🇩🇪_DE_mostafa_5","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
-  - {"name":"🇩🇪_DE_mostafa_6","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2awC9dbRzuO0vxwNFt2","headers":{"host":"sahnama.comh2"}}}
+  - {"name":"🇺🇸_US_mostafa_1","type":"vmess","server":"networksolutions.com","port":443,"cipher":"auto","uuid":"6093eefb-7ab6-41df-aba0-d5fa58147e10","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/surongwei.eu.org:443/reffs7y26g0ua","headers":{"host":"champion.wlfsub.workers.dev"}}}
+  - {"name":"🇺🇸_US_mostafa_2","type":"vmess","server":"networksolutions.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vjp2.0bad.com:443/chat","headers":{"host":"champion.wlfsub.workers.dev"}}}
+  - {"name":"🇩🇪_DE_mostafa_3","type":"vmess","server":"vde1.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vde1.0bad.com"}}}
+  - {"name":"🇺🇸_US_mostafa_4","type":"vmess","server":"vus2.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vus2.0bad.com"}}}
+  - {"name":"🇺🇸_US_mostafa_5","type":"vmess","server":"vus2.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vus2.0bad.com"}}}
+  - {"name":"🇺🇸_US_mostafa_6","type":"vmess","server":"vus2.0bad.com","port":443,"cipher":"auto","uuid":"927094d3-d678-4763-8591-e240d0bcae87","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/chat","headers":{"host":"vus2.0bad.com"}}}
   - {"name":"🇩🇪_DE_mostafa_7","type":"vmess","server":"sahnama.com","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
   - {"name":"🇩🇪_DE_mostafa_8","type":"vmess","server":"sahnama.com","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪_DE_mostafa_9","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"2awC9dbRzuO0FKxZlUcf"}}
-  - {"name":"🇩🇪_DE_mostafa_10","type":"vmess","server":"165.227.133.55","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪_DE_mostafa_11","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_9","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2awC9dbRzuO0vxwNFt2","headers":{"host":"sahnama.comh2"}}}
+  - {"name":"🇩🇪_DE_mostafa_10","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
+  - {"name":"🇩🇪_DE_mostafa_11","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"tcp"}
   - {"name":"🇩🇪_DE_mostafa_12","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪_DE_mostafa_13","type":"vmess","server":"165.227.133.55","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"speedtest.net"}}}
+  - {"name":"🇩🇪_DE_mostafa_13","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"2awC9dbRzuO0FKxZlUcf"}}
+  - {"name":"🇩🇪_DE_mostafa_14","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/2awC9dbRzuO0vxwNFt2","headers":{"host":"sahnama.comhttp/1.1"}}}
+  - {"name":"🇩🇪_DE_mostafa_15","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
+  - {"name":"🇩🇪_DE_mostafa_16","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_17","type":"vmess","server":"sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_18","type":"trojan","server":"sahnama.com","port":443,"udp":true,"password":"df68f678-62c3-4799-91a8-4d301e8cf565","sni":"sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"2awC9dbRzuO0FKxZlUcf"}}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
-      - 🇩🇪_DE_mostafa_1
-      - 🇩🇪_DE_mostafa_2
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
       - 🇩🇪_DE_mostafa_3
-      - 🇩🇪_DE_mostafa_4
-      - 🇩🇪_DE_mostafa_5
-      - 🇩🇪_DE_mostafa_6
+      - 🇺🇸_US_mostafa_4
+      - 🇺🇸_US_mostafa_5
+      - 🇺🇸_US_mostafa_6
       - 🇩🇪_DE_mostafa_7
       - 🇩🇪_DE_mostafa_8
       - 🇩🇪_DE_mostafa_9
@@ -238,18 +243,23 @@ proxy-groups:
       - 🇩🇪_DE_mostafa_11
       - 🇩🇪_DE_mostafa_12
       - 🇩🇪_DE_mostafa_13
+      - 🇩🇪_DE_mostafa_14
+      - 🇩🇪_DE_mostafa_15
+      - 🇩🇪_DE_mostafa_16
+      - 🇩🇪_DE_mostafa_17
+      - 🇩🇪_DE_mostafa_18
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪_DE_mostafa_1
-      - 🇩🇪_DE_mostafa_2
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
       - 🇩🇪_DE_mostafa_3
-      - 🇩🇪_DE_mostafa_4
-      - 🇩🇪_DE_mostafa_5
-      - 🇩🇪_DE_mostafa_6
+      - 🇺🇸_US_mostafa_4
+      - 🇺🇸_US_mostafa_5
+      - 🇺🇸_US_mostafa_6
       - 🇩🇪_DE_mostafa_7
       - 🇩🇪_DE_mostafa_8
       - 🇩🇪_DE_mostafa_9
@@ -257,6 +267,11 @@ proxy-groups:
       - 🇩🇪_DE_mostafa_11
       - 🇩🇪_DE_mostafa_12
       - 🇩🇪_DE_mostafa_13
+      - 🇩🇪_DE_mostafa_14
+      - 🇩🇪_DE_mostafa_15
+      - 🇩🇪_DE_mostafa_16
+      - 🇩🇪_DE_mostafa_17
+      - 🇩🇪_DE_mostafa_18
   - name: 🎮 استیم
     type: select
     proxies:
