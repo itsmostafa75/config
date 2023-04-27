@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：28-04-2023 01:11:48
+# 创建时间：28-04-2023 01:18:27
 # 使用模版：mostafafilterchi
-# 节点数量：12
+# 节点数量：105
 ####################################
 port: 7890
 socks-port: 7891
@@ -206,54 +206,333 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇷🇺_RU_mosi_1","type":"ssr","server":"45.89.228.231","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_2","type":"ssr","server":"45.8.158.222","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_3","type":"ssr","server":"45.89.229.67","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_4","type":"ssr","server":"45.8.159.174","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_5","type":"ssr","server":"45.89.229.209","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_6","type":"ssr","server":"45.89.229.242","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_7","type":"ssr","server":"45.8.159.53","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_8","type":"ssr","server":"176.32.33.109","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_9","type":"ssr","server":"45.8.158.131","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_10","type":"ssr","server":"45.89.229.124","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_11","type":"ssr","server":"188.119.65.143","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
-  - {"name":"🇷🇺_RU_mosi_12","type":"ssr","server":"91.206.92.227","port":18258,"password":"lncn.org b9e","cipher":"dummy","obfs":"plain","protocol":"origin"}
+  - {"name":"🇯🇵_JP_mosi_1","type":"ssr","server":"jp-am48-6.eqnode.net","port":8081,"password":"eAokbaDN6","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
+  - {"name":"🇮🇳_IN_mosi_2","type":"ssr","server":"hk1.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇸🇬_SG_mosi_3","type":"ssr","server":"sg-am3.eqsunshine.com","port":32001,"password":"3g0dHlKME","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin","obfs-param":"PT09PQ==","protocol-param":"PT09PQ=="}
+  - {"name":"🇨🇳_CN_mosi_4","type":"ssr","server":"usa1.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇨🇳_CN_mosi_5","type":"ssr","server":"14.29.124.168","port":24000,"password":"QazEdcTgb159@$*","cipher":"aes-128-cfb","obfs":"plain","protocol":"origin"}
+  - {"name":"🇷🇺_RU_mosi_6","type":"ssr","server":"jp2.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇨🇳_CN_mosi_7","type":"ssr","server":"14.29.124.168","port":24008,"password":"QazEdcTgb159@$*","cipher":"aes-128-cfb","obfs":"plain","protocol":"origin"}
+  - {"name":"🇨🇳_CN_mosi_8","type":"ssr","server":"layercm05.initcloud.pro","port":560,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48530:LLLiuiuiu787878"}
+  - {"name":"🇨🇳_CN_mosi_9","type":"ssr","server":"hk4.vfun.icu","port":446,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇨🇳_CN_mosi_10","type":"ssr","server":"layercm05.initcloud.pro","port":561,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48530:LLLiuiuiu787878"}
+  - {"name":"🇨🇳_CN_mosi_11","type":"ssr","server":"cmlayer6.standurls.co","port":561,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48530:LLLiuiuiu787878"}
+  - {"name":"🇺🇸_US_mosi_12","type":"ssr","server":"t3.freegradely.xyz","port":20022,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
+  - {"name":"🇨🇳_CN_mosi_13","type":"ssr","server":"initest08.initcloud.pro","port":562,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48530:LLLiuiuiu787878"}
+  - {"name":"🇰🇷_KR_mosi_14","type":"ssr","server":"43.201.33.9","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.h%%�%�","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇮🇳_IN_mosi_15","type":"ssr","server":"139.59.12.30","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.h%%%","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇨🇦_CA_mosi_16","type":"ssr","server":"z0115.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇯🇵_JP_mosi_17","type":"ssr","server":"18.180.23.159","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.h%%%","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇯🇵_JP_mosi_18","type":"ssr","server":"hk5.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","protocol-param":"16952:9bik8I"}
+  - {"name":"🇸🇬_SG_mosi_19","type":"ssr","server":"13.215.27.80","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","protocol-param":"16952:9bik8I"}
+  - {"name":"🇸🇬_SG_mosi_20","type":"ssr","server":"sg1.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","protocol-param":"16952:9bik8I"}
+  - {"name":"🇨🇳_CN_mosi_21","type":"ssr","server":"42.157.196.103","port":10120,"password":"Yk4UdrOyQg","cipher":"rc4-md5","obfs":"http_post","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com"}
+  - {"name":"🇨🇳_CN_mosi_22","type":"ssr","server":"42.157.196.104","port":10967,"password":"vCmp8ALih6","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com"}
+  - {"name":"🇨🇳_CN_mosi_23","type":"ssr","server":"42.157.196.104","port":20037,"password":"CWSZscLkjf","cipher":"aes-256-cfb","obfs":"http_post","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com"}
+  - {"name":"🇨🇳_CN_mosi_24","type":"ssr","server":"gzyd-01.cctelescope.xyz","port":41999,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_25","type":"ssr","server":"yzct.cctelescope.xyz","port":50804,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_26","type":"ssr","server":"gzyd-01.cctelescope.xyz","port":41998,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_27","type":"ssr","server":"wz.safetelescope.cc","port":10020,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_28","type":"ssr","server":"hn-01.cctelescope.xyz","port":30003,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_29","type":"ssr","server":"hn-01.cctelescope.xyz","port":21563,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_30","type":"ssr","server":"wz.safetelescope.cc","port":28368,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_31","type":"ssr","server":"yzct.cctelescope.xyz","port":50899,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_32","type":"ssr","server":"hn-01.cctelescope.xyz","port":21738,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_33","type":"ssr","server":"120.232.126.82","port":11899,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_34","type":"ssr","server":"hn-01.cctelescope.xyz","port":49036,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_35","type":"ssr","server":"hn-01.cctelescope.xyz","port":45705,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_36","type":"ssr","server":"hn-01.cctelescope.xyz","port":21293,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_37","type":"ssr","server":"hn-01.cctelescope.xyz","port":21261,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_38","type":"ssr","server":"wz.safetelescope.cc","port":10006,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_39","type":"ssr","server":"120.232.126.82","port":11658,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_40","type":"ssr","server":"hn-01.cctelescope.xyz","port":21632,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_41","type":"ssr","server":"wz.safetelescope.cc","port":10005,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_42","type":"ssr","server":"hn-01.cctelescope.xyz","port":40678,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_43","type":"ssr","server":"sh163.safetelescope.cc","port":62306,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_44","type":"ssr","server":"hn-01.cctelescope.xyz","port":21099,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_45","type":"ssr","server":"yzct.cctelescope.xyz","port":50058,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_46","type":"ssr","server":"120.232.126.82","port":11919,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_47","type":"ssr","server":"hn-01.cctelescope.xyz","port":62300,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_48","type":"ssr","server":"hn-01.cctelescope.xyz","port":29404,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_49","type":"ssr","server":"120.232.126.82","port":11799,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_50","type":"ssr","server":"yzct.cctelescope.xyz","port":50402,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_51","type":"ssr","server":"wz.safetelescope.cc","port":22262,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_52","type":"ssr","server":"120.232.126.82","port":11853,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_53","type":"ssr","server":"yzct.cctelescope.xyz","port":50312,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_54","type":"ssr","server":"hn-01.cctelescope.xyz","port":21078,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_55","type":"ssr","server":"wz.safetelescope.cc","port":10019,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_56","type":"ssr","server":"wz.safetelescope.cc","port":46562,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_57","type":"ssr","server":"yzct.cctelescope.xyz","port":50306,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_58","type":"ssr","server":"120.232.126.82","port":11600,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_59","type":"ssr","server":"hn-01.cctelescope.xyz","port":62302,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_60","type":"ssr","server":"hn-01.cctelescope.xyz","port":20002,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_61","type":"ssr","server":"hn-01.cctelescope.xyz","port":62303,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_62","type":"ssr","server":"sh163.safetelescope.cc","port":62301,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_63","type":"ssr","server":"yzct.cctelescope.xyz","port":50354,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_64","type":"ssr","server":"hn-01.cctelescope.xyz","port":21565,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_65","type":"ssr","server":"yzct.cctelescope.xyz","port":31001,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_66","type":"ssr","server":"hn-01.cctelescope.xyz","port":21399,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_67","type":"ssr","server":"120.232.126.82","port":11802,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_68","type":"ssr","server":"yzct.cctelescope.xyz","port":50802,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_69","type":"ssr","server":"hn-01.cctelescope.xyz","port":30002,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_70","type":"ssr","server":"wz.safetelescope.cc","port":10007,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_71","type":"ssr","server":"hn-01.cctelescope.xyz","port":21637,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_72","type":"ssr","server":"hn-01.cctelescope.xyz","port":62301,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_73","type":"ssr","server":"hn-01.cctelescope.xyz","port":21164,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_74","type":"ssr","server":"wz.safetelescope.cc","port":62302,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_75","type":"ssr","server":"sh163.safetelescope.cc","port":62305,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇨🇳_CN_mosi_76","type":"ssr","server":"hn-01.cctelescope.xyz","port":26096,"password":"hGkQ6915tD","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_aes128_md5","obfs-param":"ajax.microsoft.com","protocol-param":"203896:9WAwSNRpl8"}
+  - {"name":"🇸🇪_SE_mosi_77","type":"ssr","server":"z0117.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇫🇷_FR_mosi_78","type":"ssr","server":"z0111.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇩🇪_DE_mosi_79","type":"ssr","server":"z0110.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin","obfs-param":"www.microsoft.com#User-Agent:Mozilla/5.0(iPhone;CPUiPhoneOS11_4_1likeMacOSX)AppleWebKit/602.4.6(KHTML,likeGecko)Version/10.0Mobile/14D27MicroMessenger/6.5.13Accept:/Connection:keep-alive"}
+  - {"name":"🇮🇪_IE_mosi_80","type":"ssr","server":"z0116.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin","obfs-param":"www.microsoft.com#User-Agent:Mozilla/5.0(iPhone;CPUiPhoneOS11_4_1likeMacOSX)AppleWebKit/602.4.6(KHTML,likeGecko)Version/10.0Mobile/14D27MicroMessenger/6.5.13Accept:/Connection:keep-alive"}
+  - {"name":"🇺🇸_US_mosi_81","type":"ssr","server":"ssr1.ssrfree8.xyz","port":12345,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇨🇳_CN_mosi_82","type":"ssr","server":"120.198.71.184","port":560,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","obfs-param":"t.me/vpnhat","protocol-param":"63068:ajhjei123456"}
+  - {"name":"🏳️‍🌈_UN_mosi_83","type":"ssr","server":"z3002.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin","obfs-param":"www.microsoft.com#User-Agent:Mozilla/5.0(iPhone;CPUiPhoneOS11_4_1likeMacOSX)AppleWebKit/602.4.6(KHTML,likeGecko)Version/10.0Mobile/14D27MicroMessenger/6.5.13Accept:/Connection:keep-alive"}
+  - {"name":"🇮🇳_IN_mosi_84","type":"ssr","server":"z0114.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin","obfs-param":"====","protocol-param":"===="}
+  - {"name":"🇦🇺_AU_mosi_85","type":"ssr","server":"z0113.security-cloudfront-cdn.com","port":42833,"password":"YpX2opBbrfqJzzMs","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇨🇳_CN_mosi_86","type":"ssr","server":"36.156.222.25","port":32986,"password":"zztw9jk7gu","cipher":"chacha20-ietf","obfs":"http_simple","protocol":"auth_aes128_sha1","obfs-param":"e5ab06181.microsoft.com","protocol-param":"6181:m9oDIc"}
+  - {"name":"🏳️‍🌈_UN_mosi_87","type":"ssr","server":"sg-am21.eqsunshine.com","port":8080,"password":"jUQAcjhEG","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
+  - {"name":"🇺🇸_US_mosi_88","type":"ssr","server":"ssrfree.zhujicn2.net","port":10002,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇩🇪_DE_mosi_89","type":"ssr","server":"68.183.74.63","port":12928,"password":"4369b96","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇺🇸_US_mosi_90","type":"ssr","server":"ssrfree.zhujicn2.net","port":10005,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇺🇸_US_mosi_91","type":"ssr","server":"ssrfree.zhujicn2.net","port":10008,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇺🇸_US_mosi_92","type":"ssr","server":"ssrfree.zhujicn2.net","port":10004,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇺🇸_US_mosi_93","type":"ssr","server":"ssrfree.zhujicn2.net","port":10001,"password":"dongtaiwang.com","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"auth_chain_a"}
+  - {"name":"🇭🇰_HK_mosi_94","type":"ssr","server":"42.98.27.183","port":543,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"51923:99q87y"}
+  - {"name":"🇭🇰_HK_mosi_95","type":"ssr","server":"218.102.220.3","port":543,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"51923:99q87y"}
+  - {"name":"🇭🇰_HK_mosi_96","type":"ssr","server":"zzcm06.cacbce.com","port":3050,"password":"haRBh7","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"152b051591.microsoft.com","protocol-param":"51591:YR8kgd"}
+  - {"name":"🇭🇰_HK_mosi_97","type":"ssr","server":"zzcm06.cacbce.com","port":2860,"password":"haRBh7","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"152b051591.microsoft.com","protocol-param":"51591:YR8kgd"}
+  - {"name":"🇨🇳_CN_mosi_98","type":"ssr","server":"14.29.124.168","port":24005,"password":"QazEdcTgb159@$*","cipher":"aes-128-cfb","obfs":"plain","protocol":"origin"}
+  - {"name":"🇨🇳_CN_mosi_99","type":"ssr","server":"usstand1.eucdurl.me","port":561,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"48566:LLLiuiuiu787878"}
+  - {"name":"🇰🇷_KR_mosi_100","type":"ssr","server":"kr1.vfun.icu","port":443,"password":"vyunme","cipher":"aes-256-cfb","obfs":"plain","protocol":"auth_aes128_sha1","obfs-param":"ab93117422.jd.hk","protocol-param":"17422:TTp0SX"}
+  - {"name":"🇨🇳_CN_mosi_101","type":"ssr","server":"eduall.buzzline.org","port":561,"password":"mblank1port","cipher":"chacha20-ietf","obfs":"plain","protocol":"auth_aes128_md5","protocol-param":"55956:111111"}
+  - {"name":"🇸🇬_SG_mosi_102","type":"ssr","server":"sg-am3.eqsunshine.com","port":32001,"password":"3g0dHlKME","cipher":"aes-256-cfb","obfs":"tls1.2_ticket_auth","protocol":"origin"}
+  - {"name":"🏳️‍🌈_UN_mosi_103","type":"ssr","server":"NULL","port":11708,"password":"sEscPBiAD9K$&@79","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
+  - {"name":"🇬🇧_GB_mosi_104","type":"ssr","server":"94.102.57.163","port":11708,"password":"sEscPBiAD9K$&@79","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin","obfs-param":"WWW.YOUNEED.WIN","protocol-param":"WWW.YOUNEED.WIN"}
+  - {"name":"🇬🇧_GB_mosi_105","type":"ssr","server":"94.102.57.163","port":11708,"password":"sEscPBiAD9K$&@79","cipher":"aes-256-cfb","obfs":"http_simple","protocol":"origin"}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
-      - 🇷🇺_RU_mosi_1
-      - 🇷🇺_RU_mosi_2
-      - 🇷🇺_RU_mosi_3
-      - 🇷🇺_RU_mosi_4
-      - 🇷🇺_RU_mosi_5
+      - 🇯🇵_JP_mosi_1
+      - 🇮🇳_IN_mosi_2
+      - 🇸🇬_SG_mosi_3
+      - 🇨🇳_CN_mosi_4
+      - 🇨🇳_CN_mosi_5
       - 🇷🇺_RU_mosi_6
-      - 🇷🇺_RU_mosi_7
-      - 🇷🇺_RU_mosi_8
-      - 🇷🇺_RU_mosi_9
-      - 🇷🇺_RU_mosi_10
-      - 🇷🇺_RU_mosi_11
-      - 🇷🇺_RU_mosi_12
+      - 🇨🇳_CN_mosi_7
+      - 🇨🇳_CN_mosi_8
+      - 🇨🇳_CN_mosi_9
+      - 🇨🇳_CN_mosi_10
+      - 🇨🇳_CN_mosi_11
+      - 🇺🇸_US_mosi_12
+      - 🇨🇳_CN_mosi_13
+      - 🇰🇷_KR_mosi_14
+      - 🇮🇳_IN_mosi_15
+      - 🇨🇦_CA_mosi_16
+      - 🇯🇵_JP_mosi_17
+      - 🇯🇵_JP_mosi_18
+      - 🇸🇬_SG_mosi_19
+      - 🇸🇬_SG_mosi_20
+      - 🇨🇳_CN_mosi_21
+      - 🇨🇳_CN_mosi_22
+      - 🇨🇳_CN_mosi_23
+      - 🇨🇳_CN_mosi_24
+      - 🇨🇳_CN_mosi_25
+      - 🇨🇳_CN_mosi_26
+      - 🇨🇳_CN_mosi_27
+      - 🇨🇳_CN_mosi_28
+      - 🇨🇳_CN_mosi_29
+      - 🇨🇳_CN_mosi_30
+      - 🇨🇳_CN_mosi_31
+      - 🇨🇳_CN_mosi_32
+      - 🇨🇳_CN_mosi_33
+      - 🇨🇳_CN_mosi_34
+      - 🇨🇳_CN_mosi_35
+      - 🇨🇳_CN_mosi_36
+      - 🇨🇳_CN_mosi_37
+      - 🇨🇳_CN_mosi_38
+      - 🇨🇳_CN_mosi_39
+      - 🇨🇳_CN_mosi_40
+      - 🇨🇳_CN_mosi_41
+      - 🇨🇳_CN_mosi_42
+      - 🇨🇳_CN_mosi_43
+      - 🇨🇳_CN_mosi_44
+      - 🇨🇳_CN_mosi_45
+      - 🇨🇳_CN_mosi_46
+      - 🇨🇳_CN_mosi_47
+      - 🇨🇳_CN_mosi_48
+      - 🇨🇳_CN_mosi_49
+      - 🇨🇳_CN_mosi_50
+      - 🇨🇳_CN_mosi_51
+      - 🇨🇳_CN_mosi_52
+      - 🇨🇳_CN_mosi_53
+      - 🇨🇳_CN_mosi_54
+      - 🇨🇳_CN_mosi_55
+      - 🇨🇳_CN_mosi_56
+      - 🇨🇳_CN_mosi_57
+      - 🇨🇳_CN_mosi_58
+      - 🇨🇳_CN_mosi_59
+      - 🇨🇳_CN_mosi_60
+      - 🇨🇳_CN_mosi_61
+      - 🇨🇳_CN_mosi_62
+      - 🇨🇳_CN_mosi_63
+      - 🇨🇳_CN_mosi_64
+      - 🇨🇳_CN_mosi_65
+      - 🇨🇳_CN_mosi_66
+      - 🇨🇳_CN_mosi_67
+      - 🇨🇳_CN_mosi_68
+      - 🇨🇳_CN_mosi_69
+      - 🇨🇳_CN_mosi_70
+      - 🇨🇳_CN_mosi_71
+      - 🇨🇳_CN_mosi_72
+      - 🇨🇳_CN_mosi_73
+      - 🇨🇳_CN_mosi_74
+      - 🇨🇳_CN_mosi_75
+      - 🇨🇳_CN_mosi_76
+      - 🇸🇪_SE_mosi_77
+      - 🇫🇷_FR_mosi_78
+      - 🇩🇪_DE_mosi_79
+      - 🇮🇪_IE_mosi_80
+      - 🇺🇸_US_mosi_81
+      - 🇨🇳_CN_mosi_82
+      - 🏳️‍🌈_UN_mosi_83
+      - 🇮🇳_IN_mosi_84
+      - 🇦🇺_AU_mosi_85
+      - 🇨🇳_CN_mosi_86
+      - 🏳️‍🌈_UN_mosi_87
+      - 🇺🇸_US_mosi_88
+      - 🇩🇪_DE_mosi_89
+      - 🇺🇸_US_mosi_90
+      - 🇺🇸_US_mosi_91
+      - 🇺🇸_US_mosi_92
+      - 🇺🇸_US_mosi_93
+      - 🇭🇰_HK_mosi_94
+      - 🇭🇰_HK_mosi_95
+      - 🇭🇰_HK_mosi_96
+      - 🇭🇰_HK_mosi_97
+      - 🇨🇳_CN_mosi_98
+      - 🇨🇳_CN_mosi_99
+      - 🇰🇷_KR_mosi_100
+      - 🇨🇳_CN_mosi_101
+      - 🇸🇬_SG_mosi_102
+      - 🏳️‍🌈_UN_mosi_103
+      - 🇬🇧_GB_mosi_104
+      - 🇬🇧_GB_mosi_105
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇷🇺_RU_mosi_1
-      - 🇷🇺_RU_mosi_2
-      - 🇷🇺_RU_mosi_3
-      - 🇷🇺_RU_mosi_4
-      - 🇷🇺_RU_mosi_5
+      - 🇯🇵_JP_mosi_1
+      - 🇮🇳_IN_mosi_2
+      - 🇸🇬_SG_mosi_3
+      - 🇨🇳_CN_mosi_4
+      - 🇨🇳_CN_mosi_5
       - 🇷🇺_RU_mosi_6
-      - 🇷🇺_RU_mosi_7
-      - 🇷🇺_RU_mosi_8
-      - 🇷🇺_RU_mosi_9
-      - 🇷🇺_RU_mosi_10
-      - 🇷🇺_RU_mosi_11
-      - 🇷🇺_RU_mosi_12
+      - 🇨🇳_CN_mosi_7
+      - 🇨🇳_CN_mosi_8
+      - 🇨🇳_CN_mosi_9
+      - 🇨🇳_CN_mosi_10
+      - 🇨🇳_CN_mosi_11
+      - 🇺🇸_US_mosi_12
+      - 🇨🇳_CN_mosi_13
+      - 🇰🇷_KR_mosi_14
+      - 🇮🇳_IN_mosi_15
+      - 🇨🇦_CA_mosi_16
+      - 🇯🇵_JP_mosi_17
+      - 🇯🇵_JP_mosi_18
+      - 🇸🇬_SG_mosi_19
+      - 🇸🇬_SG_mosi_20
+      - 🇨🇳_CN_mosi_21
+      - 🇨🇳_CN_mosi_22
+      - 🇨🇳_CN_mosi_23
+      - 🇨🇳_CN_mosi_24
+      - 🇨🇳_CN_mosi_25
+      - 🇨🇳_CN_mosi_26
+      - 🇨🇳_CN_mosi_27
+      - 🇨🇳_CN_mosi_28
+      - 🇨🇳_CN_mosi_29
+      - 🇨🇳_CN_mosi_30
+      - 🇨🇳_CN_mosi_31
+      - 🇨🇳_CN_mosi_32
+      - 🇨🇳_CN_mosi_33
+      - 🇨🇳_CN_mosi_34
+      - 🇨🇳_CN_mosi_35
+      - 🇨🇳_CN_mosi_36
+      - 🇨🇳_CN_mosi_37
+      - 🇨🇳_CN_mosi_38
+      - 🇨🇳_CN_mosi_39
+      - 🇨🇳_CN_mosi_40
+      - 🇨🇳_CN_mosi_41
+      - 🇨🇳_CN_mosi_42
+      - 🇨🇳_CN_mosi_43
+      - 🇨🇳_CN_mosi_44
+      - 🇨🇳_CN_mosi_45
+      - 🇨🇳_CN_mosi_46
+      - 🇨🇳_CN_mosi_47
+      - 🇨🇳_CN_mosi_48
+      - 🇨🇳_CN_mosi_49
+      - 🇨🇳_CN_mosi_50
+      - 🇨🇳_CN_mosi_51
+      - 🇨🇳_CN_mosi_52
+      - 🇨🇳_CN_mosi_53
+      - 🇨🇳_CN_mosi_54
+      - 🇨🇳_CN_mosi_55
+      - 🇨🇳_CN_mosi_56
+      - 🇨🇳_CN_mosi_57
+      - 🇨🇳_CN_mosi_58
+      - 🇨🇳_CN_mosi_59
+      - 🇨🇳_CN_mosi_60
+      - 🇨🇳_CN_mosi_61
+      - 🇨🇳_CN_mosi_62
+      - 🇨🇳_CN_mosi_63
+      - 🇨🇳_CN_mosi_64
+      - 🇨🇳_CN_mosi_65
+      - 🇨🇳_CN_mosi_66
+      - 🇨🇳_CN_mosi_67
+      - 🇨🇳_CN_mosi_68
+      - 🇨🇳_CN_mosi_69
+      - 🇨🇳_CN_mosi_70
+      - 🇨🇳_CN_mosi_71
+      - 🇨🇳_CN_mosi_72
+      - 🇨🇳_CN_mosi_73
+      - 🇨🇳_CN_mosi_74
+      - 🇨🇳_CN_mosi_75
+      - 🇨🇳_CN_mosi_76
+      - 🇸🇪_SE_mosi_77
+      - 🇫🇷_FR_mosi_78
+      - 🇩🇪_DE_mosi_79
+      - 🇮🇪_IE_mosi_80
+      - 🇺🇸_US_mosi_81
+      - 🇨🇳_CN_mosi_82
+      - 🏳️‍🌈_UN_mosi_83
+      - 🇮🇳_IN_mosi_84
+      - 🇦🇺_AU_mosi_85
+      - 🇨🇳_CN_mosi_86
+      - 🏳️‍🌈_UN_mosi_87
+      - 🇺🇸_US_mosi_88
+      - 🇩🇪_DE_mosi_89
+      - 🇺🇸_US_mosi_90
+      - 🇺🇸_US_mosi_91
+      - 🇺🇸_US_mosi_92
+      - 🇺🇸_US_mosi_93
+      - 🇭🇰_HK_mosi_94
+      - 🇭🇰_HK_mosi_95
+      - 🇭🇰_HK_mosi_96
+      - 🇭🇰_HK_mosi_97
+      - 🇨🇳_CN_mosi_98
+      - 🇨🇳_CN_mosi_99
+      - 🇰🇷_KR_mosi_100
+      - 🇨🇳_CN_mosi_101
+      - 🇸🇬_SG_mosi_102
+      - 🏳️‍🌈_UN_mosi_103
+      - 🇬🇧_GB_mosi_104
+      - 🇬🇧_GB_mosi_105
   - name: 🎮 استیم
     type: select
     proxies:
