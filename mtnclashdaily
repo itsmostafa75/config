@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：28-04-2023 01:03:04
+# 创建时间：29-04-2023 20:52:00
 # 使用模版：mostafafilterchi
-# 节点数量：30
+# 节点数量：43
 ####################################
 port: 7890
 socks-port: 7891
@@ -206,108 +206,147 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇺🇸_US_mostafa_1","type":"trojan","server":"3.231.102.183","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trj.rollingnext.co.uk","skip-cert-verify":false,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_2","type":"vmess","server":"join-bede.vmessorg.fun","port":80,"cipher":"auto","uuid":"e7f7e7e0-2d2a-4d87-d3c8-17ddcef8003a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇮🇷_IR_mostafa_3","type":"vmess","server":"188.121.112.47","port":57395,"cipher":"auto","uuid":"2db184b4-2e19-4084-a00e-ca422c206392","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪_DE_mostafa_4","type":"vmess","server":"116.203.32.226","port":2083,"cipher":"auto","uuid":"c531658d-4e00-4470-b0f7-5c075f3e84c1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇮🇷_IR_mostafa_5","type":"vmess","server":"shop.tajsub.com","port":2082,"cipher":"auto","uuid":"17b5d547-0c84-49fa-b106-ef15c2994008","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸_US_mostafa_6","type":"vmess","server":"afshar.zanbil-mo.cf","port":2086,"cipher":"auto","uuid":"437457a9-d5db-4378-af8a-43a074de3903","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇸🇬_SG_mostafa_7","type":"trojan","server":"nsaghhfhintt100tw.559xp5.cn","port":443,"udp":true,"password":"32a40c67-d83a-4c23-b361-071ddbe51f97","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_8","type":"trojan","server":"nsaghhfhintt100tw.559xp5.cn","port":443,"udp":true,"password":"c145a49d-9311-446e-907c-4106728a7d72","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_9","type":"trojan","server":"nsaghhfhintt100tw.559xp5.cn","port":443,"udp":true,"password":"c25a7085-100d-40ce-9cd9-a5c422e459c9","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_10","type":"trojan","server":"nsaghhfhintt100tw.559xp5.cn","port":443,"udp":true,"password":"eb3529d1-eda6-47bf-8e53-85eb0e51f010","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵_JP_mostafa_11","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"4e29a7f2-094a-443c-8e5b-9c0fac0535c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇯🇵_JP_mostafa_12","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"989aef80-f53c-480c-bd33-93a08aa08f69","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇸🇬_SG_mostafa_13","type":"trojan","server":"hk3.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen","port":12007,"udp":true,"password":"45ca2685-b3ac-4410-b658-ee60d3640c4e","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_14","type":"trojan","server":"170.187.134.190","port":8443,"udp":true,"password":"cf4295378e209e70d12c5bdd017144dfd1c772d3","sni":"170-187-134-190.ipv4.rush.ml","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_15","type":"trojan","server":"jp.stablize.top","port":443,"udp":true,"password":"4cb60c22-8d5d-469e-b5c1-c1cb78448a6d","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_16","type":"trojan","server":"jp.stablize.top","port":443,"udp":true,"password":"fda51148-dd43-466b-a340-5160214f923a","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_17","type":"trojan","server":"jp.stablize.top","port":443,"udp":true,"password":"00aa8ab3-8dfe-4a62-91b8-a6813c5c2a2a","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵_JP_mostafa_18","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"4e29a7f2-094a-443c-8e5b-9c0fac0535c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇯🇵_JP_mostafa_19","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"989aef80-f53c-480c-bd33-93a08aa08f69","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇸🇬_SG_mostafa_20","type":"trojan","server":"lixiyjp12gvabkmno.559xp5.cn","port":443,"udp":true,"password":"ba136071-4c20-4fac-9c5a-6e71d7e6ae92","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_21","type":"trojan","server":"lidnaivos2nbsg.559xp5.cn","port":443,"udp":true,"password":"1e756dd9-b631-4b93-8a51-f91ec5a71467","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_22","type":"trojan","server":"li1faiubsvdnasjp2.559xp5.cn","port":443,"udp":true,"password":"3323c77d-15eb-432c-82ae-5c118ac12dac","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_23","type":"trojan","server":"lidnaivos2nbsg.559xp5.cn","port":443,"udp":true,"password":"8b99ab31-b485-43e0-9cac-2122531eec44","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_24","type":"trojan","server":"li1faiubsvdnasjp2.559xp5.cn","port":443,"udp":true,"password":"ba136071-4c20-4fac-9c5a-6e71d7e6ae92","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_25","type":"trojan","server":"usa.stablize.top","port":443,"udp":true,"password":"4cb60c22-8d5d-469e-b5c1-c1cb78448a6d","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵_JP_mostafa_26","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"5449b436-1dda-4350-a0cb-1e74497b284b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇯🇵_JP_mostafa_27","type":"vmess","server":"jp-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"bbc14007-f3b8-437e-ab4c-2cccf13ce648","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇳🇱_NL_mostafa_28","type":"vmess","server":"188.114.97.2","port":8880,"cipher":"auto","uuid":"51ba5a9a-4b7c-4c62-b4ae-0e53ec8d3024","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ArsalanTauBot","headers":{"host":"4.mamadcucu.com"}}}
-  - {"name":"🇸🇬_SG_mostafa_29","type":"trojan","server":"ap.stablize.top","port":443,"udp":true,"password":"9478e27c-6bdd-4f0e-ba46-90d9739e1e34","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇸🇬_SG_mostafa_30","type":"trojan","server":"de.stablize.top","port":443,"udp":true,"password":"c8fb9d20-d89b-4f20-93f6-acd04aeb586b","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇰🇷_KR_mostafa_1","type":"vmess","server":"kr-5.vuex.eu.org","port":8888,"cipher":"auto","uuid":"ba56b953-c837-4c88-8335-0ffe78a09677","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇰🇷_KR_mostafa_2","type":"vmess","server":"kr-3.vuex.eu.org","port":8890,"cipher":"auto","uuid":"10ad20b2-5981-45f9-8467-8f4396a9bba4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇸🇬_SG_mostafa_3","type":"vmess","server":"sg-1.vuex.eu.org","port":8890,"cipher":"auto","uuid":"5eb45cac-37d0-43df-b164-54fe4c83b607","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇺🇸_US_mostafa_4","type":"vmess","server":"hax2.freeair.eu.org","port":80,"cipher":"auto","uuid":"cb1402b7-2a15-4978-ec7d-dc19d9b5586d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/hax2"}}
+  - {"name":"🇨🇭_CH_mostafa_5","type":"trojan","server":"195.15.243.26","port":443,"udp":true,"password":"4478","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇰🇷_KR_mostafa_6","type":"vmess","server":"jp-2.vuex.eu.org","port":8890,"cipher":"auto","uuid":"b9d51add-fa24-4f2b-8e04-c431108847b1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇺🇸_US_mostafa_7","type":"vmess","server":"hd.mamadcucu.com","port":2082,"cipher":"auto","uuid":"8e98f959-6eac-40b7-8fa8-e745942c9a8c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"h5.mamadcucu.com"}}}
+  - {"name":"🇫🇷_FR_mostafa_8","type":"vmess","server":"51.159.160.136","port":1950,"cipher":"auto","uuid":"980fdb15-12d2-4c8e-8ca3-b5cac2c1fd1a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇸🇬_SG_mostafa_9","type":"trojan","server":"nsaghhfhintt100tw.559xp5.cn","port":443,"udp":true,"password":"13d1fb85-5b89-4264-9437-c74b1137d2d4","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇮🇷_IR_mostafa_10","type":"vmess","server":"185.143.234.120","port":443,"cipher":"auto","uuid":"19f3aadc-7cd9-459c-b265-7be6e63cb432","alterId":4,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/graphql","headers":{"host":"polv.ffltech.cf"}}}
+  - {"name":"🇺🇸_US_mostafa_11","type":"vmess","server":"ipcloud.irancaptial.com","port":2095,"cipher":"auto","uuid":"a0558b2d-6ef6-46eb-d17b-85b412f8fdab","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"gk.irancaptial.com"}}}
+  - {"name":"🇺🇸_US_mostafa_12","type":"vmess","server":"pq29.ov2ray.xyz","port":2095,"cipher":"auto","uuid":"a0558b2d-6ef6-46eb-d17b-85b412f8fdab","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"gk.irancaptial.com"}}}
+  - {"name":"🇮🇷_IR_mostafa_13","type":"vmess","server":"185.143.234.120","port":443,"cipher":"auto","uuid":"19f3aadc-7cd9-459c-b265-7be6e63cb432","alterId":4,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/graphql","headers":{"host":"polv.ffltech.cf"}}}
+  - {"name":"🇺🇸_US_mostafa_14","type":"vmess","server":"wispy-hill-121b.nebilshafifi14343.workers.dev","port":443,"cipher":"auto","uuid":"83b082ef-98ab-4099-998b-019825c2c778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"wispy-hill-121b.nebilshafifi14343.workers.dev"}}}
+  - {"name":"🇺🇸_US_mostafa_15","type":"vmess","server":"pm.motori.pw","port":8880,"cipher":"auto","uuid":"d1c59699-1874-49f1-b9ba-bbbfd7968075","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"pm.motori.pw"}}}
+  - {"name":"🇨🇭_CH_mostafa_16","type":"trojan","server":"195.15.243.26","port":443,"udp":true,"password":"4478","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_17","type":"vmess","server":"95.179.246.191","port":443,"cipher":"auto","uuid":"83b5f411-83be-448f-88d6-724899046970","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ports/59666","headers":{"host":"regroup.top"}}}
+  - {"name":"🇩🇪_DE_mostafa_18","type":"vmess","server":"136.244.87.70","port":443,"cipher":"auto","uuid":"6147F065-9AC0-4081-A5A3-A2EB4EBB8958","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Lille.kotick.site"}}}
+  - {"name":"🇩🇪_DE_mostafa_19","type":"vmess","server":"95.179.247.71","port":443,"cipher":"auto","uuid":"6147F065-9AC0-4081-A5A3-A2EB4EBB8958","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"Lille.kotick.site"}}}
+  - {"name":"🇯🇵_JP_mostafa_20","type":"trojan","server":"150.230.217.213","port":443,"udp":true,"password":"c09eb137-bf68-4658-84e0-102d94b74168","sni":"150.230.217.213","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇰🇷_KR_mostafa_21","type":"trojan","server":"138.2.113.84","port":443,"udp":true,"password":"b291d129-ee55-4801-a9b8-b5316e5c37b7","sni":"anten.ir","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_22","type":"vmess","server":"167.86.83.74","port":8443,"cipher":"aes-128-gcm","uuid":"30fa23ce-7a44-4bfb-b25d-11e33742c170","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇦🇺_AU_mostafa_23","type":"vmess","server":"154.26.154.41","port":443,"cipher":"aes-128-gcm","uuid":"f8cad27b-3fcc-4e5a-bb65-aa3c65a4652f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇨🇦_CA_mostafa_24","type":"vmess","server":"91.194.11.111","port":443,"cipher":"aes-128-gcm","uuid":"197ddc21-db83-496b-a2c8-f4f0aefe1312","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇫🇮_FI_mostafa_25","type":"vmess","server":"135.181.151.220","port":2083,"cipher":"auto","uuid":"844df085-af83-4928-98e8-801b5d1d643f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇫🇮_FI_mostafa_26","type":"vmess","server":"65.109.231.171","port":2083,"cipher":"auto","uuid":"844df085-af83-4928-98e8-801b5d1d643f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇫🇮_FI_mostafa_27","type":"vmess","server":"65.21.154.135","port":2083,"cipher":"auto","uuid":"844df085-af83-4928-98e8-801b5d1d643f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇮🇷_IR_mostafa_28","type":"vmess","server":"128.140.34.221","port":2083,"cipher":"auto","uuid":"b89700e9-d4b7-407f-bb9a-59a171b5afd6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_29","type":"vmess","server":"159.69.193.135","port":2083,"cipher":"auto","uuid":"c531658d-4e00-4470-b0f7-5c075f3e84c1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_mostafa_30","type":"vmess","server":"116.203.32.226","port":2083,"cipher":"auto","uuid":"c531658d-4e00-4470-b0f7-5c075f3e84c1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_31","type":"vmess","server":"mkh1.blanku.me","port":443,"cipher":"auto","uuid":"245e7c23-0057-47a4-f2f0-07772e3338fa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss26268?ed=2048","headers":{"host":"freeservice.blanku.me"}}}
+  - {"name":"🇺🇸_US_mostafa_32","type":"trojan","server":"discord.com","port":443,"udp":true,"password":"bb8595d3-25f9-4378-8500-64910472cd7e","sni":"cf1.mrvpn.de","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Yvn8Er7lay4wDwyLwEUUa","headers":{"host":"cf1.mrvpn.dehttp/1.1"}}}
+  - {"name":"🇺🇸_US_mostafa_33","type":"trojan","server":"198.41.204.81","port":443,"udp":true,"password":"bb8595d3-25f9-4378-8500-64910472cd7e","sni":"au1.mrvpn.de","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"Yvn8Er7lay4wGv9tByU"}}
+  - {"name":"🇺🇸_US_mostafa_34","type":"trojan","server":"104.17.234.4","port":443,"udp":true,"password":"bb8595d3-25f9-4378-8500-64910472cd7e","sni":"wk1.mrvpn.de","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"Yvn8Er7lay4wGv9tByU"}}
+  - {"name":"🇺🇸_US_mostafa_35","type":"trojan","server":"104.17.234.4","port":443,"udp":true,"password":"bb8595d3-25f9-4378-8500-64910472cd7e","sni":"wk1.mrvpn.de","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"Yvn8Er7lay4wGv9tByU"}}
+  - {"name":"🇺🇸_US_mostafa_36","type":"vmess","server":"mci.ircf.space","port":443,"cipher":"auto","uuid":"70e0032d-3b62-4f42-a41d-ac7b4e16ce6f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/speedtest","headers":{"host":"jaaber.nanoravro.ml"}}}
+  - {"name":"🇺🇸_US_mostafa_37","type":"vmess","server":"104.20.142.215","port":443,"cipher":"auto","uuid":"49555a95-dc36-44dd-b613-98dc14ac6295","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss48622","headers":{"host":"freeservice.blanku.me"}}}
+  - {"name":"🇺🇸_US_mostafa_38","type":"vmess","server":"104.19.179.1","port":443,"cipher":"auto","uuid":"49555a95-dc36-44dd-b613-98dc14ac6295","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss48622","headers":{"host":"freeservice.blanku.me"}}}
+  - {"name":"🇺🇸_US_mostafa_39","type":"vmess","server":"172.67.241.138","port":443,"cipher":"auto","uuid":"49555a95-dc36-44dd-b613-98dc14ac6295","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/wss48622","headers":{"host":"freeservice.blanku.me"}}}
+  - {"name":"🇨🇭_CH_mostafa_40","type":"trojan","server":"195.15.243.26","port":443,"udp":true,"password":"4478","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇻🇳_VN_mostafa_41","type":"vmess","server":"103.179.189.89","port":80,"cipher":"auto","uuid":"37b5e4ac-2b89-4ae6-82d0-63e884c72a8a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nrowibu.site"}}
+  - {"name":"🇰🇷_KR_mostafa_42","type":"vmess","server":"kr-1.vuex.eu.org","port":9898,"cipher":"auto","uuid":"806ccd83-da4b-4d7c-b177-3b7ef8ef531e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kr-1.vuex.eu.org"}}}
+  - {"name":"🇺🇸_US_mostafa_43","type":"vmess","server":"hd.mamadcucu.com","port":2082,"cipher":"auto","uuid":"8e98f959-6eac-40b7-8fa8-e745942c9a8c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"h5.mamadcucu.com"}}}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇮🇷_IR_mostafa_3
-      - 🇩🇪_DE_mostafa_4
-      - 🇮🇷_IR_mostafa_5
-      - 🇺🇸_US_mostafa_6
-      - 🇸🇬_SG_mostafa_7
-      - 🇸🇬_SG_mostafa_8
+      - 🇰🇷_KR_mostafa_1
+      - 🇰🇷_KR_mostafa_2
+      - 🇸🇬_SG_mostafa_3
+      - 🇺🇸_US_mostafa_4
+      - 🇨🇭_CH_mostafa_5
+      - 🇰🇷_KR_mostafa_6
+      - 🇺🇸_US_mostafa_7
+      - 🇫🇷_FR_mostafa_8
       - 🇸🇬_SG_mostafa_9
-      - 🇸🇬_SG_mostafa_10
-      - 🇯🇵_JP_mostafa_11
-      - 🇯🇵_JP_mostafa_12
-      - 🇸🇬_SG_mostafa_13
+      - 🇮🇷_IR_mostafa_10
+      - 🇺🇸_US_mostafa_11
+      - 🇺🇸_US_mostafa_12
+      - 🇮🇷_IR_mostafa_13
       - 🇺🇸_US_mostafa_14
-      - 🇸🇬_SG_mostafa_15
-      - 🇸🇬_SG_mostafa_16
-      - 🇸🇬_SG_mostafa_17
-      - 🇯🇵_JP_mostafa_18
-      - 🇯🇵_JP_mostafa_19
-      - 🇸🇬_SG_mostafa_20
-      - 🇸🇬_SG_mostafa_21
-      - 🇸🇬_SG_mostafa_22
-      - 🇸🇬_SG_mostafa_23
-      - 🇸🇬_SG_mostafa_24
-      - 🇸🇬_SG_mostafa_25
-      - 🇯🇵_JP_mostafa_26
-      - 🇯🇵_JP_mostafa_27
-      - 🇳🇱_NL_mostafa_28
-      - 🇸🇬_SG_mostafa_29
-      - 🇸🇬_SG_mostafa_30
+      - 🇺🇸_US_mostafa_15
+      - 🇨🇭_CH_mostafa_16
+      - 🇩🇪_DE_mostafa_17
+      - 🇩🇪_DE_mostafa_18
+      - 🇩🇪_DE_mostafa_19
+      - 🇯🇵_JP_mostafa_20
+      - 🇰🇷_KR_mostafa_21
+      - 🇩🇪_DE_mostafa_22
+      - 🇦🇺_AU_mostafa_23
+      - 🇨🇦_CA_mostafa_24
+      - 🇫🇮_FI_mostafa_25
+      - 🇫🇮_FI_mostafa_26
+      - 🇫🇮_FI_mostafa_27
+      - 🇮🇷_IR_mostafa_28
+      - 🇩🇪_DE_mostafa_29
+      - 🇩🇪_DE_mostafa_30
+      - 🇺🇸_US_mostafa_31
+      - 🇺🇸_US_mostafa_32
+      - 🇺🇸_US_mostafa_33
+      - 🇺🇸_US_mostafa_34
+      - 🇺🇸_US_mostafa_35
+      - 🇺🇸_US_mostafa_36
+      - 🇺🇸_US_mostafa_37
+      - 🇺🇸_US_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇨🇭_CH_mostafa_40
+      - 🇻🇳_VN_mostafa_41
+      - 🇰🇷_KR_mostafa_42
+      - 🇺🇸_US_mostafa_43
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇮🇷_IR_mostafa_3
-      - 🇩🇪_DE_mostafa_4
-      - 🇮🇷_IR_mostafa_5
-      - 🇺🇸_US_mostafa_6
-      - 🇸🇬_SG_mostafa_7
-      - 🇸🇬_SG_mostafa_8
+      - 🇰🇷_KR_mostafa_1
+      - 🇰🇷_KR_mostafa_2
+      - 🇸🇬_SG_mostafa_3
+      - 🇺🇸_US_mostafa_4
+      - 🇨🇭_CH_mostafa_5
+      - 🇰🇷_KR_mostafa_6
+      - 🇺🇸_US_mostafa_7
+      - 🇫🇷_FR_mostafa_8
       - 🇸🇬_SG_mostafa_9
-      - 🇸🇬_SG_mostafa_10
-      - 🇯🇵_JP_mostafa_11
-      - 🇯🇵_JP_mostafa_12
-      - 🇸🇬_SG_mostafa_13
+      - 🇮🇷_IR_mostafa_10
+      - 🇺🇸_US_mostafa_11
+      - 🇺🇸_US_mostafa_12
+      - 🇮🇷_IR_mostafa_13
       - 🇺🇸_US_mostafa_14
-      - 🇸🇬_SG_mostafa_15
-      - 🇸🇬_SG_mostafa_16
-      - 🇸🇬_SG_mostafa_17
-      - 🇯🇵_JP_mostafa_18
-      - 🇯🇵_JP_mostafa_19
-      - 🇸🇬_SG_mostafa_20
-      - 🇸🇬_SG_mostafa_21
-      - 🇸🇬_SG_mostafa_22
-      - 🇸🇬_SG_mostafa_23
-      - 🇸🇬_SG_mostafa_24
-      - 🇸🇬_SG_mostafa_25
-      - 🇯🇵_JP_mostafa_26
-      - 🇯🇵_JP_mostafa_27
-      - 🇳🇱_NL_mostafa_28
-      - 🇸🇬_SG_mostafa_29
-      - 🇸🇬_SG_mostafa_30
+      - 🇺🇸_US_mostafa_15
+      - 🇨🇭_CH_mostafa_16
+      - 🇩🇪_DE_mostafa_17
+      - 🇩🇪_DE_mostafa_18
+      - 🇩🇪_DE_mostafa_19
+      - 🇯🇵_JP_mostafa_20
+      - 🇰🇷_KR_mostafa_21
+      - 🇩🇪_DE_mostafa_22
+      - 🇦🇺_AU_mostafa_23
+      - 🇨🇦_CA_mostafa_24
+      - 🇫🇮_FI_mostafa_25
+      - 🇫🇮_FI_mostafa_26
+      - 🇫🇮_FI_mostafa_27
+      - 🇮🇷_IR_mostafa_28
+      - 🇩🇪_DE_mostafa_29
+      - 🇩🇪_DE_mostafa_30
+      - 🇺🇸_US_mostafa_31
+      - 🇺🇸_US_mostafa_32
+      - 🇺🇸_US_mostafa_33
+      - 🇺🇸_US_mostafa_34
+      - 🇺🇸_US_mostafa_35
+      - 🇺🇸_US_mostafa_36
+      - 🇺🇸_US_mostafa_37
+      - 🇺🇸_US_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇨🇭_CH_mostafa_40
+      - 🇻🇳_VN_mostafa_41
+      - 🇰🇷_KR_mostafa_42
+      - 🇺🇸_US_mostafa_43
   - name: 🎮 استیم
     type: select
     proxies:
