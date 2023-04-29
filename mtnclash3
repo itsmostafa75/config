@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：29-04-2023 08:11:01
+# 创建时间：29-04-2023 08:20:43
 # 使用模版：mostafafilterchi
-# 节点数量：24
+# 节点数量：7
 ####################################
 port: 7890
 socks-port: 7891
@@ -206,90 +206,39 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇺🇸_US_mostafa_1","type":"vless","server":"cf.sansorchi.net","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_2","type":"vless","server":"moz.sansorchi.net","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
-  - {"name":"🇺🇸_US_mostafa_3","type":"vless","server":"metrix.anvary.ir","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
   - {"name":"🇺🇸_US_mostafa_4","type":"vmess","server":"moz.sansorchi.net","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
-  - {"name":"🇨🇷_CR_mostafa_5","type":"vless","server":"cft13.sansorchi.net","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_6","type":"vless","server":"metrix.anvary.ir","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
-  - {"name":"🇺🇸_US_mostafa_7","type":"vless","server":"cf.sansorchi.net","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
-  - {"name":"🇱🇹_LT_mostafa_8","type":"vless","server":"mci.tahermollaei.pw","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
-  - {"name":"🇺🇸_US_mostafa_9","type":"vless","server":"moz.sansorchi.net","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_10","type":"vless","server":"cf3.sansorchi.net","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
-  - {"name":"🇺🇸_US_mostafa_11","type":"vless","server":"cft1.sansorchi.net","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_12","type":"vless","server":"metrix.gheychi.ml","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_13","type":"vless","server":"iranserver.com","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
   - {"name":"🇺🇸_US_mostafa_14","type":"vmess","server":"cf.sansorchi.net","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
   - {"name":"🇱🇹_LT_mostafa_15","type":"vmess","server":"mci.tahermollaei.pw","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
-  - {"name":"🇺🇸_US_mostafa_16","type":"vless","server":"172.67.191.189","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇺🇸_US_mostafa_17","type":"vless","server":"cf3.sansorchi.net","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
-  - {"name":"🇱🇹_LT_mostafa_18","type":"vless","server":"mci.tahermollaei.pw","port":2053,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"grpc"}
   - {"name":"🇺🇸_US_mostafa_19","type":"vmess","server":"cf3.sansorchi.net","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
-  - {"name":"🇺🇸_US_mostafa_20","type":"vless","server":"cft1.sansorchi.net","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
   - {"name":"🇺🇸_US_mostafa_21","type":"vmess","server":"cf3.sansorchi.net","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
   - {"name":"🇺🇸_US_mostafa_22","type":"vmess","server":"metrix.gheychi.ml","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
   - {"name":"🇨🇷_CR_mostafa_23","type":"vmess","server":"cft13.sansorchi.net","port":2095,"cipher":"auto","uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot","headers":{"host":"1alpha-omega-vpn.1alphaomega.site"}}}
-  - {"name":"🇨🇷_CR_mostafa_24","type":"vless","server":"cft13.sansorchi.net","port":443,"uuid":"ff44aad1-9ff1-4058-b4b3-28669fca41a8","tls":true,"servername":"1alpha-omega-vpn.1alphaomega.site","network":"ws","ws-opts":{"path":"/tel/sansorchi_bezan_gheychi_bot"}}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇨🇷_CR_mostafa_5
-      - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_7
-      - 🇱🇹_LT_mostafa_8
-      - 🇺🇸_US_mostafa_9
-      - 🇺🇸_US_mostafa_10
-      - 🇺🇸_US_mostafa_11
-      - 🇺🇸_US_mostafa_12
-      - 🇺🇸_US_mostafa_13
       - 🇺🇸_US_mostafa_14
       - 🇱🇹_LT_mostafa_15
-      - 🇺🇸_US_mostafa_16
-      - 🇺🇸_US_mostafa_17
-      - 🇱🇹_LT_mostafa_18
       - 🇺🇸_US_mostafa_19
-      - 🇺🇸_US_mostafa_20
       - 🇺🇸_US_mostafa_21
       - 🇺🇸_US_mostafa_22
       - 🇨🇷_CR_mostafa_23
-      - 🇨🇷_CR_mostafa_24
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇨🇷_CR_mostafa_5
-      - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_7
-      - 🇱🇹_LT_mostafa_8
-      - 🇺🇸_US_mostafa_9
-      - 🇺🇸_US_mostafa_10
-      - 🇺🇸_US_mostafa_11
-      - 🇺🇸_US_mostafa_12
-      - 🇺🇸_US_mostafa_13
       - 🇺🇸_US_mostafa_14
       - 🇱🇹_LT_mostafa_15
-      - 🇺🇸_US_mostafa_16
-      - 🇺🇸_US_mostafa_17
-      - 🇱🇹_LT_mostafa_18
       - 🇺🇸_US_mostafa_19
-      - 🇺🇸_US_mostafa_20
       - 🇺🇸_US_mostafa_21
       - 🇺🇸_US_mostafa_22
       - 🇨🇷_CR_mostafa_23
-      - 🇨🇷_CR_mostafa_24
   - name: 🎮 استیم
     type: select
     proxies:
