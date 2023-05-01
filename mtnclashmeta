@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：01-05-2023 08:42:00
+# 创建时间：01-05-2023 10:53:45
 # 使用模版：mostafafilterchi
 # 节点数量：8
 ####################################
@@ -206,42 +206,42 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇺🇸_US_mostafa_4","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homeshttp/1.1"}}}
-  - {"name":"🇺🇸_US_mostafa_6","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇺🇸_US_mostafa_8","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homesh2"}}}
-  - {"name":"🇺🇸_US_mostafa_10","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇩🇪_DE_mostafa_13","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homeshttp/1.1"}}}
-  - {"name":"🇩🇪_DE_mostafa_15","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇩🇪_DE_mostafa_17","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homesh2"}}}
-  - {"name":"🇩🇪_DE_mostafa_19","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
+  - {"name":"🇺🇸_US_mostafa_1","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homeshttp/1.1"}}}
+  - {"name":"🇺🇸_US_mostafa_2","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
+  - {"name":"🇺🇸_US_mostafa_3","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homesh2"}}}
+  - {"name":"🇺🇸_US_mostafa_4","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
+  - {"name":"🇩🇪_DE_mostafa_5","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homeshttp/1.1"}}}
+  - {"name":"🇩🇪_DE_mostafa_6","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
+  - {"name":"🇩🇪_DE_mostafa_7","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homesh2"}}}
+  - {"name":"🇩🇪_DE_mostafa_8","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
     type: select
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
+      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_8
-      - 🇺🇸_US_mostafa_10
-      - 🇩🇪_DE_mostafa_13
-      - 🇩🇪_DE_mostafa_15
-      - 🇩🇪_DE_mostafa_17
-      - 🇩🇪_DE_mostafa_19
+      - 🇩🇪_DE_mostafa_5
+      - 🇩🇪_DE_mostafa_6
+      - 🇩🇪_DE_mostafa_7
+      - 🇩🇪_DE_mostafa_8
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
+      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_8
-      - 🇺🇸_US_mostafa_10
-      - 🇩🇪_DE_mostafa_13
-      - 🇩🇪_DE_mostafa_15
-      - 🇩🇪_DE_mostafa_17
-      - 🇩🇪_DE_mostafa_19
+      - 🇩🇪_DE_mostafa_5
+      - 🇩🇪_DE_mostafa_6
+      - 🇩🇪_DE_mostafa_7
+      - 🇩🇪_DE_mostafa_8
   - name: 🎮 استیم
     type: select
     proxies:
