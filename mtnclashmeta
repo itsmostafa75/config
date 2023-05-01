@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：01-05-2023 08:38:09
+# 创建时间：01-05-2023 08:42:00
 # 使用模版：mostafafilterchi
-# 节点数量：19
+# 节点数量：8
 ####################################
 port: 7890
 socks-port: 7891
@@ -206,24 +206,13 @@ rule-providers:
     interval: 432000
 
 proxies:
-  - {"name":"🇺🇸_US_mostafa_1","type":"vless","server":"www.speedtest.net","port":443,"uuid":"a27b8a02-955e-4cb7-b2d4-adb504af68a1","tls":true,"servername":"musical.fkbaqc-agbxje.workers.dev","network":"ws","ws-opts":{"path":"gunkfa"}}
-  - {"name":"🇺🇸_US_mostafa_2","type":"vless","server":"mcix.ircf.space","port":80,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":false,"servername":"service1.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
-  - {"name":"🇺🇸_US_mostafa_3","type":"vless","server":"mcix.ircf.space","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"service1.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
   - {"name":"🇺🇸_US_mostafa_4","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homeshttp/1.1"}}}
-  - {"name":"🇺🇸_US_mostafa_5","type":"vless","server":"mcix.ircf.space","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"service1.howhealthyistoomajreally.homes","network":"grpc"}
   - {"name":"🇺🇸_US_mostafa_6","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇺🇸_US_mostafa_7","type":"vless","server":"mcix.ircf.space","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"service1.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
   - {"name":"🇺🇸_US_mostafa_8","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"service1.howhealthyistoomajreally.homesh2"}}}
-  - {"name":"🇺🇸_US_mostafa_9","type":"vless","server":"mcix.ircf.space","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"service1.howhealthyistoomajreally.homes","network":"grpc"}
   - {"name":"🇺🇸_US_mostafa_10","type":"trojan","server":"mcix.ircf.space","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"service1.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇩🇪_DE_mostafa_11","type":"vless","server":"95.179.160.40","port":80,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":false,"servername":"auto.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
-  - {"name":"🇩🇪_DE_mostafa_12","type":"vless","server":"95.179.160.40","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"auto.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
   - {"name":"🇩🇪_DE_mostafa_13","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homeshttp/1.1"}}}
-  - {"name":"🇩🇪_DE_mostafa_14","type":"vless","server":"95.179.160.40","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"auto.howhealthyistoomajreally.homes","network":"grpc"}
   - {"name":"🇩🇪_DE_mostafa_15","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
-  - {"name":"🇩🇪_DE_mostafa_16","type":"vless","server":"95.179.160.40","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"auto.howhealthyistoomajreally.homes","network":"ws","ws-opts":{"path":"/rntgpLL1GErGCkIH66kMFPa"}}
   - {"name":"🇩🇪_DE_mostafa_17","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ilb9fuWfuqWDjlQrGCkIH66kMFPa","headers":{"host":"auto.howhealthyistoomajreally.homesh2"}}}
-  - {"name":"🇩🇪_DE_mostafa_18","type":"vless","server":"95.179.160.40","port":443,"uuid":"e35026da-e985-49ca-b43b-276062a535a6","tls":true,"servername":"auto.howhealthyistoomajreally.homes","network":"grpc"}
   - {"name":"🇩🇪_DE_mostafa_19","type":"trojan","server":"95.179.160.40","port":443,"udp":true,"password":"e35026da-e985-49ca-b43b-276062a535a6","sni":"auto.howhealthyistoomajreally.homes","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"ilb9fuWfuqWDjlQvFSvLnBo"}}
 proxy-groups:
   - name: 🚀 انتخاب پروکسی
@@ -231,24 +220,13 @@ proxy-groups:
     proxies:
       - ♻️ خودکار (بهترین پینگ)
       - DIRECT
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇺🇸_US_mostafa_5
       - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_7
       - 🇺🇸_US_mostafa_8
-      - 🇺🇸_US_mostafa_9
       - 🇺🇸_US_mostafa_10
-      - 🇩🇪_DE_mostafa_11
-      - 🇩🇪_DE_mostafa_12
       - 🇩🇪_DE_mostafa_13
-      - 🇩🇪_DE_mostafa_14
       - 🇩🇪_DE_mostafa_15
-      - 🇩🇪_DE_mostafa_16
       - 🇩🇪_DE_mostafa_17
-      - 🇩🇪_DE_mostafa_18
       - 🇩🇪_DE_mostafa_19
   - name: ♻️ خودکار (بهترین پینگ)
     type: url-test
@@ -256,24 +234,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸_US_mostafa_1
-      - 🇺🇸_US_mostafa_2
-      - 🇺🇸_US_mostafa_3
       - 🇺🇸_US_mostafa_4
-      - 🇺🇸_US_mostafa_5
       - 🇺🇸_US_mostafa_6
-      - 🇺🇸_US_mostafa_7
       - 🇺🇸_US_mostafa_8
-      - 🇺🇸_US_mostafa_9
       - 🇺🇸_US_mostafa_10
-      - 🇩🇪_DE_mostafa_11
-      - 🇩🇪_DE_mostafa_12
       - 🇩🇪_DE_mostafa_13
-      - 🇩🇪_DE_mostafa_14
       - 🇩🇪_DE_mostafa_15
-      - 🇩🇪_DE_mostafa_16
       - 🇩🇪_DE_mostafa_17
-      - 🇩🇪_DE_mostafa_18
       - 🇩🇪_DE_mostafa_19
   - name: 🎮 استیم
     type: select
