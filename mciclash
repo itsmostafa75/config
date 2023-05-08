@@ -1,8 +1,8 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：07-05-2023 13:22:43
-# 使用模版：mostafafilterchi
+# 创建时间：08-05-2023 15:45:43
+# 使用模版：mostafavpn1
 # 节点数量：116
 ####################################
 port: 7890
@@ -21,61 +21,81 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   use-host: true
   enhanced-mode: fake-ip
   listen: 0.0.0.0:7874
   nameserver:
+    - https://1.1.1.1/dns-query#en0
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query
     - 1.1.1.1
-    - 4.2.2.4
-    - 119.29.29.29
-    - 223.5.5.5
-    - 8.8.8.8
     - 1.0.0.1
-    - 114.114.114.114
-    - 9.9.9.9
-    - 119.28.28.28
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
-    - https://doh.opendns.com/dns-query
-    - https://doh.dns.sb/dns-query
-    - https://doh.pub/dns-query
-    - dhcp://en0
-    - tls://dns.rubyfish.cn:853
-    - tls://dot.pub:853
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tcp://1.1.1.1
+    - tcp://1.1.1.1#en0
   fallback:
-    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
     - https://8.8.8.8/dns-query
     - https://9.9.9.9/dns-query
     - https://rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - 1.1.1.1
-    - 8.8.4.4
-    - 112.215.203.254
+    - https://doh.opendns.com/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://dns.adguard.com/dns-query
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
     - 8.8.8.8
-    - 1.0.0.1
-    - tls://1.0.0.1:853
+    - 8.8.4.4
+    - 4.2.2.4
+    - 9.9.9.9
+    - 119.29.29.29
+    - 223.5.5.5
+    - 119.28.28.28
+    - 112.215.203.254
+    - 114.114.114.114
+    - 127.0.0.1
+    - 114.114.114.114
+    - 87.118.100.175:110
+    - 8.8.8.8#en0
+    - dhcp://en0
+    - tcp://8.8.8.8#en0
+    - tls://8.8.8.8#en0
     - tls://dns.google:853
-    - tcp://1.1.1.1
-    - tcp://1.1.1.1#en0
+    - tls://dns.rubyfish.cn:853
+    - tls://dot.pub:853
   fallback-filter:
     geoip: true
     geoip-code: IR
     ipcidr:
+      - 0.0.0.0/8
       - 10.0.0.0/8
       - 100.64.0.0/10
+      - 127.0.0.0/8
       - 169.254.0.0/16
       - 172.16.0.0/12
       - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
       - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/3
       - 240.0.0.0/4
+      - '::1/128'
       - 64:ff9b:1::/48
       - fc00::/7
-      - fe80::/64
-  default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-    - 112.215.203.254
+      - fe80::/10
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
@@ -174,8 +194,7 @@ rule-providers:
   iran:
     type: http
     behavior: classical
-    url: >-
-      https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules.yaml
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
     path: ./ruleset/iran.yaml
     interval: 432000
   steam:
@@ -204,130 +223,151 @@ rule-providers:
       https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
     path: ./ruleset/Global.yaml
     interval: 432000
+  AntiAd:
+    type: http
+    behavior: domain
+    url: >-
+      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/AntiAd.yaml
+    interval: 432000
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    path: ./providers/rule-provider_clash.yaml
+    interval: 86400
 
 proxies:
   - {"name":"🇺🇸_US_mostafa_1","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"bozbozghandi.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_2","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"bozbozghandi.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_3","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_3","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_4","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_5","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_5","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_6","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_7","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"bozbozghandi.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_8","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"bozbozghandi.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_9","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_9","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_10","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_11","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_11","type":"trojan","server":"bozbozghandi.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"bozbozghandi.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_12","type":"vmess","server":"bozbozghandi.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_13","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"atal.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_14","type":"vmess","server":"atal.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"atal.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_15","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_15","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_16","type":"vmess","server":"atal.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_17","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"atal.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_18","type":"vmess","server":"atal.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"atal.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_19","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_19","type":"trojan","server":"atal.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"atal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_20","type":"vmess","server":"atal.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_21","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"matal.foriran.nlh2"}}}
   - {"name":"🇷🇴_RO_mostafa_22","type":"vmess","server":"mcix.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"matal.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_23","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_23","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_24","type":"vmess","server":"mcix.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_25","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"matal.foriran.nlhttp/1.1"}}}
   - {"name":"🇷🇴_RO_mostafa_26","type":"vmess","server":"mcix.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"matal.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_27","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_27","type":"trojan","server":"mcix.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_28","type":"vmess","server":"mcix.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇪🇸_ES_mostafa_29","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"totole.foriran.nlh2"}}}
   - {"name":"🇪🇸_ES_mostafa_30","type":"vmess","server":"mtn.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"totole.foriran.nl"}}}
-  - {"name":"🇪🇸_ES_mostafa_31","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇪🇸_ES_mostafa_31","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇪🇸_ES_mostafa_32","type":"vmess","server":"mtn.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇪🇸_ES_mostafa_33","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"totole.foriran.nlhttp/1.1"}}}
   - {"name":"🇪🇸_ES_mostafa_34","type":"vmess","server":"mtn.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"totole.foriran.nl"}}}
-  - {"name":"🇪🇸_ES_mostafa_35","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇪🇸_ES_mostafa_35","type":"trojan","server":"mtn.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇪🇸_ES_mostafa_36","type":"vmess","server":"mtn.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_37","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"gave.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_38","type":"vmess","server":"mkhx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"gave.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_39","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_39","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_40","type":"vmess","server":"mkhx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_41","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"gave.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_42","type":"vmess","server":"mkhx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"gave.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_43","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_43","type":"trojan","server":"mkhx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_44","type":"vmess","server":"mkhx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_45","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"hasan.foriran.nlh2"}}}
   - {"name":"🇷🇴_RO_mostafa_46","type":"vmess","server":"mci.ircf.space","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"hasan.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_47","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_47","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_48","type":"vmess","server":"mci.ircf.space","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_49","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"hasan.foriran.nlhttp/1.1"}}}
   - {"name":"🇷🇴_RO_mostafa_50","type":"vmess","server":"mci.ircf.space","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"hasan.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_51","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_51","type":"trojan","server":"mci.ircf.space","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"hasan.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_52","type":"vmess","server":"mci.ircf.space","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_53","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"chetore.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_54","type":"vmess","server":"104.17.224.78","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"chetore.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_55","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_55","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_56","type":"vmess","server":"104.17.224.78","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_57","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"chetore.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_58","type":"vmess","server":"104.17.224.78","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"chetore.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_59","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_59","type":"trojan","server":"104.17.224.78","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"chetore.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_60","type":"vmess","server":"104.17.224.78","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_61","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"shiresho.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_62","type":"vmess","server":"shiresho.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"shiresho.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_63","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_63","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_64","type":"vmess","server":"shiresho.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_65","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"shiresho.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_66","type":"vmess","server":"shiresho.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"shiresho.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_67","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_67","type":"trojan","server":"shiresho.foriran.nl","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"shiresho.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_68","type":"vmess","server":"shiresho.foriran.nl","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_69","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"irancpi1.duckdns.orgh2"}}}
   - {"name":"🇺🇸_US_mostafa_70","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"irancpi1.duckdns.org"}}}
-  - {"name":"🇺🇸_US_mostafa_71","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_71","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_72","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_73","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_73","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_74","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_75","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"irancpi1.duckdns.orghttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_76","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"irancpi1.duckdns.org"}}}
-  - {"name":"🇺🇸_US_mostafa_77","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_77","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_78","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_79","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_79","type":"trojan","server":"irancpi1.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"irancpi1.duckdns.org","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_80","type":"vmess","server":"irancpi1.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_81","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"iranfreedom.duckdns.orgh2"}}}
   - {"name":"🇺🇸_US_mostafa_82","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"iranfreedom.duckdns.org"}}}
-  - {"name":"🇺🇸_US_mostafa_83","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_83","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_84","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_85","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_85","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_86","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_87","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"iranfreedom.duckdns.orghttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_88","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"iranfreedom.duckdns.org"}}}
-  - {"name":"🇺🇸_US_mostafa_89","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇺🇸_US_mostafa_89","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_mostafa_90","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸_US_mostafa_91","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_91","type":"trojan","server":"iranfreedom.duckdns.org","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"iranfreedom.duckdns.org","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_92","type":"vmess","server":"iranfreedom.duckdns.org","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_93","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"gave.foriran.nlh2"}}}
   - {"name":"🇺🇸_US_mostafa_94","type":"vmess","server":"mkh.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"gave.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_95","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_95","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_96","type":"vmess","server":"mkh.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇺🇸_US_mostafa_97","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"gave.foriran.nlhttp/1.1"}}}
   - {"name":"🇺🇸_US_mostafa_98","type":"vmess","server":"mkh.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"gave.foriran.nl"}}}
-  - {"name":"🇺🇸_US_mostafa_99","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇺🇸_US_mostafa_99","type":"trojan","server":"mkh.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"gave.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇺🇸_US_mostafa_100","type":"vmess","server":"mkh.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_101","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"matal.foriran.nlh2"}}}
   - {"name":"🇷🇴_RO_mostafa_102","type":"vmess","server":"mci.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"matal.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_103","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_103","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_104","type":"vmess","server":"mci.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇷🇴_RO_mostafa_105","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"matal.foriran.nlhttp/1.1"}}}
   - {"name":"🇷🇴_RO_mostafa_106","type":"vmess","server":"mci.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"matal.foriran.nl"}}}
-  - {"name":"🇷🇴_RO_mostafa_107","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇷🇴_RO_mostafa_107","type":"trojan","server":"mci.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"matal.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇷🇴_RO_mostafa_108","type":"vmess","server":"mci.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇪🇸_ES_mostafa_109","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"totole.foriran.nlh2"}}}
   - {"name":"🇪🇸_ES_mostafa_110","type":"vmess","server":"mtnx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"totole.foriran.nl"}}}
-  - {"name":"🇪🇸_ES_mostafa_111","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇪🇸_ES_mostafa_111","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇪🇸_ES_mostafa_112","type":"vmess","server":"mtnx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇪🇸_ES_mostafa_113","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fGYLvm8nEW8E0h3Y","headers":{"host":"totole.foriran.nlhttp/1.1"}}}
   - {"name":"🇪🇸_ES_mostafa_114","type":"vmess","server":"mtnx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/UcM6L7nnEW8E0h3Y","headers":{"host":"totole.foriran.nl"}}}
-  - {"name":"🇪🇸_ES_mostafa_115","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
+  - {"name":"🇪🇸_ES_mostafa_115","type":"trojan","server":"mtnx.cpionline.co","port":443,"udp":true,"password":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","sni":"totole.foriran.nl","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"fGYLvm8YWizg78ucJ7p"}}
   - {"name":"🇪🇸_ES_mostafa_116","type":"vmess","server":"mtnx.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"a6e6b3e0-b8a7-4123-8ab4-573a9241a259","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
 proxy-groups:
-  - name: 🚀 انتخاب پروکسی
+  - name: 📶 انتخاب نوع اتصال
     type: select
     proxies:
-      - ♻️ خودکار (بهترین پینگ)
-      - DIRECT
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - بازگشتی ➡️
+      - تعادل بار (هش ثابت) ♻️
+      - تعادل بار (زمان بندی) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
       - 🇺🇸_US_mostafa_1
       - 🇺🇸_US_mostafa_2
       - 🇺🇸_US_mostafa_3
@@ -444,11 +484,10 @@ proxy-groups:
       - 🇪🇸_ES_mostafa_114
       - 🇪🇸_ES_mostafa_115
       - 🇪🇸_ES_mostafa_116
-  - name: ♻️ خودکار (بهترین پینگ)
+  - name: خودکار (بهترین پینگ) 🤖
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://clients3.google.com/generate_204
     interval: 300
-    tolerance: 50
     proxies:
       - 🇺🇸_US_mostafa_1
       - 🇺🇸_US_mostafa_2
@@ -566,51 +605,426 @@ proxy-groups:
       - 🇪🇸_ES_mostafa_114
       - 🇪🇸_ES_mostafa_115
       - 🇪🇸_ES_mostafa_116
-  - name: 🎮 استیم
-    type: select
+  - name: بازگشتی ➡️
+    type: fallback
+    url: http://clients3.google.com/generate_204
+    interval: 300
     proxies:
-      - DIRECT
-      - REJECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🛑 رهگیری جهانی
-    type: select
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
+      - 🇺🇸_US_mostafa_3
+      - 🇺🇸_US_mostafa_4
+      - 🇺🇸_US_mostafa_5
+      - 🇺🇸_US_mostafa_6
+      - 🇺🇸_US_mostafa_7
+      - 🇺🇸_US_mostafa_8
+      - 🇺🇸_US_mostafa_9
+      - 🇺🇸_US_mostafa_10
+      - 🇺🇸_US_mostafa_11
+      - 🇺🇸_US_mostafa_12
+      - 🇺🇸_US_mostafa_13
+      - 🇺🇸_US_mostafa_14
+      - 🇺🇸_US_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇺🇸_US_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇺🇸_US_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇷🇴_RO_mostafa_21
+      - 🇷🇴_RO_mostafa_22
+      - 🇷🇴_RO_mostafa_23
+      - 🇷🇴_RO_mostafa_24
+      - 🇷🇴_RO_mostafa_25
+      - 🇷🇴_RO_mostafa_26
+      - 🇷🇴_RO_mostafa_27
+      - 🇷🇴_RO_mostafa_28
+      - 🇪🇸_ES_mostafa_29
+      - 🇪🇸_ES_mostafa_30
+      - 🇪🇸_ES_mostafa_31
+      - 🇪🇸_ES_mostafa_32
+      - 🇪🇸_ES_mostafa_33
+      - 🇪🇸_ES_mostafa_34
+      - 🇪🇸_ES_mostafa_35
+      - 🇪🇸_ES_mostafa_36
+      - 🇺🇸_US_mostafa_37
+      - 🇺🇸_US_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇺🇸_US_mostafa_40
+      - 🇺🇸_US_mostafa_41
+      - 🇺🇸_US_mostafa_42
+      - 🇺🇸_US_mostafa_43
+      - 🇺🇸_US_mostafa_44
+      - 🇷🇴_RO_mostafa_45
+      - 🇷🇴_RO_mostafa_46
+      - 🇷🇴_RO_mostafa_47
+      - 🇷🇴_RO_mostafa_48
+      - 🇷🇴_RO_mostafa_49
+      - 🇷🇴_RO_mostafa_50
+      - 🇷🇴_RO_mostafa_51
+      - 🇷🇴_RO_mostafa_52
+      - 🇺🇸_US_mostafa_53
+      - 🇺🇸_US_mostafa_54
+      - 🇺🇸_US_mostafa_55
+      - 🇺🇸_US_mostafa_56
+      - 🇺🇸_US_mostafa_57
+      - 🇺🇸_US_mostafa_58
+      - 🇺🇸_US_mostafa_59
+      - 🇺🇸_US_mostafa_60
+      - 🇺🇸_US_mostafa_61
+      - 🇺🇸_US_mostafa_62
+      - 🇺🇸_US_mostafa_63
+      - 🇺🇸_US_mostafa_64
+      - 🇺🇸_US_mostafa_65
+      - 🇺🇸_US_mostafa_66
+      - 🇺🇸_US_mostafa_67
+      - 🇺🇸_US_mostafa_68
+      - 🇺🇸_US_mostafa_69
+      - 🇺🇸_US_mostafa_70
+      - 🇺🇸_US_mostafa_71
+      - 🇺🇸_US_mostafa_72
+      - 🇺🇸_US_mostafa_73
+      - 🇺🇸_US_mostafa_74
+      - 🇺🇸_US_mostafa_75
+      - 🇺🇸_US_mostafa_76
+      - 🇺🇸_US_mostafa_77
+      - 🇺🇸_US_mostafa_78
+      - 🇺🇸_US_mostafa_79
+      - 🇺🇸_US_mostafa_80
+      - 🇺🇸_US_mostafa_81
+      - 🇺🇸_US_mostafa_82
+      - 🇺🇸_US_mostafa_83
+      - 🇺🇸_US_mostafa_84
+      - 🇺🇸_US_mostafa_85
+      - 🇺🇸_US_mostafa_86
+      - 🇺🇸_US_mostafa_87
+      - 🇺🇸_US_mostafa_88
+      - 🇺🇸_US_mostafa_89
+      - 🇺🇸_US_mostafa_90
+      - 🇺🇸_US_mostafa_91
+      - 🇺🇸_US_mostafa_92
+      - 🇺🇸_US_mostafa_93
+      - 🇺🇸_US_mostafa_94
+      - 🇺🇸_US_mostafa_95
+      - 🇺🇸_US_mostafa_96
+      - 🇺🇸_US_mostafa_97
+      - 🇺🇸_US_mostafa_98
+      - 🇺🇸_US_mostafa_99
+      - 🇺🇸_US_mostafa_100
+      - 🇷🇴_RO_mostafa_101
+      - 🇷🇴_RO_mostafa_102
+      - 🇷🇴_RO_mostafa_103
+      - 🇷🇴_RO_mostafa_104
+      - 🇷🇴_RO_mostafa_105
+      - 🇷🇴_RO_mostafa_106
+      - 🇷🇴_RO_mostafa_107
+      - 🇷🇴_RO_mostafa_108
+      - 🇪🇸_ES_mostafa_109
+      - 🇪🇸_ES_mostafa_110
+      - 🇪🇸_ES_mostafa_111
+      - 🇪🇸_ES_mostafa_112
+      - 🇪🇸_ES_mostafa_113
+      - 🇪🇸_ES_mostafa_114
+      - 🇪🇸_ES_mostafa_115
+      - 🇪🇸_ES_mostafa_116
+  - name: تعادل بار (هش ثابت) ♻️
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
     proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🍃 تصفیه برنامه
-    type: select
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
+      - 🇺🇸_US_mostafa_3
+      - 🇺🇸_US_mostafa_4
+      - 🇺🇸_US_mostafa_5
+      - 🇺🇸_US_mostafa_6
+      - 🇺🇸_US_mostafa_7
+      - 🇺🇸_US_mostafa_8
+      - 🇺🇸_US_mostafa_9
+      - 🇺🇸_US_mostafa_10
+      - 🇺🇸_US_mostafa_11
+      - 🇺🇸_US_mostafa_12
+      - 🇺🇸_US_mostafa_13
+      - 🇺🇸_US_mostafa_14
+      - 🇺🇸_US_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇺🇸_US_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇺🇸_US_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇷🇴_RO_mostafa_21
+      - 🇷🇴_RO_mostafa_22
+      - 🇷🇴_RO_mostafa_23
+      - 🇷🇴_RO_mostafa_24
+      - 🇷🇴_RO_mostafa_25
+      - 🇷🇴_RO_mostafa_26
+      - 🇷🇴_RO_mostafa_27
+      - 🇷🇴_RO_mostafa_28
+      - 🇪🇸_ES_mostafa_29
+      - 🇪🇸_ES_mostafa_30
+      - 🇪🇸_ES_mostafa_31
+      - 🇪🇸_ES_mostafa_32
+      - 🇪🇸_ES_mostafa_33
+      - 🇪🇸_ES_mostafa_34
+      - 🇪🇸_ES_mostafa_35
+      - 🇪🇸_ES_mostafa_36
+      - 🇺🇸_US_mostafa_37
+      - 🇺🇸_US_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇺🇸_US_mostafa_40
+      - 🇺🇸_US_mostafa_41
+      - 🇺🇸_US_mostafa_42
+      - 🇺🇸_US_mostafa_43
+      - 🇺🇸_US_mostafa_44
+      - 🇷🇴_RO_mostafa_45
+      - 🇷🇴_RO_mostafa_46
+      - 🇷🇴_RO_mostafa_47
+      - 🇷🇴_RO_mostafa_48
+      - 🇷🇴_RO_mostafa_49
+      - 🇷🇴_RO_mostafa_50
+      - 🇷🇴_RO_mostafa_51
+      - 🇷🇴_RO_mostafa_52
+      - 🇺🇸_US_mostafa_53
+      - 🇺🇸_US_mostafa_54
+      - 🇺🇸_US_mostafa_55
+      - 🇺🇸_US_mostafa_56
+      - 🇺🇸_US_mostafa_57
+      - 🇺🇸_US_mostafa_58
+      - 🇺🇸_US_mostafa_59
+      - 🇺🇸_US_mostafa_60
+      - 🇺🇸_US_mostafa_61
+      - 🇺🇸_US_mostafa_62
+      - 🇺🇸_US_mostafa_63
+      - 🇺🇸_US_mostafa_64
+      - 🇺🇸_US_mostafa_65
+      - 🇺🇸_US_mostafa_66
+      - 🇺🇸_US_mostafa_67
+      - 🇺🇸_US_mostafa_68
+      - 🇺🇸_US_mostafa_69
+      - 🇺🇸_US_mostafa_70
+      - 🇺🇸_US_mostafa_71
+      - 🇺🇸_US_mostafa_72
+      - 🇺🇸_US_mostafa_73
+      - 🇺🇸_US_mostafa_74
+      - 🇺🇸_US_mostafa_75
+      - 🇺🇸_US_mostafa_76
+      - 🇺🇸_US_mostafa_77
+      - 🇺🇸_US_mostafa_78
+      - 🇺🇸_US_mostafa_79
+      - 🇺🇸_US_mostafa_80
+      - 🇺🇸_US_mostafa_81
+      - 🇺🇸_US_mostafa_82
+      - 🇺🇸_US_mostafa_83
+      - 🇺🇸_US_mostafa_84
+      - 🇺🇸_US_mostafa_85
+      - 🇺🇸_US_mostafa_86
+      - 🇺🇸_US_mostafa_87
+      - 🇺🇸_US_mostafa_88
+      - 🇺🇸_US_mostafa_89
+      - 🇺🇸_US_mostafa_90
+      - 🇺🇸_US_mostafa_91
+      - 🇺🇸_US_mostafa_92
+      - 🇺🇸_US_mostafa_93
+      - 🇺🇸_US_mostafa_94
+      - 🇺🇸_US_mostafa_95
+      - 🇺🇸_US_mostafa_96
+      - 🇺🇸_US_mostafa_97
+      - 🇺🇸_US_mostafa_98
+      - 🇺🇸_US_mostafa_99
+      - 🇺🇸_US_mostafa_100
+      - 🇷🇴_RO_mostafa_101
+      - 🇷🇴_RO_mostafa_102
+      - 🇷🇴_RO_mostafa_103
+      - 🇷🇴_RO_mostafa_104
+      - 🇷🇴_RO_mostafa_105
+      - 🇷🇴_RO_mostafa_106
+      - 🇷🇴_RO_mostafa_107
+      - 🇷🇴_RO_mostafa_108
+      - 🇪🇸_ES_mostafa_109
+      - 🇪🇸_ES_mostafa_110
+      - 🇪🇸_ES_mostafa_111
+      - 🇪🇸_ES_mostafa_112
+      - 🇪🇸_ES_mostafa_113
+      - 🇪🇸_ES_mostafa_114
+      - 🇪🇸_ES_mostafa_115
+      - 🇪🇸_ES_mostafa_116
+    strategy: consistent-hashing
+  - name: تعادل بار (زمان بندی) ⏳
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    tolerance: 100
     proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🆎 تبلیغات
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
+      - 🇺🇸_US_mostafa_1
+      - 🇺🇸_US_mostafa_2
+      - 🇺🇸_US_mostafa_3
+      - 🇺🇸_US_mostafa_4
+      - 🇺🇸_US_mostafa_5
+      - 🇺🇸_US_mostafa_6
+      - 🇺🇸_US_mostafa_7
+      - 🇺🇸_US_mostafa_8
+      - 🇺🇸_US_mostafa_9
+      - 🇺🇸_US_mostafa_10
+      - 🇺🇸_US_mostafa_11
+      - 🇺🇸_US_mostafa_12
+      - 🇺🇸_US_mostafa_13
+      - 🇺🇸_US_mostafa_14
+      - 🇺🇸_US_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇺🇸_US_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇺🇸_US_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇷🇴_RO_mostafa_21
+      - 🇷🇴_RO_mostafa_22
+      - 🇷🇴_RO_mostafa_23
+      - 🇷🇴_RO_mostafa_24
+      - 🇷🇴_RO_mostafa_25
+      - 🇷🇴_RO_mostafa_26
+      - 🇷🇴_RO_mostafa_27
+      - 🇷🇴_RO_mostafa_28
+      - 🇪🇸_ES_mostafa_29
+      - 🇪🇸_ES_mostafa_30
+      - 🇪🇸_ES_mostafa_31
+      - 🇪🇸_ES_mostafa_32
+      - 🇪🇸_ES_mostafa_33
+      - 🇪🇸_ES_mostafa_34
+      - 🇪🇸_ES_mostafa_35
+      - 🇪🇸_ES_mostafa_36
+      - 🇺🇸_US_mostafa_37
+      - 🇺🇸_US_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇺🇸_US_mostafa_40
+      - 🇺🇸_US_mostafa_41
+      - 🇺🇸_US_mostafa_42
+      - 🇺🇸_US_mostafa_43
+      - 🇺🇸_US_mostafa_44
+      - 🇷🇴_RO_mostafa_45
+      - 🇷🇴_RO_mostafa_46
+      - 🇷🇴_RO_mostafa_47
+      - 🇷🇴_RO_mostafa_48
+      - 🇷🇴_RO_mostafa_49
+      - 🇷🇴_RO_mostafa_50
+      - 🇷🇴_RO_mostafa_51
+      - 🇷🇴_RO_mostafa_52
+      - 🇺🇸_US_mostafa_53
+      - 🇺🇸_US_mostafa_54
+      - 🇺🇸_US_mostafa_55
+      - 🇺🇸_US_mostafa_56
+      - 🇺🇸_US_mostafa_57
+      - 🇺🇸_US_mostafa_58
+      - 🇺🇸_US_mostafa_59
+      - 🇺🇸_US_mostafa_60
+      - 🇺🇸_US_mostafa_61
+      - 🇺🇸_US_mostafa_62
+      - 🇺🇸_US_mostafa_63
+      - 🇺🇸_US_mostafa_64
+      - 🇺🇸_US_mostafa_65
+      - 🇺🇸_US_mostafa_66
+      - 🇺🇸_US_mostafa_67
+      - 🇺🇸_US_mostafa_68
+      - 🇺🇸_US_mostafa_69
+      - 🇺🇸_US_mostafa_70
+      - 🇺🇸_US_mostafa_71
+      - 🇺🇸_US_mostafa_72
+      - 🇺🇸_US_mostafa_73
+      - 🇺🇸_US_mostafa_74
+      - 🇺🇸_US_mostafa_75
+      - 🇺🇸_US_mostafa_76
+      - 🇺🇸_US_mostafa_77
+      - 🇺🇸_US_mostafa_78
+      - 🇺🇸_US_mostafa_79
+      - 🇺🇸_US_mostafa_80
+      - 🇺🇸_US_mostafa_81
+      - 🇺🇸_US_mostafa_82
+      - 🇺🇸_US_mostafa_83
+      - 🇺🇸_US_mostafa_84
+      - 🇺🇸_US_mostafa_85
+      - 🇺🇸_US_mostafa_86
+      - 🇺🇸_US_mostafa_87
+      - 🇺🇸_US_mostafa_88
+      - 🇺🇸_US_mostafa_89
+      - 🇺🇸_US_mostafa_90
+      - 🇺🇸_US_mostafa_91
+      - 🇺🇸_US_mostafa_92
+      - 🇺🇸_US_mostafa_93
+      - 🇺🇸_US_mostafa_94
+      - 🇺🇸_US_mostafa_95
+      - 🇺🇸_US_mostafa_96
+      - 🇺🇸_US_mostafa_97
+      - 🇺🇸_US_mostafa_98
+      - 🇺🇸_US_mostafa_99
+      - 🇺🇸_US_mostafa_100
+      - 🇷🇴_RO_mostafa_101
+      - 🇷🇴_RO_mostafa_102
+      - 🇷🇴_RO_mostafa_103
+      - 🇷🇴_RO_mostafa_104
+      - 🇷🇴_RO_mostafa_105
+      - 🇷🇴_RO_mostafa_106
+      - 🇷🇴_RO_mostafa_107
+      - 🇷🇴_RO_mostafa_108
+      - 🇪🇸_ES_mostafa_109
+      - 🇪🇸_ES_mostafa_110
+      - 🇪🇸_ES_mostafa_111
+      - 🇪🇸_ES_mostafa_112
+      - 🇪🇸_ES_mostafa_113
+      - 🇪🇸_ES_mostafa_114
+      - 🇪🇸_ES_mostafa_115
+      - 🇪🇸_ES_mostafa_116
+    strategy: round-robin
   - name: 🇮🇷 سایتای ایرانی
     type: select
     proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
       - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
       - REJECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
 
 rules:
-  - GEOIP,IR,🇮🇷 سایتای ایرانی
   - DOMAIN-SUFFIX,ir,🇮🇷 سایتای ایرانی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
   - RULE-SET,iran,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,freeserver.top,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,sermovie.xyz,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,mobo-dl-filter-nakon.xyz,🇮🇷 سایتای ایرانی
   - RULE-SET,steam,🎮 استیم
   - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
   - IP-CIDR,23.109.87.42/32,🆎 تبلیغات,no-resolve
   - IP-CIDR,23.109.87.101/32,🆎 تبلیغات,no-resolve
   - IP-CIDR,35.232.188.118/32,🆎 تبلیغات,no-resolve
@@ -707,8 +1121,8 @@ rules:
   - IP-CIDR,223.87.182.52/32,🍃 تصفیه برنامه,no-resolve
   - RULE-SET,Global,🛑 رهگیری جهانی
 # 长风网站，自动注入
-  - DOMAIN-SUFFIX,v2rayse.com,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,cff.pw,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,vpnse.org,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,cfmem.com,🚀 انتخاب پروکسی
-  - MATCH,🚀 انتخاب پروکسی
+  - DOMAIN-SUFFIX,v2rayse.com,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cff.pw,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,vpnse.org,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cfmem.com,📶 انتخاب نوع اتصال
+  - MATCH,📶 انتخاب نوع اتصال
