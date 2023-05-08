@@ -1,8 +1,8 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：26-04-2023 08:06:45
-# 使用模版：mostafafilterchi
+# 创建时间：08-05-2023 15:54:47
+# 使用模版：mostafavpn1
 # 节点数量：50
 ####################################
 port: 7890
@@ -21,61 +21,81 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   use-host: true
   enhanced-mode: fake-ip
   listen: 0.0.0.0:7874
   nameserver:
+    - https://1.1.1.1/dns-query#en0
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query
     - 1.1.1.1
-    - 4.2.2.4
-    - 119.29.29.29
-    - 223.5.5.5
-    - 8.8.8.8
     - 1.0.0.1
-    - 114.114.114.114
-    - 9.9.9.9
-    - 119.28.28.28
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
-    - https://doh.opendns.com/dns-query
-    - https://doh.dns.sb/dns-query
-    - https://doh.pub/dns-query
-    - dhcp://en0
-    - tls://dns.rubyfish.cn:853
-    - tls://dot.pub:853
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tcp://1.1.1.1
+    - tcp://1.1.1.1#en0
   fallback:
-    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
     - https://8.8.8.8/dns-query
     - https://9.9.9.9/dns-query
     - https://rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - 1.1.1.1
-    - 8.8.4.4
-    - 112.215.203.254
+    - https://doh.opendns.com/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://dns.adguard.com/dns-query
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
     - 8.8.8.8
-    - 1.0.0.1
-    - tls://1.0.0.1:853
+    - 8.8.4.4
+    - 4.2.2.4
+    - 9.9.9.9
+    - 119.29.29.29
+    - 223.5.5.5
+    - 119.28.28.28
+    - 112.215.203.254
+    - 114.114.114.114
+    - 127.0.0.1
+    - 114.114.114.114
+    - 87.118.100.175:110
+    - 8.8.8.8#en0
+    - dhcp://en0
+    - tcp://8.8.8.8#en0
+    - tls://8.8.8.8#en0
     - tls://dns.google:853
-    - tcp://1.1.1.1
-    - tcp://1.1.1.1#en0
+    - tls://dns.rubyfish.cn:853
+    - tls://dot.pub:853
   fallback-filter:
     geoip: true
     geoip-code: IR
     ipcidr:
+      - 0.0.0.0/8
       - 10.0.0.0/8
       - 100.64.0.0/10
+      - 127.0.0.0/8
       - 169.254.0.0/16
       - 172.16.0.0/12
       - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
       - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/3
       - 240.0.0.0/4
+      - '::1/128'
       - 64:ff9b:1::/48
       - fc00::/7
-      - fe80::/64
-  default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-    - 112.215.203.254
+      - fe80::/10
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
@@ -174,8 +194,7 @@ rule-providers:
   iran:
     type: http
     behavior: classical
-    url: >-
-      https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules.yaml
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
     path: ./ruleset/iran.yaml
     interval: 432000
   steam:
@@ -204,20 +223,33 @@ rule-providers:
       https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
     path: ./ruleset/Global.yaml
     interval: 432000
+  AntiAd:
+    type: http
+    behavior: domain
+    url: >-
+      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/AntiAd.yaml
+    interval: 432000
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    path: ./providers/rule-provider_clash.yaml
+    interval: 86400
 
 proxies:
   - {"name":"🇬🇧_GB_mostafa_1","type":"vmess","server":"wfi.sahnama.com","port":80,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/n02mMHFUSf9cMft6o","headers":{"host":"wfi.sahnama.com"}}}
   - {"name":"🇬🇧_GB_mostafa_2","type":"vmess","server":"wfi.sahnama.com","port":80,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇬🇧_GB_mostafa_3","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/qm8oTHiYi5SrAt9cMft6o","headers":{"host":"wfi.sahnama.comhttp/1.1"}}}
   - {"name":"🇬🇧_GB_mostafa_4","type":"vmess","server":"wfi.sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/n02mMHFUSf9cMft6o","headers":{"host":"wfi.sahnama.com"}}}
-  - {"name":"🇬🇧_GB_mostafa_5","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"🇬🇧_GB_mostafa_5","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇬🇧_GB_mostafa_6","type":"vmess","server":"wfi.sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧_GB_mostafa_7","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"qm8oTHiYi5SrAtAdAuY8tHlwf"}}
+  - {"name":"🇬🇧_GB_mostafa_7","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"qm8oTHiYi5SrAtAdAuY8tHlwf"}}
   - {"name":"🇬🇧_GB_mostafa_8","type":"vmess","server":"wfi.sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"/","grpc-mode":"gun"}}
   - {"name":"🇬🇧_GB_mostafa_9","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/qm8oTHiYi5SrAt9cMft6o","headers":{"host":"wfi.sahnama.comh2"}}}
   - {"name":"🇬🇧_GB_mostafa_10","type":"vmess","server":"wfi.sahnama.com","port":443,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/n02mMHFUSf9cMft6o","headers":{"host":"wfi.sahnama.com"}}}
-  - {"name":"🇬🇧_GB_mostafa_11","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":false,"network":"tcp"}
-  - {"name":"🇬🇧_GB_mostafa_12","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"qm8oTHiYi5SrAtAdAuY8tHlwf"}}
+  - {"name":"🇬🇧_GB_mostafa_11","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇬🇧_GB_mostafa_12","type":"trojan","server":"wfi.sahnama.com","port":443,"udp":true,"password":"1e5fba98-deac-4fae-ac2f-c055e7810668","sni":"wfi.sahnama.com","skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"qm8oTHiYi5SrAtAdAuY8tHlwf"}}
   - {"name":"🇬🇧_GB_mostafa_13","type":"vmess","server":"178.239.171.103","port":80,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/n02mMHFUSf9cMft6o","headers":{"host":"docker.com"}}}
   - {"name":"🇬🇧_GB_mostafa_14","type":"vmess","server":"178.239.171.103","port":80,"cipher":"chacha20-poly1305","uuid":"1e5fba98-deac-4fae-ac2f-c055e7810668","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇸🇬_SG_mostafa_15","type":"vmess","server":"xjp2.wangjiaxin.xyz","port":25932,"cipher":"auto","uuid":"33a47ce6-5ea9-4d21-d3db-ce38421d2558","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/23423","headers":{"host":"xjp2.wangjiaxin.xyz"}}}
@@ -257,11 +289,19 @@ proxies:
   - {"name":"🇩🇪_DE_mostafa_49","type":"vmess","server":"165.227.133.55","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"speedtest.net"}}}
   - {"name":"🇩🇪_DE_mostafa_50","type":"vmess","server":"sahnama.com","port":80,"cipher":"chacha20-poly1305","uuid":"df68f678-62c3-4799-91a8-4d301e8cf565","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PGV2vtMvxwNFt2","headers":{"host":"sahnama.com"}}}
 proxy-groups:
-  - name: 🚀 انتخاب پروکسی
+  - name: 📶 انتخاب نوع اتصال
     type: select
     proxies:
-      - ♻️ خودکار (بهترین پینگ)
-      - DIRECT
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - بازگشتی ➡️
+      - تعادل بار (هش ثابت) ♻️
+      - تعادل بار (زمان بندی) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
       - 🇬🇧_GB_mostafa_1
       - 🇬🇧_GB_mostafa_2
       - 🇬🇧_GB_mostafa_3
@@ -312,11 +352,10 @@ proxy-groups:
       - 🇺🇸_US_mostafa_48
       - 🇩🇪_DE_mostafa_49
       - 🇩🇪_DE_mostafa_50
-  - name: ♻️ خودکار (بهترین پینگ)
+  - name: خودکار (بهترین پینگ) 🤖
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://clients3.google.com/generate_204
     interval: 300
-    tolerance: 50
     proxies:
       - 🇬🇧_GB_mostafa_1
       - 🇬🇧_GB_mostafa_2
@@ -368,51 +407,228 @@ proxy-groups:
       - 🇺🇸_US_mostafa_48
       - 🇩🇪_DE_mostafa_49
       - 🇩🇪_DE_mostafa_50
-  - name: 🎮 استیم
-    type: select
+  - name: بازگشتی ➡️
+    type: fallback
+    url: http://clients3.google.com/generate_204
+    interval: 300
     proxies:
-      - DIRECT
-      - REJECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🛑 رهگیری جهانی
-    type: select
+      - 🇬🇧_GB_mostafa_1
+      - 🇬🇧_GB_mostafa_2
+      - 🇬🇧_GB_mostafa_3
+      - 🇬🇧_GB_mostafa_4
+      - 🇬🇧_GB_mostafa_5
+      - 🇬🇧_GB_mostafa_6
+      - 🇬🇧_GB_mostafa_7
+      - 🇬🇧_GB_mostafa_8
+      - 🇬🇧_GB_mostafa_9
+      - 🇬🇧_GB_mostafa_10
+      - 🇬🇧_GB_mostafa_11
+      - 🇬🇧_GB_mostafa_12
+      - 🇬🇧_GB_mostafa_13
+      - 🇬🇧_GB_mostafa_14
+      - 🇸🇬_SG_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇰🇷_KR_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇯🇵_JP_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇺🇸_US_mostafa_21
+      - 🇺🇸_US_mostafa_22
+      - 🇺🇸_US_mostafa_23
+      - 🇭🇰_HK_mostafa_24
+      - 🇭🇰_HK_mostafa_25
+      - 🇭🇰_HK_mostafa_26
+      - 🇺🇸_US_mostafa_27
+      - 🇺🇸_US_mostafa_28
+      - 🇺🇸_US_mostafa_29
+      - 🇰🇷_KR_mostafa_30
+      - 🇫🇷_FR_mostafa_31
+      - 🇺🇸_US_mostafa_32
+      - 🇰🇷_KR_mostafa_33
+      - 🇰🇷_KR_mostafa_34
+      - 🇺🇸_US_mostafa_35
+      - 🇯🇵_JP_mostafa_36
+      - 🇸🇬_SG_mostafa_37
+      - 🇭🇰_HK_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇭🇰_HK_mostafa_40
+      - 🇳🇱_NL_mostafa_41
+      - 🇸🇬_SG_mostafa_42
+      - 🇸🇬_SG_mostafa_43
+      - 🇫🇷_FR_mostafa_44
+      - 🇭🇰_HK_mostafa_45
+      - 🇸🇬_SG_mostafa_46
+      - 🇫🇷_FR_mostafa_47
+      - 🇺🇸_US_mostafa_48
+      - 🇩🇪_DE_mostafa_49
+      - 🇩🇪_DE_mostafa_50
+  - name: تعادل بار (هش ثابت) ♻️
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
     proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🍃 تصفیه برنامه
-    type: select
+      - 🇬🇧_GB_mostafa_1
+      - 🇬🇧_GB_mostafa_2
+      - 🇬🇧_GB_mostafa_3
+      - 🇬🇧_GB_mostafa_4
+      - 🇬🇧_GB_mostafa_5
+      - 🇬🇧_GB_mostafa_6
+      - 🇬🇧_GB_mostafa_7
+      - 🇬🇧_GB_mostafa_8
+      - 🇬🇧_GB_mostafa_9
+      - 🇬🇧_GB_mostafa_10
+      - 🇬🇧_GB_mostafa_11
+      - 🇬🇧_GB_mostafa_12
+      - 🇬🇧_GB_mostafa_13
+      - 🇬🇧_GB_mostafa_14
+      - 🇸🇬_SG_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇰🇷_KR_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇯🇵_JP_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇺🇸_US_mostafa_21
+      - 🇺🇸_US_mostafa_22
+      - 🇺🇸_US_mostafa_23
+      - 🇭🇰_HK_mostafa_24
+      - 🇭🇰_HK_mostafa_25
+      - 🇭🇰_HK_mostafa_26
+      - 🇺🇸_US_mostafa_27
+      - 🇺🇸_US_mostafa_28
+      - 🇺🇸_US_mostafa_29
+      - 🇰🇷_KR_mostafa_30
+      - 🇫🇷_FR_mostafa_31
+      - 🇺🇸_US_mostafa_32
+      - 🇰🇷_KR_mostafa_33
+      - 🇰🇷_KR_mostafa_34
+      - 🇺🇸_US_mostafa_35
+      - 🇯🇵_JP_mostafa_36
+      - 🇸🇬_SG_mostafa_37
+      - 🇭🇰_HK_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇭🇰_HK_mostafa_40
+      - 🇳🇱_NL_mostafa_41
+      - 🇸🇬_SG_mostafa_42
+      - 🇸🇬_SG_mostafa_43
+      - 🇫🇷_FR_mostafa_44
+      - 🇭🇰_HK_mostafa_45
+      - 🇸🇬_SG_mostafa_46
+      - 🇫🇷_FR_mostafa_47
+      - 🇺🇸_US_mostafa_48
+      - 🇩🇪_DE_mostafa_49
+      - 🇩🇪_DE_mostafa_50
+    strategy: consistent-hashing
+  - name: تعادل بار (زمان بندی) ⏳
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    tolerance: 100
     proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
-  - name: 🆎 تبلیغات
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
+      - 🇬🇧_GB_mostafa_1
+      - 🇬🇧_GB_mostafa_2
+      - 🇬🇧_GB_mostafa_3
+      - 🇬🇧_GB_mostafa_4
+      - 🇬🇧_GB_mostafa_5
+      - 🇬🇧_GB_mostafa_6
+      - 🇬🇧_GB_mostafa_7
+      - 🇬🇧_GB_mostafa_8
+      - 🇬🇧_GB_mostafa_9
+      - 🇬🇧_GB_mostafa_10
+      - 🇬🇧_GB_mostafa_11
+      - 🇬🇧_GB_mostafa_12
+      - 🇬🇧_GB_mostafa_13
+      - 🇬🇧_GB_mostafa_14
+      - 🇸🇬_SG_mostafa_15
+      - 🇺🇸_US_mostafa_16
+      - 🇰🇷_KR_mostafa_17
+      - 🇺🇸_US_mostafa_18
+      - 🇯🇵_JP_mostafa_19
+      - 🇺🇸_US_mostafa_20
+      - 🇺🇸_US_mostafa_21
+      - 🇺🇸_US_mostafa_22
+      - 🇺🇸_US_mostafa_23
+      - 🇭🇰_HK_mostafa_24
+      - 🇭🇰_HK_mostafa_25
+      - 🇭🇰_HK_mostafa_26
+      - 🇺🇸_US_mostafa_27
+      - 🇺🇸_US_mostafa_28
+      - 🇺🇸_US_mostafa_29
+      - 🇰🇷_KR_mostafa_30
+      - 🇫🇷_FR_mostafa_31
+      - 🇺🇸_US_mostafa_32
+      - 🇰🇷_KR_mostafa_33
+      - 🇰🇷_KR_mostafa_34
+      - 🇺🇸_US_mostafa_35
+      - 🇯🇵_JP_mostafa_36
+      - 🇸🇬_SG_mostafa_37
+      - 🇭🇰_HK_mostafa_38
+      - 🇺🇸_US_mostafa_39
+      - 🇭🇰_HK_mostafa_40
+      - 🇳🇱_NL_mostafa_41
+      - 🇸🇬_SG_mostafa_42
+      - 🇸🇬_SG_mostafa_43
+      - 🇫🇷_FR_mostafa_44
+      - 🇭🇰_HK_mostafa_45
+      - 🇸🇬_SG_mostafa_46
+      - 🇫🇷_FR_mostafa_47
+      - 🇺🇸_US_mostafa_48
+      - 🇩🇪_DE_mostafa_49
+      - 🇩🇪_DE_mostafa_50
+    strategy: round-robin
   - name: 🇮🇷 سایتای ایرانی
     type: select
     proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
       - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
       - REJECT
-      - ♻️ خودکار (بهترین پینگ)
-      - 🚀 انتخاب پروکسی
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
 
 rules:
-  - GEOIP,IR,🇮🇷 سایتای ایرانی
   - DOMAIN-SUFFIX,ir,🇮🇷 سایتای ایرانی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
   - RULE-SET,iran,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,freeserver.top,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,sermovie.xyz,🇮🇷 سایتای ایرانی
   - DOMAIN-KEYWORD,mobo-dl-filter-nakon.xyz,🇮🇷 سایتای ایرانی
   - RULE-SET,steam,🎮 استیم
   - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
   - IP-CIDR,23.109.87.42/32,🆎 تبلیغات,no-resolve
   - IP-CIDR,23.109.87.101/32,🆎 تبلیغات,no-resolve
   - IP-CIDR,35.232.188.118/32,🆎 تبلیغات,no-resolve
@@ -509,8 +725,8 @@ rules:
   - IP-CIDR,223.87.182.52/32,🍃 تصفیه برنامه,no-resolve
   - RULE-SET,Global,🛑 رهگیری جهانی
 # 长风网站，自动注入
-  - DOMAIN-SUFFIX,v2rayse.com,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,cff.pw,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,vpnse.org,🚀 انتخاب پروکسی
-  - DOMAIN-SUFFIX,cfmem.com,🚀 انتخاب پروکسی
-  - MATCH,🚀 انتخاب پروکسی
+  - DOMAIN-SUFFIX,v2rayse.com,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cff.pw,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,vpnse.org,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cfmem.com,📶 انتخاب نوع اتصال
+  - MATCH,📶 انتخاب نوع اتصال
