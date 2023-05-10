@@ -2,7 +2,6 @@
 # 创建者：v2rayse.com
 # 客户端：Clash
 # 创建时间：08-05-2023 23:02:15
-# 使用模版：clashmeta mostafa vpn
 # 节点数量：14
 ####################################
 global-client-fingerprint: chrome
@@ -14,8 +13,7 @@ tproxy-port: 7895
 allow-lan: true
 geodata-mode: true
 tcp-concurrent: true
-log-level: info
-external-controller: 0.0.0.0:9090
+090
 secret: ''
 bind-address: '*'
 unified-delay: true
