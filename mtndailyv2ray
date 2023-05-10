@@ -1,13 +1,14 @@
-vless://8d95a2e8-29af-492d-823e-1e38f01d8754@gr3.gr3mimigr3.tk:51537?security=none&type=tcp&sni=speedtest.net&encryption=none&headerType=none#%F0%9F%87%A9%F0%9F%87%AA_DE_mostafa_1
-vless://95f5feac-9996-4387-d321-ffabc25a39dc@159.65.53.149:1344?security=none&type=tcp&sni=iranserver.com&encryption=none&headerType=none#%F0%9F%87%AC%F0%9F%87%A7_GB_mostafa_2
-vless://411377e4-7837-426b-b438-b563bf018a42@49.13.6.89:443?security=none&type=grpc&sni=eset.com&encryption=none&headerType=none#%F0%9F%87%A9%F0%9F%87%AA_DE_mostafa_3
-vless://0d82d76f-0d7f-4f58-9438-a93a75385d13@37.27.10.2:443?security=none&type=grpc&sni=eset.com&encryption=none&headerType=none#%F0%9F%87%AE%F0%9F%87%B7_IR_mostafa_4
-vless://bb8595d3-25f9-4378-8500-64910472cd7e@104.24.135.103:443?security=tls&type=ws&sni=wk1.mrvpn.de&path=/Dny7S1rd1aptDwyLwEUUa&encryption=none&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_5
-vless://8d95a2e8-29af-492d-823e-1e38f01d8754@gr3.gr3mimigr3.tk:51537?security=none&type=tcp&sni=speedtest.net&encryption=none&headerType=none#%F0%9F%87%A9%F0%9F%87%AA_DE_mostafa_6
-vless://c657cd0b-91e4-473f-de69-48bbf5d0a065@mrvpn.ghoran.de:23941?security=none&type=tcp&sni=www.google-analytics.com&flow=xtls-rprx-vision&encryption=none&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_7
-vless://bb8595d3-25f9-4378-8500-64910472cd7e@104.24.135.103:443?security=tls&type=ws&sni=wk1.mrvpn.de&path=/Dny7S1rd1aptDwyLwEUUa&encryption=none&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_8
-vmess://eyJ2IjoiMiIsInBzIjoi8J+HqvCfh6pfRUVfbW9zdGFmYV85IiwiYWRkIjoibXN0LmV2aWVzLmNsb3VkIiwicG9ydCI6NDQ0OTAsImlkIjoiNzA0MGQyZDUtY2FkMC00NmYwLTkwZDktMGRiYjY2MzNhZTQxIiwiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0IjoidGNwIiwidGxzIjoiIn0=
-trojan://9bea679c-ce35-4a9e-a664-90857f74f0a4@helan1.zhudaidaohang.com:58850?type=tcp&sni=helan1.zhudaidaohang.com&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_10
-vless://c657cd0b-91e4-473f-de69-48bbf5d0a065@mrvpn.ghoran.de:23941?security=none&type=tcp&sni=www.google-analytics.com&flow=xtls-rprx-vision&encryption=none&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_11
-vless://ba189876-6fcd-4c43-bffb-d0e44c2feccb@cp2.independenttherapeutics.com:8443?security=tls&type=ws&sni=cp2.independenttherapeutics.com&path=/client-area&encryption=none&headerType=none#%F0%9F%87%B8%F0%9F%87%AA_SE_mostafa_12
-vless://0cc4fd66-9c7f-47a0-c2a2-53efb9a3852e@mrvpn.ghoran.de:39190?security=none&type=tcp&sni=yahoo.com&flow=xtls-rprx-vision&encryption=none&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_US_mostafa_13
+vless://8d95a2e8-29af-492d-823e-1e38f01d8754@gr3.gr3mimigr3.tk:51537?security=none&encryption=none&host=speedtest.net&headerType=http&type=tcp#%E2%9E%A0%40v2ray30
+vless://95f5feac-9996-4387-d321-ffabc25a39dc@159.65.53.149:1344?security=none&encryption=none&host=iranserver.com&headerType=http&type=tcp#-20g+3
+vless://411377e4-7837-426b-b438-b563bf018a42@49.13.6.89:443?mode=multi&security=reality&encryption=none&pbk=2OHXGL7Y7RSiexMPDAobeNhY5yuKxoty_kIKFlrZU0g&fp=randomized&type=grpc&serviceName=@LegenderY_Servers -&sni=eset.com&sid=87cddfb6#Reality+2
+vless://0d82d76f-0d7f-4f58-9438-a93a75385d13@37.27.10.2:443?mode=multi&security=reality&encryption=none&pbk=9NqjANkq7MZ0qrwYwf4JqbUm_WbpGXOIldi1f7FoTAY&fp=chrome&type=grpc&serviceName=@LegenderY_Servers&sni=eset.com&sid=27e68393#Reality+1
+vless://bb8595d3-25f9-4378-8500-64910472cd7e@104.24.135.103:443?path=%2FDny7S1rd1aptDwyLwEUUa&security=tls&encryption=none&alpn=http/1.1&host=wk1.mrvpn.de&fp=randomized&type=ws&sni=wk1.mrvpn.de#TG%40X_Her0_%7C_16_wk
+vless://8d95a2e8-29af-492d-823e-1e38f01d8754@gr3.gr3mimigr3.tk:51537?security=none&encryption=none&host=speedtest.net&headerType=http&type=tcp#%E2%9E%A0%40v2ray30
+vless://c657cd0b-91e4-473f-de69-48bbf5d0a065@mrvpn.ghoran.de:23941?security=reality&encryption=none&pbk=R1oAOriik-Ayo7q2AB-9IwtAHRtHyUOCtmI3KypAoCc&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.google-analytics.com&sid=9b119b8b#%40X_HER0+%7C+IRANCELL-temp2
+vless://bb8595d3-25f9-4378-8500-64910472cd7e@104.24.135.103:443?path=%2FDny7S1rd1aptDwyLwEUUa&security=tls&encryption=none&alpn=http/1.1&host=wk1.mrvpn.de&fp=randomized&type=ws&sni=wk1.mrvpn.de#TG%40X_Her0_%7C_1_wk
+vmess://eyJhZGQiOiJtc3QuZXZpZXMuY2xvdWQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InZhcnplc2gzLmNvbSIsImlkIjoiNzA0MGQyZDUtY2FkMC00NmYwLTkwZDktMGRiYjY2MzNhZTQxIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDQ0OTAiLCJwcyI6IuKeoEB2MnJheTMwIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJodHRwIiwidiI6IjIifQ==
+trojan://9bea679c-ce35-4a9e-a664-90857f74f0a4@helan1.zhudaidaohang.com:58850?security=tls&headerType=none&type=tcp&sni=helan1.zhudaidaohang.com#%F0%9F%87%BA%F0%9F%87%B8l1%40oneclickvpnkeys
+vless://c657cd0b-91e4-473f-de69-48bbf5d0a065@mrvpn.ghoran.de:23941?security=reality&encryption=none&pbk=R1oAOriik-Ayo7q2AB-9IwtAHRtHyUOCtmI3KypAoCc&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.google-analytics.com&sid=9b119b8b#%40X_HER0+%7C+IRANCELL-temp2
+vless://ba189876-6fcd-4c43-bffb-d0e44c2feccb@cp2.independenttherapeutics.com:8443?path=%2Fclient-area&security=tls&encryption=none&alpn=http/1.1&host=cp2.independenttherapeutics.com&fp=chrome&type=ws&sni=cp2.independenttherapeutics.com#beiten
+vless://0cc4fd66-9c7f-47a0-c2a2-53efb9a3852e@mrvpn.ghoran.de:39190?security=reality&encryption=none&pbk=Bh9QTNWsV9in1rHo4Y_iYv8xUrlPTSxUDFqFrC4GiEs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yahoo.com&sid=f74876ca#%40X_HER0+%7C+HAMRAH-temp1
+
