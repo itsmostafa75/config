@@ -117,11 +117,6 @@ proxy-groups:
       - 〄 mtn fixed - تعادل بار (هش ثابت) ♻️
       - 〄 mtn fixed - تعادل بار (زمان بندی) ⏳
       - 〄 mtn fixed - دستی 🤏🏻
-      - 🕊 mci fixed - خودکار (بهترین پینگ) 🤖
-      - 🕊 mci fixed - بازگشتی ➡️
-      - 🕊 mci fixed - تعادل بار (هش ثابت) ♻️
-      - 🕊 mci fixed - تعادل بار (زمان بندی) ⏳
-      - 🕊 mci fixed - دستی 🤏🏻
       - 👨🏻‍💻 mkh fixed - خودکار (بهترین پینگ) 🤖
       - 👨🏻‍💻 mkh fixed - بازگشتی ➡️
       - 👨🏻‍💻 mkh fixed - تعادل بار (هش ثابت) ♻️
@@ -215,43 +210,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     use:
-      - mtn fixed
-
-  - name: 🕊 mci fixed - دستی 🤏🏻
-    type: url-test
-    use:
-      - mci fixed
-
-  - name: 🕊 mci fixed - خودکار (بهترین پینگ) 🤖
-    type: url-test
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    use:
-      - mci fixed
-
-  - name: 🕊 mci fixed - بازگشتی ➡️
-    type: fallback
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    use:
-      - mci fixed
-
-  - name: 🕊 mci fixed - تعادل بار (هش ثابت) ♻️
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    use:
-      - mci fixed
-
-  - name: 🕊 mci fixed - تعادل بار (زمان بندی) ⏳
-    type: load-balance
-    strategy: round-robin
-    url: http://clients3.google.com/generate_204
-    interval: 300
-    tolerance: 100
-    use:
-      - mci fixed 
+      - mtn fixed 
 	  
   - name: 👨🏻‍💻 mkh daily - دستی 🤏🏻
     type: select
@@ -457,18 +416,6 @@ proxy-providers:
       https://raw.githubusercontent.com/itsmostafa75/config/main/mkhpermanent
     interval: 1440
     path: ./mkh fixed.yaml
-    health-check:
-      enable: true
-      interval: 600
-      lazy: true
-      url: http://cp.cloudflare.com/
-
-  mci fixed:
-    type: http
-    url: >-
-      https://raw.githubusercontent.com/itsmostafa75/config/main/mcipermanent
-    interval: 1440
-    path: ./mci fixed.yaml
     health-check:
       enable: true
       interval: 600
