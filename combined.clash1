@@ -236,7 +236,7 @@ proxy-groups:
     use:
       - mci fixed
 
- - name: 🕊 mci fixed - تعادل بار (هش ثابت) ♻️
+  - name: 🕊 mci fixed - تعادل بار (هش ثابت) ♻️
     type: load-balance
     strategy: consistent-hashing
     url: http://clients3.google.com/generate_204
@@ -244,7 +244,7 @@ proxy-groups:
     use:
       - mci fixed
 
- - name: 🕊 mci fixed - تعادل بار (زمان بندی) ⏳
+  - name: 🕊 mci fixed - تعادل بار (زمان بندی) ⏳
     type: load-balance
     strategy: round-robin
     url: http://clients3.google.com/generate_204
