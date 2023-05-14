@@ -251,7 +251,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     use:
-      - mci fixed
+      - mci fixed 
 	  
   - name: 👨🏻‍💻 mkh daily - دستی 🤏🏻
     type: select
