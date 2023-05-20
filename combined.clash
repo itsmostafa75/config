@@ -1,0 +1,261 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: 127.0.0.1:53
+  ipv6: true
+  default-nameserver: 
+    - '127.0.0.1'
+    - '1.1.1.1'
+  enhanced-mode: fake-ip
+  use-hosts: true
+  nameserver:
+    - "https://cloudflare-dns.com/dns-query"
+    - "https://dns.google/dns-query"
+    - "https://dns.quad9.net/dns-query"
+    - '127.0.0.1'
+    - '1.1.1.1'
+  fallback:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "https://9.9.9.9/dns-query"
+    - "https://rubyfish.cn/dns-query"
+    - "https://dns.nextdns.io"
+    - "https://doh.cleanbrowsing.org/doh/security-filter/"
+    - "https://dns.adguard.com/dns-query"
+    - "https://resolver2.dns.watch/dns-query"
+    - "https://doh-de.blahdns.com/dns-query"
+    - "https://dns.surfshark.com/dns-query"
+    - "https://doh.opendns.com/dns-query"
+    - "https://freedns.controld.com/p2"
+    - "https://dns.dnswarden.com/adblock"
+    - "https://adblock.doh.mullvad.net/dns-query"
+    - "https://basic.rethinkdns.com/dns-query"
+  fallback-filter:
+    geoip: false
+    ipcidr:
+      - '0.0.0.0/8'
+      - '10.0.0.0/8'
+      - '100.64.0.0/10'
+      - '127.0.0.0/8'
+      - '169.254.0.0/16'
+      - '172.16.0.0/12'
+      - '192.0.0.0/24'
+      - '192.0.2.0/24'
+      - '192.88.99.0/24'
+      - '192.168.0.0/16'
+      - '198.18.0.0/15'
+      - '198.51.100.0/24'
+      - '203.0.113.0/24'
+      - '224.0.0.0/3'
+      - '240.0.0.0/4'
+      - '::1/128'
+      - '64:ff9b:1::/48'
+      - 'fc00::/7'
+      - 'fe80::/10'
+
+
+
+proxy-groups:
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - mci fixed - خودکار (بهترین پینگ) 🤖
+      - mci fixed - دستی 🤏🏻
+      - mtn fixed - خودکار (بهترین پینگ) 🤖
+      - mtn fixed - دستی 🤏🏻
+      - mkh fixed - خودکار (بهترین پینگ) 🤖
+      - mkh fixed - دستی 🤏🏻
+      - mtn daily - خودکار (بهترین پینگ) 🤖
+      - mtn daily - دستی 🤏🏻
+      - mci daily - خودکار (بهترین پینگ) 🤖
+      - mci daily - دستی 🤏🏻
+      - mkh daily - خودکار (بهترین پینگ) 🤖
+      - mkh daily - دستی 🤏🏻
+
+  - name: mci fixed - دستی 🤏🏻
+    type: select
+    use:
+      - mci fixed
+
+  - name: mci fixed - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mci fixed
+
+  - name: mkh fixed - دستی 🤏🏻
+    type: select
+    use:
+      - mkh fixed
+
+  - name: mkh fixed - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mkh fixed
+
+  - name: mtn fixed - دستی 🤏🏻
+    type: select
+    use:
+      - mtn fixed
+
+  - name: mtn fixed - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mtn fixed
+
+  - name: mkh daily - دستی 🤏🏻
+    type: select
+    use:
+      - mkh daily
+
+  - name: mkh daily - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mkh daily
+
+  - name: mci daily - دستی 🤏🏻
+    type: select
+    use:
+      - mci daily
+
+  - name: mci daily - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mci daily
+
+  - name: mtn daily - دستی 🤏🏻
+    type: select
+    use:
+      - mtn daily
+
+  - name: mtn daily - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - mtn daily
+
+  - name: main clash - دستی 🤏🏻
+    type: select
+    use:
+      - main clash
+
+  - name: main clash - خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    use:
+      - main clash
+
+
+
+proxy-providers:
+
+
+  mci fixed:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mcipermanent
+    interval: 1440
+    path: ./mci fixed.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+  mkh fixed:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mkhpermanent
+    interval: 1440
+    path: ./mkh fixed.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+
+  mtn fixed:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mtnpermanent
+    interval: 1440
+    path: ./mtn fixed.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+
+  mkh daily:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mkhdailyclash
+    interval: 1440
+    path: ./mkh daily.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+
+  mci daily:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mcidailyclash
+    interval: 1440
+    path: ./mci daily.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+
+  mtn daily:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mtnclashdaily
+    interval: 1440
+    path: ./mtn daily.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+  main clash:
+    type: http
+    url: >-
+      https://raw.githubusercontent.com/itsmostafa75/config/main/mainclashconfig
+    interval: 1440
+    path: ./main clash.yaml
+    health-check:
+      enable: true
+      interval: 600
+      lazy: true
+      url: http://cp.cloudflare.com/
+
+rules:
+  - MATCH,📶 انتخاب نوع اتصال
