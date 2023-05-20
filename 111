@@ -1,33 +1,17 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
+mixed-port: 7890
 allow-lan: true
 log-level: info
-ipv6: true
-external-controller: 127.0.0.1:9090
-secret: ''
-bind-address: '*'
-unified-delay: true
-profile:
-  store-selected: true
-  store-fake-ip: true
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  listen: 127.0.0.1:53
-  ipv6: true
-  default-nameserver: 
-    - '127.0.0.1'
-    - '1.1.1.1'
-  enhanced-mode: fake-ip
-  use-hosts: true
+  enabled: true
   nameserver:
-    - "https://cloudflare-dns.com/dns-query"
-    - "https://dns.google/dns-query"
-    - "https://dns.quad9.net/dns-query"
-    - '127.0.0.1'
-    - '1.1.1.1'
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
 
 proxy-groups:
   - name: 📶 انتخاب نوع اتصال
