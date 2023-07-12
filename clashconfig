@@ -1,0 +1,454 @@
+####################################
+# 创建者：v2rayse.com
+# 客户端：Clash
+# 创建时间：12-07-2023 16:12:18
+# 使用模版：mostafavpn1
+# 节点数量：4
+# 节点类型：trojan, vmess
+####################################
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
+secret: ''
+bind-address: '*'
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - https://1.1.1.1/dns-query#en0
+    - https://cloudflare-dns.com/dns-query
+    - https://1.1.1.1/dns-query
+    - 1.1.1.1
+    - 1.0.0.1
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tcp://1.1.1.1
+    - tcp://1.1.1.1#en0
+  fallback:
+    - https://dns.google/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.dns.sb/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.nextdns.io
+    - https://doh.cleanbrowsing.org/doh/security-filter/
+    - https://dns.adguard.com/dns-query
+    - https://resolver2.dns.watch/dns-query
+    - https://doh-de.blahdns.com/dns-query
+    - https://dns.surfshark.com/dns-query
+    - https://freedns.controld.com/p2
+    - https://dns.dnswarden.com/adblock
+    - https://adblock.doh.mullvad.net/dns-query
+    - https://basic.rethinkdns.com/dns-query
+    - 8.8.8.8
+    - 8.8.4.4
+    - 4.2.2.4
+    - 9.9.9.9
+    - 119.29.29.29
+    - 223.5.5.5
+    - 119.28.28.28
+    - 112.215.203.254
+    - 114.114.114.114
+    - 127.0.0.1
+    - 114.114.114.114
+    - 87.118.100.175:110
+    - 8.8.8.8#en0
+    - dhcp://en0
+    - tcp://8.8.8.8#en0
+    - tls://8.8.8.8#en0
+    - tls://dns.google:853
+    - tls://dns.rubyfish.cn:853
+    - tls://dot.pub:853
+  fallback-filter:
+    geoip: true
+    geoip-code: IR
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/3
+      - 240.0.0.0/4
+      - '::1/128'
+      - 64:ff9b:1::/48
+      - fc00::/7
+      - fe80::/10
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+rule-providers:
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/iran.yaml
+    path: ./ruleset/iran.yaml
+    interval: 432000
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/steam.yaml
+    path: ./ruleset/steam.yaml
+    interval: 432000
+  add:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/add.yaml
+    path: ./ruleset/add.yaml
+    interval: 432000
+  Purification:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Purification%20app.yaml
+    path: ./ruleset/Purification.yaml
+    interval: 432000
+  Global:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/coldwater-10/clash_rules/main/Global%20tracking.yaml
+    path: ./ruleset/Global.yaml
+    interval: 432000
+  AntiAd:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/AntiAd.yaml
+    interval: 432000
+  MoreAd:
+    type: http
+    behavior: domain
+    url: https://howdy.id/download/rules/clash.txt
+    path: ./providers/rule-provider_clash.yaml
+    interval: 86400
+
+proxies:
+  - {"name":"🇩🇪_DE_mostafa vpn_1","type":"trojan","server":"hoddi.cpionline.co","port":443,"udp":true,"password":"93ed0514-854b-4e6c-9967-f8dc4b40db8a","sni":"hoddi.cpionline.co","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/86mNTlgBQQGC7YNALYx5xYr","headers":{"host":"hoddi.cpionline.coh2"}}}
+  - {"name":"🇩🇪_DE_mostafa vpn_2","type":"vmess","server":"hoddi.cpionline.co","port":443,"cipher":"chacha20-poly1305","uuid":"93ed0514-854b-4e6c-9967-f8dc4b40db8a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/jgEHFNTnNALYx5xYr","headers":{"host":"hoddi.cpionline.co"}}}
+  - {"name":"🇩🇪_DE_mostafa vpn_3","type":"trojan","server":"hdfydrctold.foriran.trade","port":443,"udp":true,"password":"93ed0514-854b-4e6c-9967-f8dc4b40db8a","sni":"hdfydrctold.foriran.trade","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/86mNTlgBQQGC7YNALYx5xYr","headers":{"host":"hdfydrctold.foriran.tradeh2"}}}
+  - {"name":"🇩🇪_DE_mostafa vpn_4","type":"vmess","server":"hdfydrctold.foriran.trade","port":443,"cipher":"chacha20-poly1305","uuid":"93ed0514-854b-4e6c-9967-f8dc4b40db8a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/jgEHFNTnNALYx5xYr","headers":{"host":"hdfydrctold.foriran.trade"}}}
+proxy-groups:
+  - name: 📶 انتخاب نوع اتصال
+    type: select
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - بازگشتی ➡️
+      - تعادل بار (هش ثابت) ♻️
+      - تعادل بار (زمان بندی) ⏳
+      - ⛔ قطع اینترنت
+      - 🛡️ بدون فیلترشکن
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 🇩🇪_DE_mostafa vpn_1
+      - 🇩🇪_DE_mostafa vpn_2
+      - 🇩🇪_DE_mostafa vpn_3
+      - 🇩🇪_DE_mostafa vpn_4
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    proxies:
+      - 🇩🇪_DE_mostafa vpn_1
+      - 🇩🇪_DE_mostafa vpn_2
+      - 🇩🇪_DE_mostafa vpn_3
+      - 🇩🇪_DE_mostafa vpn_4
+  - name: بازگشتی ➡️
+    type: fallback
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    proxies:
+      - 🇩🇪_DE_mostafa vpn_1
+      - 🇩🇪_DE_mostafa vpn_2
+      - 🇩🇪_DE_mostafa vpn_3
+      - 🇩🇪_DE_mostafa vpn_4
+  - name: تعادل بار (هش ثابت) ♻️
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    proxies:
+      - 🇩🇪_DE_mostafa vpn_1
+      - 🇩🇪_DE_mostafa vpn_2
+      - 🇩🇪_DE_mostafa vpn_3
+      - 🇩🇪_DE_mostafa vpn_4
+    strategy: consistent-hashing
+  - name: تعادل بار (زمان بندی) ⏳
+    type: load-balance
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    tolerance: 100
+    proxies:
+      - 🇩🇪_DE_mostafa vpn_1
+      - 🇩🇪_DE_mostafa vpn_2
+      - 🇩🇪_DE_mostafa vpn_3
+      - 🇩🇪_DE_mostafa vpn_4
+    strategy: round-robin
+  - name: 🇮🇷 سایتای ایرانی
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🆎 تبلیغات
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🍃 تصفیه برنامه
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛑 رهگیری جهانی
+    type: select
+    proxies:
+      - 🚫 اجازه ندادن
+      - 🛡️ بدون فیلترشکن
+      - 📶 انتخاب نوع اتصال
+  - name: 🎮 استیم
+    type: select
+    proxies:
+      - 🛡️ بدون فیلترشکن
+      - 🚫 اجازه ندادن
+      - 📶 انتخاب نوع اتصال
+  - name: 🛡️ بدون فیلترشکن
+    type: select
+    proxies:
+      - DIRECT
+  - name: ⛔ قطع اینترنت
+    type: select
+    proxies:
+      - REJECT
+  - name: 🚫 اجازه ندادن
+    type: select
+    proxies:
+      - REJECT
+
+rules:
+  - DOMAIN-SUFFIX,ir,🇮🇷 سایتای ایرانی
+  - GEOIP,IR,🇮🇷 سایتای ایرانی
+  - RULE-SET,iran,🇮🇷 سایتای ایرانی
+  - DOMAIN-KEYWORD,freeserver.top,🇮🇷 سایتای ایرانی
+  - DOMAIN-KEYWORD,sermovie.xyz,🇮🇷 سایتای ایرانی
+  - DOMAIN-KEYWORD,mobo-dl-filter-nakon.xyz,🇮🇷 سایتای ایرانی
+  - RULE-SET,steam,🎮 استیم
+  - RULE-SET,add,🆎 تبلیغات
+  - RULE-SET,AntiAd,🆎 تبلیغات
+  - RULE-SET,MoreAd,🆎 تبلیغات
+  - IP-CIDR,23.109.87.42/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.109.87.101/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,35.232.188.118/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,37.1.209.213/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.96/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.97/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.98/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.99/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.100/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.101/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.102/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.77.227.103/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.136/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.137/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.138/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.139/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.140/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.141/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.142/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,51.89.187.143/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,162.252.214.4/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,167.99.31.227/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,167.206.10.148/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,203.195.121.11/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.89.50.180/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.91.3.114/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.234.217.11/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.234.217.12/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,23.244.43.212/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,60.190.139.164/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,103.21.91.144/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,104.197.140.120/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,104.198.198.188/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,104.203.72.254/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,104.203.214.3/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,104.233.177.93/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,107.148.199.181/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,107.165.206.26/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,107.172.176.197/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,107.183.137.18/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,107.187.122.172/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,108.171.248.234/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,119.29.207.87/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,120.27.34.156/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,121.40.25.88/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,122.114.239.160/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,134.73.54.252/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,136.0.56.196/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,137.175.69.92/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,142.0.129.74/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,146.148.85.61/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,154.196.143.171/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,156.232.37.2/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,156.246.162.2/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,163.197.136.33/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,163.197.167.236/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,164.155.185.254/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,172.121.4.251/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,172.121.4.252/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,174.139.53.195/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,180.76.171.28/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,211.167.105.131/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,213.232.113.250/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,216.172.154.226/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,220.115.251.25/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,221.204.213.222/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,222.186.12.235/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,0.0.0.1/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,35.194.26.233/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,35.239.57.233/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,45.32.105.134/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,77.162.125.199/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,185.165.169.108/32,🆎 تبلیغات,no-resolve
+  - IP-CIDR,185.193.38.148/32,🆎 تبلیغات,no-resolve
+  - RULE-SET,Purification,🍃 تصفیه برنامه
+  - IP-CIDR,101.227.200.0/24,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,101.227.200.11/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,101.227.200.28/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,101.227.97.240/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,124.192.153.42/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,117.177.248.17/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,117.177.248.41/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.176.139/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.176.176/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.180/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.182/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.184/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.43/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.47/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.177.80/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.182.101/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.182.102/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.182.11/32,🍃 تصفیه برنامه,no-resolve
+  - IP-CIDR,223.87.182.52/32,🍃 تصفیه برنامه,no-resolve
+  - RULE-SET,Global,🛑 رهگیری جهانی
+# 长风网站，自动注入
+  - DOMAIN-SUFFIX,v2rayse.com,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cff.pw,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,vpnse.org,📶 انتخاب نوع اتصال
+  - DOMAIN-SUFFIX,cfmem.com,📶 انتخاب نوع اتصال
+  - MATCH,📶 انتخاب نوع اتصال
