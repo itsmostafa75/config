@@ -1,0 +1,34 @@
+const upstream = 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality';
+
+let data;
+let lastFetched;
+
+async function fetchUpstream() {
+  const resp = await fetch(upstream);
+  data = await resp.text();
+  lastFetched = Date.now();
+}
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))  
+})
+
+async function handleRequest(request) {
+
+  if (!data || Date.now() - lastFetched > 60 * 60 * 1000) {
+    // Data is missing or stale, fetch it
+    await fetchUpstream();
+    // Setup recurring fetch  
+    setInterval(fetchUpstream, 60 * 60 * 1000);
+  }
+
+  const headers = new Headers();
+  headers.set('Content-Type', 'text/plain; charset=utf-8');
+  headers.set('Cache-Control', 'no-cache');
+
+  return new Response(data, {
+    headers: headers
+  });
+}
+Simply paste your rich-text content in here or scroll down to learn more
+This paste expires in <1 day. Public IP access. Share whatever you see with others in seconds with Context. Terms of ServiceReport this
