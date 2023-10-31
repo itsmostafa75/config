@@ -1,3 +1,8 @@
 hysteria://51.158.54.46:11926/?insecure=1&peer=youku.com&auth=Trz2alKwzCImRAXI3nXfpo1ylpHfqOL8s1vageWKoyjjvWeMVs&upmbps=11&downmbps=55&alpn=h3#%40EUT_VPN
-tuic://2209d482-3dbb-44da-817a-ddc2c8f27daa:2aaae510@tui881hqp.youthinkyoucanstopmefyoudpi.site:25172/?congestion_control=bbr&udp_relay_mode=quic&alpn=h3#%40IP_CF%7CTUIC%7C
-tuic://2209d482-3dbb-44da-817a-ddc2c8f27daa:2aaae510@tui881hqp.youthinkyoucanstopmefyoudpi.site:25172/?congestion_control=bbr&udp_relay_mode=quic&alpn=h3#%40vpnAndroid2
+hy2://y0qochAspE+u-HLfrip-@hys.cpionline.co:443/?insecure=1&sni=Google.com&obfs=salamander&obfs-password=2pU%21%26Brls%210exuP%2B%214so#qq1000
+tuic://4d14b5f1-b6bd-4a30-81ea-19fa1d47699f:f8AB+EN2P3ifobaKOCRi@[2a05:f480:1c00:b56:5400:4ff:fe8f:5121]:443/?congestion_control=bbr&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#tuicupv6_1
+tuic://4d14b5f1-b6bd-4a30-81ea-19fa1d47699f:f8AB+EN2P3ifobaKOCRi@tuic4d.cpionline.co:443/?congestion_control=bbr&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#tuicupv4_1
+tuic://4d14b5f1-b6bd-4a30-81ea-19fa1d47699f:f8AB+EN2P3ifobaKOCRi@tuic4d.cpionline.co:443/?congestion_control=bbr&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#tuicupv4_2
+tuic://4d14b5f1-b6bd-4a30-81ea-19fa1d47699f:f8AB+EN2P3ifobaKOCRi@tuic4d.cpionline.co:443/?congestion_control=bbr&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#tuic4
+hy2://y0qochAspE+u-HLfrip-@hys.cpionline.co:443/?insecure=1&sni=Google.com&obfs=salamander&obfs-password=2pU%21%26Brls%210exuP%2B%214so#wiwqqqo1
+tuic://70a5f242-2f20-4057-aa38-2be1d45c8dbc:prlD*e!1b3Yipr$D795%3F@hys2.cpionline.co:2086/?congestion_control=cubic&udp_relay_mode=native&alpn=h3%2Cspdy%2F3.1&allow_insecure=1#armita2
