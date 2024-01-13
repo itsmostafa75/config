@@ -1,1 +1,284 @@
-sn://config?eNrdWM2Oo0YQdqSc9ilGnAcMNthmbpFySG6R9pBDskJNUxi0DU26G3u80Rz2TfIKebC8Q6oxPw3G9u5oN0oylsYzVVC_X_10LxaLhbfaOi5-_tx9u2h-_vr19zcPDxbje-vpQf-J_yS5JDGDBCkpYRIez2QGB2BIs_Iy5VZLVHkBUpGiQoYSNSD1RbOspJSDRAniAEITfmkIDy3jLIJo3VYl-PPpe3zrcWCRJBEg9XvWzmk-JjcBxWuhmRIYUGW1rJfHq0oYp4RdV5IpVcmn5XK1WjuB_izRDfu3GsRpXnGSi09THKPm91e0CsoTQK2yplSTOmnN97s20KJmcCWACS9IXkayTtP82XikYTq5sPr_3xkGnHPSOIE-3ndkD1zmCqbyKVGw5-Jkk0TahLF7ys6BuKFneHQuWbxWMa9LjU2LlOOsnGEbUUIzGOD4Oj2UEZlFBSbm09I8SJvD8VjanvGYsPk0SyV0QE9NnVUHP-IlO1l9VeVl4_0AhM4ES5Z5mrZed5otdaoajUX-jOXck1kuFZSa0fUDb8qMKi4UPuG5O--N4fSgTxHMo669Ez5fDO-TWvFIYJ5gak1egvIjA_jeduV4oVa_XLuDhELVyA1d13286R3GKqdqXlfnuarLQXDFiEq5KPrG1FB10UdN1kZ05EDZ9UFT9iTflyE0HrgI45Dx7lv_brLfY3smu20XafvchZdnOhcD51JWnxwTmN95NuPHCSUjhSCZTQ4IUpOzyk7wofowpckSjjYlHZ7fzcKldWCkvze_FkzhFLlr_dewtteJRpgj4Hg8OnsEucqpQ3mx3EMJujSjletbBqQV5pk0b3pGESjO8OmSavcC91ZE2tZyEROz5Vx5dTxT-jeNDntNJzZ8DPGM0lLOvzjAXcenDY-sABKdOAcLexA2Rr7vr3tOqrOHMgzFTI6L8VrJYaQl0FrAJafVV5ICDANJWSKCcJ7aKTY0-z1PyHub1lLxQjpKnCjjdZIyIkCn10RJPTXqdidI83IPohIIBa2eZoKjIZfFPviMwJBtdAzPK6IyLWBJZJKa9mRAkvPyNDLpBy7V6_0d7DM0dTA4joZXQZ4jIIKdooQoolPqhhuDP_Cis6l9Kt4CtX-G-C3iEZT9k-CKU84uxqhV13kz0LexuyY-SewgDbe2H25DOw792Pa9LYTuNg3TGAzsnME8aQq9EwfW71L_JTR3WwxOvPH-fQPr2Kb2mPgD7Im045zvBamyk72vCUJNAfwvAf8ap_-VqN_t3E26WYPt-yn-Cvy1TYIQbDdJ0x2hQZLEdA71c4Pv89DvrV1n4znB1lm5m2uQ35mYfzXCL7yviJRHLpoIABb-brsKvPVuG7heaCwCcTpR2K88hJGClBh4M2umVH-7iykJNpeR72I4XRF64ZneaUVOVncj6LvOar1zvHXoeO76U9rG1wlh4G_SgHhpsI4D39tsv0wIvTQEfx3SmyHsNqq7UewX3W5jb28H8GSZV4aJeKA9loyTJJrsZPtcZXXcrGM000WF-5hfL3_EgrcldiU75s92c1BeCtyIicQ_9DNSLTuRy0aZk8SDub22-WN967Nx_v2n7NTqXmPpjauCqutG7bJ35WTdLYg3Drw4JBElzQmwTqoRgC4wP5F-9wpg9vB9zdS7R_PZw_cVafcvkm5etly7a_k8g7t6mIoeTWGcvweEzJhI8CxSNjPvC9kxd-PzxZycE96Sny6ulUZ-FoQdcaZPIpLlMsPqGlOpOFW4A-el3iju2n0XmlfM5iqDr5f72-5-plOj66bmsga7CVoVNWfZlNDxUqrXvfP5dqiN810UPFfY3QsoVcNvm_m52kiVm40SnlE0iokoL5XgjE2uTp5CNzQugPrH63y8YBuMaNp87zw1tExzSFMBakxLICU1U32_GGbXy5uXbxaLBQ5MwfPkj48f_wbhM-Nx
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+      {
+        "geosite": [
+          "category-ads-all"
+        ],
+        "server": "block"
+      },
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      }
+
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "A1-low",
+        "A1-hamrah-aval",
+        "A2hyezpz",
+        "A2hysnew-ca"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "A1-low",
+        "A1-hamrah-aval",
+        "A2hyezpz",
+        "A2hysnew-ca"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "server": "http://www.speedtest.net",
+      "server_port": 443,
+     "flow": "",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "http://announces-fist-kodak-customs.trycloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/asdf",
+        "headers": {
+        "Host": "http://announces-fist-kodak-customs.trycloudflare.com"
+      },
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "7b03a4ad-5f97-4979-b94b-417e907f9fbe",
+      "tag": "A1-low",
+      "type": "vless"
+    },
+    {
+      "server": "http://www.speedtest.net",
+      "server_port": 443,
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "disable_sni": false,
+        "server_name": "http://stages-vegas-biography-guarantees.trycloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "path": "/asdf",
+        "headers": {
+        "Host": "http://stages-vegas-biography-guarantees.trycloudflare.com"
+      },
+        "type": "ws",
+        "max_early_data": 4096,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "uuid": "8806f63e-44fe-4543-a59e-0dff8ac5ddbc",
+      "tag": "A1-hamrah-aval",
+      "type": "vless"
+    },
+    {
+      "server": "130.61.57.206",
+      "server_port": 8443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "e7b0872513875019",
+      "obfs": {
+        "type": "salamander",
+        "password": "478bca56"
+      },
+      "tag": "A2hyezpz",
+      "type": "hysteria2"
+    },
+    {
+      "server": "140.238.139.103",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "546f5a1f53b54167",
+      "obfs": {
+        "type": "salamander",
+        "password": "1f9e439c"
+      },
+      "tag": "A2hysnew-ca",
+      "type": "hysteria2"
+    }
+  ],
+  "route": {
+    "geoip": {
+            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https://github.com\/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
+            "download_detour": "direct"
+        },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "ir",
+                    "private",
+                    "arvancloud"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geosite:category-ads-all",
+                    "malware",
+                    "phishing",
+                    "cryptominers"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "malware",
+                    "phishing"
+                ],
+                "outbound": "block"
+            }
+
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+  "external_controller": "127.0.0.1:9090",
+  "external_ui": "",
+  "external_ui_download_url": "",
+  "external_ui_download_detour": "",
+  "secret":"",
+  "default_mode": ""
+
+    }
+  }
+}
