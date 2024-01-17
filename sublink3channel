@@ -1,180 +1,189 @@
 {
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
   "dns": {
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
-    "independent_cache": true,
-    "rules": [
-      {
-        "geosite": [
-          "ir"
-        ],
-        "server": "dns-direct"
-      },
-      {
-        "disable_cache": true,
-        "inbound": [
-          "tun-in"
-        ],
-        "server": "dns-fake"
-      }
-    ],
     "servers": [
       {
-        "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns-direct",
-        "strategy": "prefer_ipv4",
-        "tag": "dns-remote"
+        "tag": "dns-remote",
+        "address": "tcp://8.8.8.8",
+        "address_resolver": "dns-direct"
       },
       {
-        "address": "223.5.5.5",
+        "tag": "dns-direct",
+        "address": "8.8.8.8",
         "address_resolver": "dns-local",
-        "detour": "direct",
-        "strategy": "prefer_ipv4",
-        "tag": "dns-direct"
+        "detour": "direct"
       },
       {
+        "tag": "dns-local",
         "address": "local",
-        "detour": "direct",
-        "tag": "dns-local"
+        "detour": "direct"
       },
       {
-        "address": "rcode://success",
-        "tag": "dns-block"
-      },
-      {
-        "address": "fakeip",
-        "strategy": "ipv4_only",
-        "tag": "dns-fake"
+        "tag": "dns-block",
+        "address": "rcode://success"
       }
-    ]
-  },
-  "experimental": {
-    "clash_api": {
-      "cache_file": "../cache/clash.db",
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "../files/yacd"
-    }
+    ],
+    "rules": [
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "server": "dns-direct"
+      }
+    ],
+    "independent_cache": true
   },
   "inbounds": [
     {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
       "listen": "127.0.0.1",
       "listen_port": 6450,
       "override_address": "8.8.8.8",
-      "override_port": 53,
-      "tag": "dns-in",
-      "type": "direct"
-    },
-    {
-      "domain_strategy": "",
-      "endpoint_independent_nat": true,
-      "inet4_address": [
-        "172.19.0.1/28"
-      ],
-      "inet6_address": [
-        "fdfe:dcba:9876::1/126"
-      ],
-      "mtu": 9000,
-      "sniff": false,
-      "sniff_override_destination": false,
-      "stack": "system",
-      "tag": "tun-in",
-      "type": "tun"
-    },
-    {
-      "domain_strategy": "",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": false,
-      "sniff_override_destination": false,
-      "tag": "mixed-in",
-      "type": "mixed"
+      "override_port": 53
     }
   ],
-  "log": {
-    "level": "panic"
-  },
   "outbounds": [
     {
-      "down_mbps": 0,
-      "hop_interval": 10,
-      "obfs": {
-        "password": "05462d067f21387c",
-        "type": "salamander"
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "تمام خطوط § 5",
+        "همراه اول § 7"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "تمام خطوط § 5",
+        "همراه اول § 7"
+      ],
+      "url": "https://cp.cloudflare.com/",
+      "interval": "10m0s"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "تمام خطوط § 5",
+      "tls_fragment": {
+        "size": "10-100",
+        "sleep": "50-200"
       },
-      "password": "536a1e178ea00bf2",
+      "server": "5.161.213.184",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "d5a9baeec9b61a44"
+      },
+      "password": "1ab02865393bfa6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "همراه اول § 7",
+      "tls_fragment": {
+        "size": "10-100",
+        "sleep": "50-200"
+      },
       "server": "95.217.211.216",
       "server_port": 443,
-      "tls": {
-        "alpn": [
-          "h3"
-        ],
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.google.com"
+      "obfs": {
+        "type": "salamander",
+        "password": "05462d067f21387c"
       },
-      "up_mbps": 0,
-      "type": "hysteria2",
-      "domain_strategy": "",
-      "tag": "proxy"
+      "password": "536a1e178ea00bf2",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
     },
     {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
       "tag": "direct",
-      "type": "direct"
+      "tls_fragment": {}
     },
     {
+      "type": "direct",
       "tag": "bypass",
-      "type": "direct"
+      "tls_fragment": {}
     },
     {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
+      "type": "block",
+      "tag": "block"
     }
   ],
   "route": {
-    "auto_detect_interface": true,
+    "geoip": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geosite.db"
+    },
     "rules": [
       {
-        "outbound": "dns-out",
-        "port": [
-          53
-        ]
-      },
-      {
-        "inbound": [
-          "dns-in"
-        ],
+        "inbound": "dns-in",
         "outbound": "dns-out"
       },
       {
-        "geosite": [
-          "ir"
-        ],
-        "outbound": "bypass"
+        "port": 53,
+        "outbound": "dns-out"
       },
       {
-        "geoip": [
-          "ir"
-        ],
-        "outbound": "bypass"
+        "clash_mode": "Direct",
+        "outbound": "direct"
       },
       {
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "outbound": "block",
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "domain_suffix": ".ir",
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
       }
-    ]
+    ],
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "store_selected": true,
+      "cache_file": "clash.db"
+    }
   }
 }
