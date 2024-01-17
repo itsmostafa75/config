@@ -132,13 +132,11 @@
     },
     {
       "type": "direct",
-      "tag": "direct",
-      "tls_fragment": {}
+      "tag": "direct"
     },
     {
       "type": "direct",
-      "tag": "bypass",
-      "tls_fragment": {}
+      "tag": "bypass"
     },
     {
       "type": "block",
