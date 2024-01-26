@@ -113,10 +113,10 @@
         "enabled": true,
         "insecure": true
       },
-      "password": "205ef172277d3292",
+      "password": "04979c3cfe2a7945",
       "obfs": {
         "type": "salamander",
-        "password": "04979c3cfe2a7945"
+        "password": "205ef172277d3292"
       },
       "tag": "A1",
       "type": "hysteria2"
@@ -128,10 +128,10 @@
         "enabled": true,
         "insecure": true
       },
-      "password": "7925a5b3071cb35f",
+      "password": "2f1b122607f533dc",
       "obfs": {
         "type": "salamander",
-        "password": "2f1b122607f533dc"
+        "password": "7925a5b3071cb35f"
       },
       "tag": "A2",
       "type": "hysteria2"
@@ -143,10 +143,10 @@
         "enabled": true, 
         "insecure": true
       },
-      "password": "d73fedd93ae03557",
+      "password": "45fee9f969ede5cf",
       "obfs": {
-        "type": "salamander",
-        "password": "45fee9f969ede5cf"
+             "type": "salamander",
+        "password": "d73fedd93ae03557"
       },
       "tag": "A3",
       "type": "hysteria2"
