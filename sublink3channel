@@ -155,7 +155,7 @@
       "type": "hysteria2"
     },
 	{
-      "server": "2607:5300:205:200::1926",
+      "server": "[2607:5300:205:200::1926]",
       "server_port": 443,
       "tls": {
         "enabled": true, 
