@@ -249,7 +249,7 @@
       "server": "70.34.214.160",
       "server_port": 443,
       "uuid": "6313c68a-472b-4999-ba33-094a55ea7549",
-	  "password": "FRebRlCrO+huXaprEwr6"
+	  "password": "FRebRlCrO+huXaprEwr6",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
