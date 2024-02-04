@@ -231,7 +231,7 @@
       },
       "password": "",
       "obfs": {
-        "type": "salamander",
+        "type": "",
         "password": ""
       },
       "tag": "A8",
