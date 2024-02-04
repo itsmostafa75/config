@@ -222,7 +222,7 @@
       "tag": "A7",
       "type": "hysteria2"
     },
-	//{
+	{
 	"type": "hysteria",
 	"server": "51.158.54.46",
 	"server_port": 55396,
