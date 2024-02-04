@@ -84,7 +84,8 @@
 		"A5",
 		"A6",
 		"A7",
-		"A8"
+		"A8",
+		"A9"
       ]
     },
     {
@@ -98,7 +99,8 @@
 		"A5",
 		"A6",
 		"A7",
-		"A8"
+		"A8",
+		"A9"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -242,6 +244,23 @@
       },
       "tag": "A8",
       "type": "hysteria"
+    },
+	{
+      "server": "70.34.214.160",
+      "server_port": 443,
+      "uuid": "6313c68a-472b-4999-ba33-094a55ea7549",
+	  "password": "FRebRlCrO+huXaprEwr6"
+      "congestion_control": "bbr",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+		"alpn": [
+			"h3"
+			"spdy/3.1"
+		]
+      },
+      "tag": "A9",
+      "type": "tuic"
     }
   ],
   "route": {
