@@ -225,6 +225,10 @@
 	{
       "server": "51.158.54.46",
       "server_port": 55396,
+	  "auth_str": "dongtaiwang.com",
+      "disable_mtu_discovery": false,
+      "down_mbps": 55,
+      "hop_interval": 10,
       "tls": {
         "enabled": true,
         "insecure": true
