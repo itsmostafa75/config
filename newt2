@@ -239,11 +239,6 @@
 		"alpn": [
 			"h3"
 		]
-	},
-	"connect_timeout": "5s",
-	"tcp_fast_open": false,
-	"udp_fragment": true
-}
       },
       "tag": "A8",
       "type": "hysteria"
