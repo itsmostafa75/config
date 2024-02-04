@@ -223,15 +223,27 @@
       "type": "hysteria2"
     },
 	{
-      "server": "51.158.54.46",
-      "server_port": 55396,
-	  "auth_str": "dongtaiwang.com",
-      "disable_mtu_discovery": false,
-      "down_mbps": 55,
-	  "up_mbps": 11,
-      "tls": {
-        "enabled": true,
-        "insecure": true
+	"type": "hysteria",
+	"server": "51.158.54.46",
+	"server_port": 55396,
+	"up_mbps": 11,
+	"down_mbps": 55,
+	"auth": "",
+	"auth_str": "dongtaiwang.com",
+	"disable_mtu_discovery": false,
+	"tls": {
+		"enabled": true,
+		"disable_sni": false,
+		"server_name": "youku.com",
+		"insecure": true,
+		"alpn": [
+			"h3"
+		]
+	},
+	"connect_timeout": "5s",
+	"tcp_fast_open": false,
+	"udp_fragment": true
+}
       },
       "tag": "A8",
       "type": "hysteria"
