@@ -228,6 +228,7 @@
 	  "auth_str": "dongtaiwang.com",
       "disable_mtu_discovery": false,
       "down_mbps": 55,
+	  "up_mbps": 11,
       "tls": {
         "enabled": true,
         "insecure": true
