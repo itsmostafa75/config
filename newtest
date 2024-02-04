@@ -83,7 +83,8 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
+		"A7",
+		"A8"
       ]
     },
     {
@@ -96,7 +97,8 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
+		"A7",
+		"A8"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -228,6 +230,11 @@
       "tls": {
         "enabled": true,
         "insecure": true
+      },
+      "password": "",
+      "obfs": {
+        "type": "salamander",
+        "password": ""
       },
       "tag": "A8",
       "type": "hysteria1"
