@@ -229,11 +229,6 @@
         "enabled": true,
         "insecure": true
       },
-      "password": "",
-      "obfs": {
-        "type": "",
-        "password": ""
-      },
       "tag": "A8",
       "type": "hysteria"
     }
