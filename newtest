@@ -225,8 +225,6 @@
 	{
       "server": "51.158.54.46",
       "server_port": 55396,
-	  "auth_str": "dongtaiwang.com",
-      "disable_mtu_discovery": false,
       "tls": {
         "enabled": true,
         "insecure": true
@@ -237,7 +235,7 @@
         "password": ""
       },
       "tag": "A8",
-      "type": "hysteria"
+      "type": "hysteria1"
     }
   ],
   "route": {
