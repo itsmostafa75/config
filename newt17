@@ -268,7 +268,7 @@
       "tag": "trojan_tls_tcp",
       "type": "trojan",
       "server": "35.180.6.93",
-      "server_port": 2222,
+      "server_port": 22222,
       "password": "telegram-id-privatevpns",
       "tls": {
         "enabled": true,
