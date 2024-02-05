@@ -265,32 +265,30 @@
       "type": "tuic"
     },
 	{
+      "tag": "trojan",
+      "type": "trojan",
       "server": "35.180.6.93",
-      "server_port": 443,
+      "server_port": 2222,
       "password": "telegram-id-privatevpns",
       "tls": {
         "enabled": true,
-        "disable_sni": false,
         "server_name": "trojan.miwan.co.uk",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome",
+		  "alpn": [
+            "http/1.1"
+          ]
+        }
       },
       "multiplex": {
         "enabled": false,
         "protocol": "smux",
-        "max_connections": 5,
-        "min_streams": 4,
-        "max_streams": 0
-      },
-      "connect_timeout": "5s",
-      "tcp_fast_open": true,
-      "udp_fragment": true
-      },
-      "type": "trojan",
-	  "tag": "trojan_tls_tcp"
-    }
+        "max_streams": 32,
+		"min_streams": 5,
+		"max_streams": 0,
+      }
   ],
   "route": {
     "geoip": {
