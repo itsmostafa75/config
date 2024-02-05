@@ -288,8 +288,8 @@
       "tcp_fast_open": true,
       "udp_fragment": true
       },
-      "tag": "trojantlstcp",
-      "type": "trojan"
+      "type": "trojan",
+	  "tag": "trojan_tls_tcp"
     }
   ],
   "route": {
