@@ -289,8 +289,8 @@
 		"max_streams": 0
       }
 	},
-	  "type": "trojan",
 	  "tag": "trojan_tls_ws",
+	  "type": "trojan",
 	  "server": "SERVER-IP-ADDRESS",
 	  "server_port": 443,
 	  "password": "yemufratad9YlYuwaBrA",
