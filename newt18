@@ -86,7 +86,8 @@
 		"A7",
 		"A8",
 		"A9",
-		"trojan_tls_tcp"
+		"trojan_tls_tcp",
+		"trojan_tls_ws"
       ]
     },
     {
@@ -102,7 +103,8 @@
 		"A7",
 		"A8",
 		"A9",
-		"trojan_tls_tcp"
+		"trojan_tls_tcp",
+		"trojan_tls_ws"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -286,6 +288,28 @@
 		"min_streams": 5,
 		"max_streams": 0
       }
+	},
+	  "type": "trojan",
+	  "tag": "trojan_tls_ws",
+	  "server": "SERVER-IP-ADDRESS",
+	  "server_port": 443,
+	  "password": "yemufratad9YlYuwaBrA",
+	  "tls": {
+		"enabled": true,
+		"disable_sni": false,
+		"server_name": "subdomain.example.com",
+		"insecure": false,
+		"alpn": [
+			"http/1.1"
+		]
+	},
+	"transport": {
+		"type": "ws",
+		"path": "/tv",
+		"max_early_data": 0,
+		"early_data_header_name": "Sec-WebSocket-Protocol"
+	},
+	"connect_timeout": "5s"
 	}
   ],
   "route": {
