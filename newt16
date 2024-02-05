@@ -265,7 +265,7 @@
       "type": "tuic"
     },
 	{
-      "tag": "trojan",
+      "tag": "trojan_tls_tcp",
       "type": "trojan",
       "server": "35.180.6.93",
       "server_port": 2222,
