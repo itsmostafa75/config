@@ -277,9 +277,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome",
-		  "alpn": [
-            "http/1.1"
-          ]
         }
       },
       "multiplex": {
