@@ -288,7 +288,7 @@
         "max_streams": 32,
 		"min_streams": 5,
 		"max_streams": 0,
-      }
+    }
   ],
   "route": {
     "geoip": {
