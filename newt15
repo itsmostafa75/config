@@ -276,7 +276,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome",
+          "fingerprint": "chrome"
         }
       },
       "multiplex": {
