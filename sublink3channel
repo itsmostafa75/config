@@ -85,8 +85,7 @@
 		"A6",
 		"A7",
 		"A8",
-		"A9",
-		"A10"
+		"A9"
       ]
     },
     {
@@ -101,8 +100,7 @@
 		"A6",
 		"A7",
 		"A8",
-		"A9",
-		"A10"
+		"A9"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -182,21 +180,6 @@
       "type": "hysteria2"
     },
 	{
-      "server": "51.222.12.75",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "password": "2f1b122607f533dc",
-      "obfs": {
-        "type": "salamander",
-        "password": "7925a5b3071cb35f"
-      },
-      "tag": "A5",
-      "type": "hysteria2"
-    },
-	{
       "server": "[2607:5300:205:200::1926]",
       "server_port": 443,
       "tls": {
@@ -208,7 +191,7 @@
              "type": "salamander",
         "password": "7925a5b3071cb35f"
       },
-      "tag": "A6",
+      "tag": "A5",
       "type": "hysteria2"
     },
 	{        
@@ -223,7 +206,7 @@
         "type": "salamander",
         "password": "05462d067f21387c"
       },
-      "tag": "A7",
+      "tag": "A6",
       "type": "hysteria2"
     },
 	{
@@ -238,7 +221,7 @@
         "type": "salamander",
         "password": "05462d067f21387c"
       },
-      "tag": "A8",
+      "tag": "A7",
       "type": "hysteria2"
     },
 	{
@@ -253,7 +236,7 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
-      "tag": "A9",
+      "tag": "A8",
       "type": "hysteria2"
     },
 	{
@@ -268,7 +251,7 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
-      "tag": "A10",
+      "tag": "A9",
       "type": "hysteria2"
     }
   ],
