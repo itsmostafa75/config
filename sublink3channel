@@ -83,7 +83,10 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
+		"A7",
+		"A8",
+		"A9",
+		"A10"
       ]
     },
     {
@@ -96,7 +99,10 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
+		"A7",
+		"A8",
+		"A9",
+		"A10"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -116,31 +122,31 @@
     },
    
     {
-      "server": "92.246.139.15",
+      "server": "147.45.76.99",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "04979c3cfe2a7945",
+      "password": "cef1e7a47565b431",
       "obfs": {
         "type": "salamander",
-        "password": "205ef172277d3292"
+        "password": "2c5ef5135559d4f5"
       },
       "tag": "A1",
       "type": "hysteria2"
     },
     {
-      "server": "51.222.12.75",
+      "server": "[2a12:5940:42c5::2]",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "2f1b122607f533dc",
+      "password": "cef1e7a47565b431",
       "obfs": {
         "type": "salamander",
-        "password": "7925a5b3071cb35f"
+        "password": "2c5ef5135559d4f5"
       },
       "tag": "A2",
       "type": "hysteria2"
@@ -161,6 +167,36 @@
       "type": "hysteria2"
     },
 	{
+      "server": "[2600:3c09::f03c:94ff:febd:e353]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true, 
+        "insecure": true
+      },
+      "password": "45fee9f969ede5cf",
+      "obfs": {
+             "type": "salamander",
+        "password": "d73fedd93ae03557"
+      },
+      "tag": "A4",
+      "type": "hysteria2"
+    },
+	{
+      "server": "51.222.12.75",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "2f1b122607f533dc",
+      "obfs": {
+        "type": "salamander",
+        "password": "7925a5b3071cb35f"
+      },
+      "tag": "A5",
+      "type": "hysteria2"
+    },
+	{
       "server": "[2607:5300:205:200::1926]",
       "server_port": 443,
       "tls": {
@@ -172,26 +208,11 @@
              "type": "salamander",
         "password": "7925a5b3071cb35f"
       },
-      "tag": "A4",
+      "tag": "A6",
       "type": "hysteria2"
     },
-	{
-      "server": "[2a12:5940:9acf::2]",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "password": "04979c3cfe2a7945",
-      "obfs": {
-        "type": "salamander",
-        "password": "205ef172277d3292"
-      },
-      "tag": "A5",
-      "type": "hysteria2"
-    },
-	{
-      "server": "95.217.211.216",
+	{        
+	  "server": "95.217.211.216",
       "server_port": 443,
       "tls": {
         "enabled": true,
@@ -202,7 +223,7 @@
         "type": "salamander",
         "password": "05462d067f21387c"
       },
-      "tag": "A6",
+      "tag": "A7",
       "type": "hysteria2"
     },
 	{
@@ -217,7 +238,37 @@
         "type": "salamander",
         "password": "05462d067f21387c"
       },
-      "tag": "A7",
+      "tag": "A8",
+      "type": "hysteria2"
+    },
+	{
+      "server": "147.45.76.116",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "7929508208061157",
+      "obfs": {
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
+      },
+      "tag": "A9",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2a12:5940:42d8::2]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "7929508208061157",
+      "obfs": {
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
+      },
+      "tag": "A10",
       "type": "hysteria2"
     }
   ],
