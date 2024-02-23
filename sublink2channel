@@ -1,7 +1,322 @@
-hy2://7929508208061157@147.45.76.116:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=6cc525a9a7a2eb6c#%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%D8%8C%D8%AE%D8%A7%D9%86%DA%AF%DB%8C%20%DB%8C%DA%A9
-hy2://cef1e7a47565b431@147.45.76.99:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=2c5ef5135559d4f5#%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%D8%8C%D8%AE%D8%A7%D9%86%DA%AF%DB%8C%20%D8%AF%D9%88
-hy2://d209a78e3272cbeb@147.45.76.180:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=b1752cdc49b48a29#%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%D8%8C%D8%AE%D8%A7%D9%86%DA%AF%DB%8C%20%D8%B3%D9%87
-hy2://7929508208061157@[2a12:5940:42d8::2]:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=6cc525a9a7a2eb6c#%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84%20%DB%8C%DA%A9
-hy2://cef1e7a47565b431@[2a12:5940:42c5::2]:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=2c5ef5135559d4f5#%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84%20%D8%AF%D9%88
-hy2://d209a78e3272cbeb@[2a12:5940:431d::2]:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=b1752cdc49b48a29#%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84%20%D8%B3%D9%87
-hy2://2f1b122607f533dc@[2607:5300:205:200::1926]:443/?insecure=1&sni=www.google.com&obfs=salamander&obfs-password=7925a5b3071cb35f#%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84%20%DA%86%D9%87%D8%A7%D8%B1
+
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "1.1.1.1",
+        "detour": "select"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+
+      {
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
+      },
+      {
+        "server": "localDns",
+        "clash_mode": "direct"
+      },
+      {
+        "server": "proxyDns",
+        "clash_mode": "global"
+      }
+
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "sniff": true,
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 1081
+    },
+    {
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "strict_route": true,
+      "type": "tun",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 1081
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "A1",
+        "A2",
+        "A3",
+		"A4",
+		"A5",
+		"A6",
+		"A7",
+		"A8",
+		"A9"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "A1",
+        "A2",
+        "A3",
+		"A4",
+		"A5",
+		"A6",
+		"A7",
+		"A8",
+		"A9"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+   
+    {
+      "server": "147.45.76.99",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "cef1e7a47565b431",
+      "obfs": {
+        "type": "salamander",
+        "password": "2c5ef5135559d4f5"
+      },
+      "tag": "A1",
+      "type": "hysteria2"
+    },
+    {
+      "server": "[2a12:5940:42c5::2]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "cef1e7a47565b431",
+      "obfs": {
+        "type": "salamander",
+        "password": "2c5ef5135559d4f5"
+      },
+      "tag": "A2",
+      "type": "hysteria2"
+    },
+    {
+      "server": "172.232.133.213",
+      "server_port": 443,
+      "tls": {
+        "enabled": true, 
+        "insecure": true
+      },
+      "password": "45fee9f969ede5cf",
+      "obfs": {
+             "type": "salamander",
+        "password": "d73fedd93ae03557"
+      },
+      "tag": "A3",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2600:3c09::f03c:94ff:febd:e353]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true, 
+        "insecure": true
+      },
+      "password": "45fee9f969ede5cf",
+      "obfs": {
+             "type": "salamander",
+        "password": "d73fedd93ae03557"
+      },
+      "tag": "A4",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2607:5300:205:200::1926]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true, 
+        "insecure": true
+      },
+      "password": "2f1b122607f533dc",
+      "obfs": {
+             "type": "salamander",
+        "password": "7925a5b3071cb35f"
+      },
+      "tag": "A5",
+      "type": "hysteria2"
+    },
+	{        
+	  "server": "95.217.211.216",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "536a1e178ea00bf2",
+      "obfs": {
+        "type": "salamander",
+        "password": "05462d067f21387c"
+      },
+      "tag": "A6",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2a01:4f9:c012:c3fd::1]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "536a1e178ea00bf2",
+      "obfs": {
+        "type": "salamander",
+        "password": "05462d067f21387c"
+      },
+      "tag": "A7",
+      "type": "hysteria2"
+    },
+	{
+      "server": "147.45.76.116",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "7929508208061157",
+      "obfs": {
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
+      },
+      "tag": "A8",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2a12:5940:42d8::2]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "7929508208061157",
+      "obfs": {
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
+      },
+      "tag": "A9",
+      "type": "hysteria2"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+  "external_controller": "127.0.0.1:9090",
+  "external_ui": "",
+  "external_ui_download_url": "",
+  "external_ui_download_detour": "",
+  "secret":"",
+  "default_mode": ""
+
+    }
+  }
+}
+async function handleRequest(request) {
+  const endpoints = [
+    "https://raw.githubusercontent.com/itsmostafa75/config/main/sublink3channel"
+  ];
+
+  const responses = [];
+
+  for (const endpoint of endpoints) {
+    if (endpoint.startsWith("http://") || endpoint.startsWith("https://")) {
+      try {
+        const response = await fetch(endpoint);
+
+        if (!response.ok) {
+          console.log(response);
+          throw new Error(`Failed to fetch ${endpoint}. Status: ${response.status}`);
+        }
+
+        const content = await response.text();
+
+        if (isBase64(content)) {
+          // If content is in base64 format, decode it
+          const decodedContent = atob(content);
+          responses.push(decodedContent);
+        } else {
+          responses.push(content);
+        }
+      } catch (error) {
+        responses.push("Error fetching content: " + error.message);
+      }
+    } else {
+      responses.push(endpoint);
+    }
+  }
+
+  return new Response(responses.join("\n"), { status: 200, headers: { "Content-Type": "text/plain" } });
+}
+
+// Function to check if a string is base64 encoded
+function isBase64(str) {
+  try {
+    return btoa(atob(str)) === str;
+  } catch (err) {
+    return false;
+  }
+}
+
+addEventListener("fetch", (event) => {
+  event.respondWith(handleRequest(event.request));
+});
