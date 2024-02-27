@@ -83,9 +83,7 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7",
-		"A8",
-		"A9"
+		"A7"
       ]
     },
     {
@@ -98,9 +96,7 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7",
-		"A8",
-		"A9"
+		"A7"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -149,36 +145,6 @@
       "tag": "A2",
       "type": "hysteria2"
     },
-    {
-      "server": "172.232.133.213",
-      "server_port": 443,
-      "tls": {
-        "enabled": true, 
-        "insecure": true
-      },
-      "password": "45fee9f969ede5cf",
-      "obfs": {
-             "type": "salamander",
-        "password": "d73fedd93ae03557"
-      },
-      "tag": "A3",
-      "type": "hysteria2"
-    },
-	{
-      "server": "[2600:3c09::f03c:94ff:febd:e353]",
-      "server_port": 443,
-      "tls": {
-        "enabled": true, 
-        "insecure": true
-      },
-      "password": "45fee9f969ede5cf",
-      "obfs": {
-             "type": "salamander",
-        "password": "d73fedd93ae03557"
-      },
-      "tag": "A4",
-      "type": "hysteria2"
-    },
 	{
       "server": "[2607:5300:205:200::1926]",
       "server_port": 443,
@@ -191,37 +157,37 @@
              "type": "salamander",
         "password": "7925a5b3071cb35f"
       },
-      "tag": "A5",
+      "tag": "A3",
       "type": "hysteria2"
     },
-	{        
-	  "server": "95.217.211.216",
+    {        
+	  "server": "147.45.76.180",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "536a1e178ea00bf2",
+      "password": "d209a78e3272cbeb",
       "obfs": {
         "type": "salamander",
-        "password": "05462d067f21387c"
+        "password": "b1752cdc49b48a29"
       },
-      "tag": "A6",
+      "tag": "A4",
       "type": "hysteria2"
     },
 	{
-      "server": "[2a01:4f9:c012:c3fd::1]",
+      "server": "[2a12:5940:431d::2]",
       "server_port": 443,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "536a1e178ea00bf2",
+      "password": "d209a78e3272cbeb",
       "obfs": {
         "type": "salamander",
-        "password": "05462d067f21387c"
+        "password": "b1752cdc49b48a29"
       },
-      "tag": "A7",
+      "tag": "A5",
       "type": "hysteria2"
     },
 	{
@@ -236,7 +202,7 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
-      "tag": "A8",
+      "tag": "A6",
       "type": "hysteria2"
     },
 	{
@@ -251,7 +217,7 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
-      "tag": "A9",
+      "tag": "A7",
       "type": "hysteria2"
     }
   ],
@@ -271,52 +237,3 @@
     }
   }
 }
-async function handleRequest(request) {
-  const endpoints = [
-    "https://raw.githubusercontent.com/itsmostafa75/config/main/sublink3channel"
-  ];
-
-  const responses = [];
-
-  for (const endpoint of endpoints) {
-    if (endpoint.startsWith("http://") || endpoint.startsWith("https://")) {
-      try {
-        const response = await fetch(endpoint);
-
-        if (!response.ok) {
-          console.log(response);
-          throw new Error(`Failed to fetch ${endpoint}. Status: ${response.status}`);
-        }
-
-        const content = await response.text();
-
-        if (isBase64(content)) {
-          // If content is in base64 format, decode it
-          const decodedContent = atob(content);
-          responses.push(decodedContent);
-        } else {
-          responses.push(content);
-        }
-      } catch (error) {
-        responses.push("Error fetching content: " + error.message);
-      }
-    } else {
-      responses.push(endpoint);
-    }
-  }
-
-  return new Response(responses.join("\n"), { status: 200, headers: { "Content-Type": "text/plain" } });
-}
-
-// Function to check if a string is base64 encoded
-function isBase64(str) {
-  try {
-    return btoa(atob(str)) === str;
-  } catch (err) {
-    return false;
-  }
-}
-
-addEventListener("fetch", (event) => {
-  event.respondWith(handleRequest(event.request));
-});
