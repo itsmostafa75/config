@@ -83,7 +83,8 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
+		"A7",
+		"A8"
       ]
     },
     {
@@ -96,8 +97,9 @@
 		"A4",
 		"A5",
 		"A6",
-		"A7"
-      ],
+		"A7",
+		"A8"
+	  ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
       "tolerance": 50
@@ -145,21 +147,6 @@
       "tag": "A2",
       "type": "hysteria2"
     },
-	{
-      "server": "[2607:5300:205:200::1926]",
-      "server_port": 443,
-      "tls": {
-        "enabled": true, 
-        "insecure": true
-      },
-      "password": "2f1b122607f533dc",
-      "obfs": {
-             "type": "salamander",
-        "password": "7925a5b3071cb35f"
-      },
-      "tag": "A3",
-      "type": "hysteria2"
-    },
     {        
 	  "server": "147.45.76.180",
       "server_port": 443,
@@ -172,7 +159,7 @@
         "type": "salamander",
         "password": "b1752cdc49b48a29"
       },
-      "tag": "A4",
+      "tag": "A3",
       "type": "hysteria2"
     },
 	{
@@ -187,7 +174,7 @@
         "type": "salamander",
         "password": "b1752cdc49b48a29"
       },
-      "tag": "A5",
+      "tag": "A4",
       "type": "hysteria2"
     },
 	{
@@ -202,7 +189,7 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
-      "tag": "A6",
+      "tag": "A5",
       "type": "hysteria2"
     },
 	{
@@ -217,7 +204,37 @@
         "type": "salamander",
         "password": "6cc525a9a7a2eb6c"
       },
+      "tag": "A6",
+      "type": "hysteria2"
+    },
+	{
+      "server": "[2001:19f0:6c00:18a6:5400:4ff:fea5:2404]",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "d00a010295b3a605",
+      "obfs": {
+        "type": "salamander",
+        "password": "c12bb8b9c19024c2"
+      },
       "tag": "A7",
+      "type": "hysteria2"
+    },
+	{
+      "server": "95.179.255.19",
+      "server_port": 443,
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "password": "d00a010295b3a605",
+      "obfs": {
+        "type": "salamander",
+        "password": "c12bb8b9c19024c2"
+      },
+      "tag": "A8",
       "type": "hysteria2"
     }
   ],
