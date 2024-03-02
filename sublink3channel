@@ -208,7 +208,7 @@
       "type": "hysteria2"
     },
 	{
-      "server": "[2001:19f0:6c00:18a6:5400:4ff:fea5:2404]",
+      "server": "95.179.255.19",
       "server_port": 443,
       "tls": {
         "enabled": true,
@@ -223,7 +223,7 @@
       "type": "hysteria2"
     },
 	{
-      "server": "95.179.255.19",
+      "server": "[2001:19f0:6c00:18a6:5400:4ff:fea5:2404]",
       "server_port": 443,
       "tls": {
         "enabled": true,
