@@ -99,7 +99,7 @@
 		"A6",
 		"A7",
 		"A8"
-	  ],
+      ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
       "tolerance": 50
@@ -117,125 +117,141 @@
       "type": "dns"
     },
    
-    {
-      "server": "147.45.76.99",
-      "server_port": 443,
+	{
+      "server": "91.108.241.3",
+      "server_port": 34344,
+      "uuid": "fa98ccdf-157f-4b0a-9c10-8430f4f94411",
+	  "password": "2c87a5bf9e45f2b2",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
-      },
-      "password": "cef1e7a47565b431",
-      "obfs": {
-        "type": "salamander",
-        "password": "2c5ef5135559d4f5"
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
       "tag": "A1",
-      "type": "hysteria2"
+      "type": "tuic"
     },
     {
-      "server": "[2a12:5940:42c5::2]",
-      "server_port": 443,
+      "server": "[2a12:5940:777f::2]",
+      "server_port": 34344,
+      "uuid": "fa98ccdf-157f-4b0a-9c10-8430f4f94411",
+	  "password": "2c87a5bf9e45f2b2",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
-      },
-      "password": "cef1e7a47565b431",
-      "obfs": {
-        "type": "salamander",
-        "password": "2c5ef5135559d4f5"
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
       "tag": "A2",
-      "type": "hysteria2"
+      "type": "tuic"
     },
-    {        
-	  "server": "147.45.76.180",
-      "server_port": 443,
+	{
+      "server": "147.45.76.180",
+      "server_port": 29393,
+      "uuid": "c3c8a581-25c3-41a8-95bd-0188f63748b9",
+	  "password": "01e584f913b01ca8",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
-      },
-      "password": "d209a78e3272cbeb",
-      "obfs": {
-        "type": "salamander",
-        "password": "b1752cdc49b48a29"
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
       "tag": "A3",
-      "type": "hysteria2"
+      "type": "tuic"
     },
 	{
       "server": "[2a12:5940:431d::2]",
-      "server_port": 443,
+      "server_port": 29393,
+      "uuid": "c3c8a581-25c3-41a8-95bd-0188f63748b9",
+	  "password": "01e584f913b01ca8",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
-      },
-      "password": "d209a78e3272cbeb",
-      "obfs": {
-        "type": "salamander",
-        "password": "b1752cdc49b48a29"
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
       "tag": "A4",
-      "type": "hysteria2"
+      "type": "tuic"
+    },
+	{
+      "server": "147.45.76.99",
+      "server_port": 48282,
+      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
+	  "password": "c515252362b009f5",
+      "congestion_control": "bbr",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
+      },
+      "tag": "A5",
+      "type": "tuic"
+    },
+	{
+      "server": "[2a12:5940:42c5::2]",
+      "server_port": 48282,
+      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
+	  "password": "c515252362b009f5",
+      "congestion_control": "bbr",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
+      },
+      "tag": "A6",
+      "type": "tuic"
     },
 	{
       "server": "147.45.76.116",
-      "server_port": 443,
+      "server_port": 54833,
+      "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
+	  "password": "3e53ddf7839c5112",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
-      "password": "7929508208061157",
-      "obfs": {
-        "type": "salamander",
-        "password": "6cc525a9a7a2eb6c"
-      },
-      "tag": "A5",
-      "type": "hysteria2"
+      "tag": "A7",
+      "type": "tuic"
     },
 	{
       "server": "[2a12:5940:42d8::2]",
-      "server_port": 443,
+      "server_port": 54833,
+      "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
+	  "password": "3e53ddf7839c5112",
+      "congestion_control": "bbr",
       "tls": {
         "enabled": true,
-        "insecure": true
-      },
-      "password": "7929508208061157",
-      "obfs": {
-        "type": "salamander",
-        "password": "6cc525a9a7a2eb6c"
-      },
-      "tag": "A6",
-      "type": "hysteria2"
-    },
-	{
-      "server": "95.179.255.19",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "password": "d00a010295b3a605",
-      "obfs": {
-        "type": "salamander",
-        "password": "c12bb8b9c19024c2"
-      },
-      "tag": "A7",
-      "type": "hysteria2"
-    },
-	{
-      "server": "[2001:19f0:6c00:18a6:5400:4ff:fea5:2404]",
-      "server_port": 443,
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "password": "d00a010295b3a605",
-      "obfs": {
-        "type": "salamander",
-        "password": "c12bb8b9c19024c2"
+        "insecure": true,
+		"alpn": [
+			"h3",
+			"spdy/3.1"
+		]
       },
       "tag": "A8",
-      "type": "hysteria2"
+      "type": "tuic"
     }
   ],
   "route": {
