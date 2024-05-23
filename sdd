@@ -9,7 +9,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "94.140.14.14",
+        "address": "udp://1.1.1.1",
         "address_resolver":"dns-direct"
       },
       {
