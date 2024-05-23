@@ -9,12 +9,12 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "https://8.8.8.8/dns-query",
+        "address": "94.140.14.14",
         "detour": "select"
       },
       {
         "tag": "localDns",
-        "address": "223.5.5.5",
+        "address": "8.8.8.8",
         "detour": "direct"
       },
       {
