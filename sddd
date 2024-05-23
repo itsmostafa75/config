@@ -14,13 +14,13 @@
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "udp://1.1.1.1",
         "address_resolver":"dns-local",
         "detour": "direct"
       },
       {
         "tag": "dns-local",
-        "address": "8.8.8.8",
+        "address": "udp://8.8.8.8",
         "detour": "direct"
       },
       {
