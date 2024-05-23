@@ -9,7 +9,7 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "1.1.1.1",
+        "address": "https://1.1.1.1/dns-query",
         "detour": "select"
       },
       {
