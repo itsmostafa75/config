@@ -9,18 +9,18 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "udp://1.1.1.1",
+        "address": "94.140.14.14",
         "address_resolver":"dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "udp://1.1.1.1",
+        "address": "94.140.14.14",
         "address_resolver":"dns-local",
         "detour": "direct"
       },
       {
         "tag": "dns-local",
-        "address": "udp://1.1.1.1",
+        "address": "94.140.14.14",
         "detour": "direct"
       },
       {
