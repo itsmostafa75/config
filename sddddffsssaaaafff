@@ -239,6 +239,75 @@
     }
   ],
   "route": {
+    "geoip": {
+            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https://github.com\/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
+            "download_detour": "direct"
+        },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "ir",
+                    "private",
+                    "arvancloud"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "malware",
+                    "phishing",
+                    "cryptominers"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "malware",
+                    "phishing"
+                ],
+                "outbound": "block"
+            }
+
+    ],
     "auto_detect_interface": true,
     "final": "select"
   },
