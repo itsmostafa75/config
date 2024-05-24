@@ -8,24 +8,17 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns-remote",
+        "tag": "proxyDns",
         "address": "udp://185.228.168.9",
-        "address_resolver":"dns-direct"
+        "detour": "select"
       },
       {
-        "tag": "dns-direct",
-        "address": "https://sky.rethinkdns.com/",
-        "address_resolver":"dns-local",
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
         "detour": "direct"
       },
       {
-        "tag": "dns-local",
-        "address": "https://sky.rethinkdns.com/",
-        "address_resolver":"dns-local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
+        "tag": "block",
         "address": "rcode://success"
       }
     ],
