@@ -9,18 +9,18 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "tls://8.8.8.8/dns-query",
+        "address": "udp://185.228.168.9",
         "address_resolver":"dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "tls://8.8.8.8/dns-query",
+        "address": "https://sky.rethinkdns.com/",
         "address_resolver":"dns-local",
         "detour": "direct"
       },
       {
         "tag": "dns-local",
-        "address": "tls://8.8.8.8/dns-query",
+        "address": "https://sky.rethinkdns.com/",
         "detour": "direct"
       },
       {
