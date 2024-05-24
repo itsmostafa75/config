@@ -8,17 +8,23 @@
   "dns": {
     "servers": [
       {
-        "tag": "proxyDns",
+        "tag": "dns-remote",
         "address": "udp://185.228.168.9",
-        "detour": "select"
+        "address_resolver": "dns-direct"
       },
       {
-        "tag": "localDns",
-        "address": "8.8.8.8",
+        "tag": "dns-direct",
+        "address": "auto",
+        "address_resolver": "dns-local",
         "detour": "direct"
       },
       {
-        "tag": "block",
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
         "address": "rcode://success"
       }
     ],
