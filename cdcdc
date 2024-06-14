@@ -159,13 +159,33 @@
       "tag": "block"
     }
   ],
-  "route": {
-    "geoip": {
-      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geoip.db"
-    },
-    "geosite": {
-      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geosite.db"
-    },
+  "route":{
+      "rule_set":[
+         {
+            "tag":"geoip-ir",
+            "type":"remote",
+            "format":"binary",
+            "download_detour":"select",
+            "update_interval":"1d",
+            "url":"https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geoip-ir.srs"
+         },
+         {
+            "tag":"geosite-ir",
+            "type":"remote",
+            "format":"binary",
+            "download_detour":"select",
+            "update_interval":"1d",
+            "url":"https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-ir.srs"
+         },
+ {
+            "tag":"geosite-category-ads-all",
+            "type":"remote",
+            "format":"binary",
+            "download_detour":"select",
+            "update_interval":"1d",
+            "url":"https://cdn.jsdelivr.net/gh/chocolate4u/Iran-sing-box-rules@rule-set/geosite-category-ads-all.srs"
+         }
+      ],
     "rules": [
       {
         "inbound": "dns-in",
@@ -179,6 +199,19 @@
         "clash_mode": "Direct",
         "outbound": "direct"
       },
+   {
+            "rule_set":[
+               "geoip-ir",
+               "geosite-ir"
+            ],
+            "outbound":"direct"
+         },
+ {
+            "rule_set":[
+               "geosite-category-ads-all"         
+           ],
+            "outbound":"block"
+         },
       {
         "clash_mode": "Global",
         "outbound": "select"
@@ -195,13 +228,14 @@
     "override_android_vpn": true
   },
   "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "clash.db"
-    },
     "clash_api": {
-      "external_controller": "127.0.0.1:6756",
-      "secret": "2zsdZrzLFwhT4Y1J"
+  "external_controller": "127.0.0.1:9090",
+  "external_ui": "",
+  "external_ui_download_url": "",
+  "external_ui_download_detour": "select",
+  "secret":"",
+  "default_mode": ""
+
     }
   }
 }
