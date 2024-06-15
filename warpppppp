@@ -377,7 +377,7 @@
       "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
     "password": "3e53ddf7839c5112",
       "congestion_control": "bbr",
-      "tls":
+      "tls": {
         "enabled": true,
         "insecure": true,
     "alpn": [
