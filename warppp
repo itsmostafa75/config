@@ -378,8 +378,8 @@
     "password": "3e53ddf7839c5112",
       "congestion_control": "bbr",
       "tls":
-        "enabled": true,
-        "insecure": true
+        "enabled": true
+        "insecure": true,
     "alpn": [
       "h3",
       "spdy/3.1"
