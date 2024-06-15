@@ -163,31 +163,31 @@
       "type": "hysteria2"
     },
 	{
-      "server": "147.45.76.99",
-      "server_port": 443,
+      "server": "77.221.152.43",
+      "server_port": 38281,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "cef1e7a47565b431",
+      "password": "4d83a87bc8debbbb",
       "obfs": {
         "type": "salamander",
-        "password": "2c5ef5135559d4f5"
+        "password": "83c4eb0cda31a9a1"
       },
       "tag": "A3",
       "type": "hysteria2"
     },
     {
-      "server": "[2a12:5940:42c5::2]",
-      "server_port": 443,
+      "server": "[2a0b:4140:55cf::2]",
+      "server_port": 38281,
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "password": "cef1e7a47565b431",
+      "password": "4d83a87bc8debbbb",
       "obfs": {
         "type": "salamander",
-        "password": "2c5ef5135559d4f5"
+        "password": "83c4eb0cda31a9a1"
       },
       "tag": "A4",
       "type": "hysteria2"
@@ -321,10 +321,10 @@
       "type": "tuic"
     },
     {
-      "server": "147.45.76.99",
-      "server_port": 48282,
-      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
-    "password": "c515252362b009f5",
+      "server": "77.221.152.43",
+      "server_port": 28211,
+      "uuid": "cf2b1e57-3831-4796-87c4-0829735b1f33",
+    "password": "4bb344e1f9855355",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
@@ -338,10 +338,10 @@
       "type": "tuic"
     },
     {
-      "server": "[2a12:5940:42c5::2]",
-      "server_port": 48282,
-      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
-    "password": "c515252362b009f5",
+      "server": "[2a0b:4140:55cf::2]",
+      "server_port": 28211,
+      "uuid": "cf2b1e57-3831-4796-87c4-0829735b1f33",
+    "password": "4bb344e1f9855355",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
@@ -377,7 +377,7 @@
       "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
     "password": "3e53ddf7839c5112",
       "congestion_control": "bbr",
-      "tls": {
+      "tls":
         "enabled": true,
         "insecure": true,
     "alpn": [
