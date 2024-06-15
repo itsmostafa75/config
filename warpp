@@ -379,7 +379,7 @@
       "congestion_control": "bbr",
       "tls":
         "enabled": true,
-        "insecure": true,
+        "insecure": true
     "alpn": [
       "h3",
       "spdy/3.1"
