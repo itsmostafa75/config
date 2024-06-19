@@ -32,18 +32,6 @@
         "address": "rcode://success"
       }
     ],
-    "rules": [
-      {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "server": "dns-direct"
-      },
-      {
-        "domain": "http://cp.cloudflare.com",
-        "server": "dns-remote",
-        "rewrite_ttl": 3000
-      }
-    ],
     "final": "dns-remote",
     "independent_cache": true
   },
