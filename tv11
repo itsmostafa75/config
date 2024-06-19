@@ -445,34 +445,7 @@
       "tag": "block"
     }
   ],
-  "route":{
-      "rule_set":[
-         {
-            "tag":"geoip-ir",
-            "type":"remote",
-            "format":"binary",
-            "download_detour":"select",
-            "update_interval":"1d",
-            "url":"https://github.com/itsmostafa75/rules-files/raw/main/geoip-ir.srs"
-         },
-         {
-            "tag":"geosite-ir",
-            "type":"remote",
-            "format":"binary",
-            "download_detour":"select",
-            "update_interval":"1d",
-            "url":"https://github.com/itsmostafa75/rules-files/raw/main/geosite-ir.srs"
-         },
-         {
-            "tag":"geosite-category-ads-all",
-            "type":"remote",
-            "format":"binary",
-            "download_detour":"select",
-            "update_interval":"1d",
-            "url":"https://github.com/itsmostafa75/rules-files/raw/main/geosite-category-ads-all.srs"
-         }
-      ],
-    "rules": [
+  "rules": [
 	  {
         "inbound": "dns-in",
         "outbound": "dns-out"
