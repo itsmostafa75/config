@@ -174,7 +174,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 2)- www.speedtest.net",
+        "remarks": "(use only active fragment 2)",
         "log": {
             "loglevel": "warning"
         },
@@ -348,7 +348,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 3)- zula.ir",
+        "remarks": "(use only active fragment 3)",
         "log": {
             "loglevel": "warning"
         },
@@ -522,7 +522,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 4)- digiclassor.ir",
+        "remarks": "(use only active fragment 4)",
         "log": {
             "loglevel": "warning"
         },
@@ -696,7 +696,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 5)- tgju.org",
+        "remarks": "(use only active fragment 5)",
         "log": {
             "loglevel": "warning"
         },
@@ -870,7 +870,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 6)- russian.people.com.cn",
+        "remarks": "(use only active fragment 6)",
         "log": {
             "loglevel": "warning"
         },
@@ -1392,7 +1392,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 9)- [2606:4700:310c::ac42:2f79]",
+        "remarks": "(use only active fragment 9)",
         "log": {
             "loglevel": "warning"
         },
@@ -1566,7 +1566,7 @@
         "stats": {}
     },
     {
-        "remarks": "(use only active fragment 10)- [2606:4700:310c::ac42:2c87]",
+        "remarks": "(use only active fragment 10)",
         "log": {
             "loglevel": "warning"
         },
