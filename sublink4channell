@@ -1,5 +1,5 @@
 [
-{
+ {
   "remarks": "useonlyactivefragment1",
   "log": {
     "access": "",
@@ -148,8 +148,8 @@
       }
     ]
   }
-},
-{
+ },
+ {
   "remarks": "useonlyactivefragment2www.speedtest.net",
   "log": {
     "access": "",
@@ -298,5 +298,5 @@
       }
     ]
   }
-}
+ }
 ]
