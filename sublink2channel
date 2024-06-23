@@ -4,11 +4,16 @@
     "output": "box.log",
     "timestamp": true
   },
-  "dns": { 
+  "dns": {
+      "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    }, 
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "1.1.1.1",
+        "address": "udp://1.1.1.1",
         "address_resolver": "dns-direct"
       },
       {
@@ -237,9 +242,9 @@
     },
 	{
       "server": "91.108.241.3",
-      "server_port": 34344,
-      "uuid": "fa98ccdf-157f-4b0a-9c10-8430f4f94411",
-	  "password": "2c87a5bf9e45f2b2",
+      "server_port": 7483,
+      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
+	  "password": "a9eeefea83fd0a6c",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
@@ -254,9 +259,9 @@
     },
     {
       "server": "[2a12:5940:777f::2]",
-      "server_port": 34344,
-      "uuid": "fa98ccdf-157f-4b0a-9c10-8430f4f94411",
-	  "password": "2c87a5bf9e45f2b2",
+      "server_port": 7483,
+      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
+	  "password": "a9eeefea83fd0a6c",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
