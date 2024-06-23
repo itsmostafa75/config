@@ -1,6 +1,6 @@
 [
     {
-        "remarks": "use only active fragment 1- 820916cd.bpb-pa...",
+        "remarks": "(use only active fragment 1)",
         "log": {
             "loglevel": "warning"
         },
@@ -174,7 +174,7 @@
         "stats": {}
     },
     {
-        "remarks": "use only active fragment 2- www.speedtest.n...",
+        "remarks": "(use only active fragment 2)- www.speedtest.net",
         "log": {
             "loglevel": "warning"
         },
