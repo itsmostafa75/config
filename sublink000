@@ -400,8 +400,6 @@
 			  },
 			  "tag": "A16",
 			  "type": "tuic"
-			},
-
         },
 		{
 			  "type": "wireguard",
