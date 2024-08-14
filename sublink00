@@ -402,7 +402,7 @@
 			  "type": "tuic"
 			},
 
-        {,
+        },
 		{
 			  "type": "wireguard",
 			  "server": "162.159.192.121",
