@@ -152,9 +152,9 @@
 			  "server_port": 39292,
 			  "obfs": {
 				"type": "salamander",
-				"password": "f0126e9fe4014e17"
+				"password": "5449c086723e86d4"
 			  },
-			  "password": "5449c086723e86d4",
+			  "password": "f0126e9fe4014e17",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
