@@ -32,7 +32,8 @@
                 "domain_suffix": ".ir",
                 "server": "dns-direct",
                 "domain": [
-                    "root",
+                    "8f637407.new-bpb-worker-panel-4qa.pages.dev",
+                    "www.speedtest.net",
                     "speedtest.net",
                     "zula.ir",
                     "digiclassor.ir",
@@ -90,32 +91,34 @@
             "tag": "proxy",
             "outbounds": [
                 "Best-Ping 💥",
-                "root",
+                "Domain_1",
+                "Domain_2",
                 "IPv4_1",
                 "IPv4_2",
                 "IPv6_1",
                 "IPv6_2",
-                "speedtest.net",
-                "zula.ir",
-                "digiclassor.ir",
-                "tgju.org",
-                "russian.people.com.cn"
+                "IP_1",
+                "IP_2",
+                "IP_3",
+                "IP_4",
+                "IP_5"
             ]
         },
         {
             "type": "urltest",
             "tag": "Best-Ping 💥",
             "outbounds": [
-                "root",
+                "Domain_1",
+                "Domain_2",
                 "IPv4_1",
                 "IPv4_2",
                 "IPv6_1",
                 "IPv6_2",
-                "speedtest.net",
-                "zula.ir,
-                "digiclassor.ir",
-                "tgju.org",
-                "russian.people.com.cn"
+                "IP_1",
+                "IP_2",
+                "IP_3",
+                "IP_4",
+                "IP_5"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "30s",
@@ -161,7 +164,37 @@
                 "path": "/Mzc3uonpGEYVUm89",
                 "type": "ws"
             },
-            "tag": "root"
+            "tag": "Domain_1"
+        },
+        {
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": false,
+                "server_name": "8F637407.NEW-bpB-woRKEr-PaNEl-4qA.pagEs.DEV",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "8F637407.NEw-bpb-WoRKEr-PANel-4QA.pAGEs.DeV"
+                },
+                "path": "/vEHTEmf0ZQv4ZPJ7",
+                "type": "ws"
+            },
+            "tag": "Domain_2"
         },
         {
             "type": "vless",
@@ -311,7 +344,7 @@
                 "path": "/HxYjqK36Kj0Xu9NT",
                 "type": "ws"
             },
-            "tag": "speedtest.net"
+            "tag": "IP_1"
         },
         {
             "type": "vless",
@@ -341,7 +374,7 @@
                 "path": "/uneCHikNhxN2uKwj",
                 "type": "ws"
             },
-            "tag": "zula.ir"
+            "tag": "IP_2"
         },
         {
             "type": "vless",
@@ -371,7 +404,7 @@
                 "path": "/F7icB2t7VWbXh08e",
                 "type": "ws"
             },
-            "tag": "digiclassor.ir"
+            "tag": "IP_3"
         },
         {
             "type": "vless",
@@ -401,7 +434,7 @@
                 "path": "/YhAid4T0ZDwpmVH9",
                 "type": "ws"
             },
-            "tag": "tgju.org"
+            "tag": "IP_4"
         },
         {
             "type": "vless",
@@ -431,7 +464,7 @@
                 "path": "/vcqKf50rt9eMtng6",
                 "type": "ws"
             },
-            "tag": "russian.people.com.cn"
+            "tag": "IP_5"
         }
     ],
     "route": {
