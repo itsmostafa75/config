@@ -34,11 +34,9 @@
                 "domain": [
                     "8f637407.new-bpb-worker-panel-4qa.pages.dev",
                     "www.speedtest.net",
-                    "speedtest.net",
                     "zula.ir",
                     "digiclassor.ir",
-                    "tgju.org",
-                    "russian.people.com.cn"
+                    "tgju.org"
                 ]
             },
             {
@@ -99,9 +97,7 @@
                 "IPv6_2",
                 "IP_1",
                 "IP_2",
-                "IP_3",
-                "IP_4",
-                "IP_5"
+                "IP_3"
             ]
         },
         {
@@ -116,9 +112,7 @@
                 "IPv6_2",
                 "IP_1",
                 "IP_2",
-                "IP_3",
-                "IP_4",
-                "IP_5"
+                "IP_3"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "30s",
@@ -318,36 +312,6 @@
         },
         {
             "type": "vless",
-            "server": "speedtest.net",
-            "server_port": 443,
-            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-            "domain_strategy": "prefer_ipv6",
-            "packet_encoding": "",
-            "tls": {
-                "alpn": [
-                    "http/1.1"
-                ],
-                "enabled": true,
-                "insecure": false,
-                "server_name": "8f637407.neW-bpB-worKER-panel-4QA.paGEs.dEv",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "randomized"
-                }
-            },
-            "transport": {
-                "early_data_header_name": "Sec-WebSocket-Protocol",
-                "max_early_data": 2560,
-                "headers": {
-                    "Host": "8F637407.NEW-bpB-wOrKEr-PANEl-4qA.pAges.Dev"
-                },
-                "path": "/HxYjqK36Kj0Xu9NT",
-                "type": "ws"
-            },
-            "tag": "IP_1"
-        },
-        {
-            "type": "vless",
             "server": "zula.ir",
             "server_port": 443,
             "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -374,7 +338,7 @@
                 "path": "/uneCHikNhxN2uKwj",
                 "type": "ws"
             },
-            "tag": "IP_2"
+            "tag": "IP_1"
         },
         {
             "type": "vless",
@@ -404,7 +368,7 @@
                 "path": "/F7icB2t7VWbXh08e",
                 "type": "ws"
             },
-            "tag": "IP_3"
+            "tag": "IP_2"
         },
         {
             "type": "vless",
@@ -434,37 +398,7 @@
                 "path": "/YhAid4T0ZDwpmVH9",
                 "type": "ws"
             },
-            "tag": "IP_4"
-        },
-        {
-            "type": "vless",
-            "server": "russian.people.com.cn",
-            "server_port": 443,
-            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-            "domain_strategy": "prefer_ipv6",
-            "packet_encoding": "",
-            "tls": {
-                "alpn": [
-                    "http/1.1"
-                ],
-                "enabled": true,
-                "insecure": false,
-                "server_name": "8f637407.new-BPB-wOrKEr-pAneL-4Qa.pagEs.DEV",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "randomized"
-                }
-            },
-            "transport": {
-                "early_data_header_name": "Sec-WebSocket-Protocol",
-                "max_early_data": 2560,
-                "headers": {
-                    "Host": "8f637407.New-bpb-WorkER-panEL-4Qa.pAGeS.dEv"
-                },
-                "path": "/vcqKf50rt9eMtng6",
-                "type": "ws"
-            },
-            "tag": "IP_5"
+            "tag": "IP_3"
         }
     ],
     "route": {
