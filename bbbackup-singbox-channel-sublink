@@ -32,8 +32,7 @@
                 "domain_suffix": ".ir",
                 "server": "dns-direct",
                 "domain": [
-                    "8f637407.new-bpb-worker-panel-4qa.pages.dev",
-                    "www.speedtest.net",
+                    "root",
                     "speedtest.net",
                     "zula.ir",
                     "digiclassor.ir",
