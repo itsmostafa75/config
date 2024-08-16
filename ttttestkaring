@@ -1,6 +1,5 @@
 {
   "log": {
-    "level": "warn",
     "output": "box.log",
     "timestamp": true
   },
@@ -8,7 +7,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "udp://1.1.1.1",
+        "address": "",
         "address_resolver": "dns-direct"
       },
       {
@@ -18,7 +17,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -35,59 +34,56 @@
     "rules": [
       {
         "domain": [
+          "",
+          "8f637407.new-bpb-worker-panel-4qa.pages.dev",
+          "www.speedtest.net",
+          "[2606:4700:310c::ac42:2cfd]",
           "[2606:4700:310c::ac42:2f03]",
           "zula.ir",
           "digiclassor.ir",
-          "tgju.org",
-          "8f637407.new-bpb-worker-panel-4qa.pages.dev",
-          "www.speedtest.net",
-          "[2606:4700:310c::ac42:2cfd]"
+          "tgju.org"
         ],
         "server": "dns-direct"
       },
       {
-        "domain": "connectivitycheck.gstatic.com",
+        "domain": "",
         "server": "dns-remote",
         "rewrite_ttl": 3000
       },
       {
         "rule_set": [
-          "geoip-ir",
-          "geosite-ir"
+          "geoip-",
+          "geosite-"
         ],
         "server": "dns-direct"
       },
       {
-        "domain_suffix": ".ir",
+        "domain_suffix": ".",
         "server": "dns-direct"
       }
     ],
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "104.17.148.22",
         "104.17.147.22",
+        "104.17.148.22",
         "188.114.98.0",
         "188.114.99.0"
       ]
-    },
-    "independent_cache": true
+    }
   },
   "inbounds": [
     {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 12334,
       "sniff": true,
-      "sniff_override_destination": true,
-      "set_system_proxy": true
+      "sniff_override_destination": true
     },
     {
       "type": "direct",
       "tag": "dns-in",
-      "listen": "127.0.0.1",
-      "listen_port": 16450
+      "listen": "127.0.0.1"
     }
   ],
   "outbounds": [
@@ -122,20 +118,12 @@
         "IP_2",
         "IP_3"
       ],
-      "url": "http://connectivitycheck.gstatic.com/generate_204",
-      "interval": "10m0s",
-      "tolerance": 1,
-      "idle_timeout": "30m0s"
+      "tolerance": 1
     },
     {
       "type": "vless",
       "tag": "Domain_1",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "8f637407.new-bpb-worker-panel-4qa.pages.dev",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -145,12 +133,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -168,11 +151,6 @@
       "type": "vless",
       "tag": "Domain_2",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "www.speedtest.net",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -182,12 +160,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -205,11 +178,6 @@
       "type": "vless",
       "tag": "IPv4_1",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "172.66.47.3",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -219,12 +187,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -242,11 +205,6 @@
       "type": "vless",
       "tag": "IPv4_2",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "172.66.44.253",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -256,12 +214,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -279,11 +232,6 @@
       "type": "vless",
       "tag": "IPv6_1",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "[2606:4700:310c::ac42:2cfd]",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -293,12 +241,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -316,11 +259,6 @@
       "type": "vless",
       "tag": "IPv6_2",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "[2606:4700:310c::ac42:2f03]",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -330,12 +268,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -353,11 +286,6 @@
       "type": "vless",
       "tag": "IP_1",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "zula.ir",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -367,12 +295,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -390,11 +313,6 @@
       "type": "vless",
       "tag": "IP_2",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "digiclassor.ir",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -404,12 +322,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -427,11 +340,6 @@
       "type": "vless",
       "tag": "IP_3",
       "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
-      },
       "server": "tgju.org",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
@@ -441,12 +349,7 @@
         "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "custom"
-        },
-        "tls_tricks": {
-          "mixedcase_sni": true,
-          "padding_mode": "random",
-          "padding_size": "1-1500"
+          "fingerprint": "randomized"
         }
       },
       "transport": {
@@ -472,9 +375,7 @@
       "type": "direct",
       "tag": "direct-fragment",
       "tls_fragment": {
-        "enabled": true,
-        "size": "10-30",
-        "sleep": "2-8"
+        "enabled": true
       }
     },
     {
@@ -489,13 +390,13 @@
   "route": {
     "rules": [
       {
-        "domain": ".ir",
+        "domain": ".",
         "outbound": "direct"
       },
       {
         "rule_set": [
-          "geoip-ir",
-          "geosite-ir"
+          "geoip-",
+          "geosite-"
         ],
         "outbound": "direct"
       },
@@ -519,31 +420,21 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "geoip-ir",
+        "tag": "geoip-",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-.srs",
         "update_interval": "120h0m0s"
       },
       {
         "type": "remote",
-        "tag": "geosite-ir",
+        "tag": "geosite-",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-.srs",
         "update_interval": "120h0m0s"
       }
     ],
     "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "clash.db"
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:16756",
-      "secret": "Lip5AY50Whwjbd1g"
-    }
   }
 }
