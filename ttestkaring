@@ -1,0 +1,506 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "connectivitycheck.gstatic.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain_suffix": ".ir",
+        "server": "dns-direct"
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.99.0",
+        "188.114.98.0"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 12334,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "set_system_proxy": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 16450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "یک § 0",
+        "دو § 1",
+        "سه § 2",
+        "چهار § 3",
+        "پنج § 4",
+        "شش § 5",
+        "هفت § 6",
+        "هشت § 7",
+        "نه § 8",
+        "ده § 9",
+        "یازده § 10",
+        "دوازده § 11",
+        "سیزده § 12",
+        "چهارده § 13",
+        "پانزده § 14",
+        "شانزده § 15"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "یک § 0",
+        "دو § 1",
+        "سه § 2",
+        "چهار § 3",
+        "پنج § 4",
+        "شش § 5",
+        "هفت § 6",
+        "هشت § 7",
+        "نه § 8",
+        "ده § 9",
+        "یازده § 10",
+        "دوازده § 11",
+        "سیزده § 12",
+        "چهارده § 13",
+        "پانزده § 14",
+        "شانزده § 15"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "tolerance": 1,
+      "idle_timeout": "30m0s"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "یک § 0",
+      "server": "77.91.77.87",
+      "server_port": 37383,
+      "obfs": {
+        "type": "salamander",
+        "password": "f809a60274316cdd"
+      },
+      "password": "4eb5646f51e94a84",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "دو § 1",
+      "server": "2a12:5940:9ab8::2",
+      "server_port": 37383,
+      "obfs": {
+        "type": "salamander",
+        "password": "f809a60274316cdd"
+      },
+      "password": "4eb5646f51e94a84",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "سه § 2",
+      "server": "77.91.77.87",
+      "server_port": 38382,
+      "uuid": "2999e665-fa4e-498f-8417-4ab567010ed6",
+      "password": "aa69e32eae500e1c",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "چهار § 3",
+      "server": "2a12:5940:9ab8::2",
+      "server_port": 38382,
+      "uuid": "2999e665-fa4e-498f-8417-4ab567010ed6",
+      "password": "aa69e32eae500e1c",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "پنج § 4",
+      "server": "77.91.77.187",
+      "server_port": 47388,
+      "obfs": {
+        "type": "salamander",
+        "password": "15a519691a16a5d8"
+      },
+      "password": "f65c122897be1bff",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "شش § 5",
+      "server": "2a12:5940:aa9a::2",
+      "server_port": 47388,
+      "obfs": {
+        "type": "salamander",
+        "password": "15a519691a16a5d8"
+      },
+      "password": "f65c122897be1bff",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "هفت § 6",
+      "server": "77.91.77.187",
+      "server_port": 38383,
+      "uuid": "a223d4ab-2355-46e6-a455-e95ed843991a",
+      "password": "ae8e511e0d7b5a49",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "هشت § 7",
+      "server": "2a12:5940:aa9a::2",
+      "server_port": 38383,
+      "uuid": "a223d4ab-2355-46e6-a455-e95ed843991a",
+      "password": "ae8e511e0d7b5a49",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "نه § 8",
+      "server": "77.91.77.27",
+      "server_port": 39292,
+      "obfs": {
+        "type": "salamander",
+        "password": "5449c086723e86d4"
+      },
+      "password": "f0126e9fe4014e17",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ده § 9",
+      "server": "2a12:5940:9794::2",
+      "server_port": 39292,
+      "obfs": {
+        "type": "salamander",
+        "password": "5449c086723e86d4"
+      },
+      "password": "f0126e9fe4014e17",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "یازده § 10",
+      "server": "77.91.77.27",
+      "server_port": 39299,
+      "uuid": "72b15e67-6ae5-42ba-9518-2258d5bb300f",
+      "password": "cc5ce5f8e279f9ee",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "دوازده § 11",
+      "server": "2a12:5940:9794::2",
+      "server_port": 39299,
+      "uuid": "72b15e67-6ae5-42ba-9518-2258d5bb300f",
+      "password": "cc5ce5f8e279f9ee",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "سیزده § 12",
+      "server": "91.108.241.3",
+      "server_port": 21213,
+      "obfs": {
+        "type": "salamander",
+        "password": "c7480fdef414d9ac"
+      },
+      "password": "c18bc9611e532ced",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "چهارده § 13",
+      "server": "2a12:5940:777f::2",
+      "server_port": 21213,
+      "obfs": {
+        "type": "salamander",
+        "password": "c7480fdef414d9ac"
+      },
+      "password": "c18bc9611e532ced",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "پانزده § 14",
+      "server": "91.108.241.3",
+      "server_port": 7483,
+      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
+      "password": "a9eeefea83fd0a6c",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "شانزده § 15",
+      "server": "2a12:5940:777f::2",
+      "server_port": 7483,
+      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
+      "password": "a9eeefea83fd0a6c",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "heartbeat": "10s",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "domain": ".ir",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:16756",
+      "secret": "LNcqF2diED8iLnbH"
+    }
+  }
+}
