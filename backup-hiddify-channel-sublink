@@ -1,5 +1,6 @@
 {
   "log": {
+    "level": "warn",
     "output": "box.log",
     "timestamp": true
   },
@@ -7,7 +8,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "",
+        "address": "udp://1.1.1.1",
         "address_resolver": "dns-direct"
       },
       {
@@ -17,7 +18,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -34,31 +35,28 @@
     "rules": [
       {
         "domain": [
-          "",
+          "digiclassor.ir",
+          "tgju.org",
           "8f637407.new-bpb-worker-panel-4qa.pages.dev",
           "www.speedtest.net",
-          "[2606:4700:310c::ac42:2cfd]",
-          "[2606:4700:310c::ac42:2f03]",
-          "zula.ir",
-          "digiclassor.ir",
-          "tgju.org"
+          "zula.ir"
         ],
         "server": "dns-direct"
       },
       {
-        "domain": "",
+        "domain": "connectivitycheck.gstatic.com",
         "server": "dns-remote",
         "rewrite_ttl": 3000
       },
       {
         "rule_set": [
-          "geoip-",
-          "geosite-"
+          "geoip-ir",
+          "geosite-ir"
         ],
         "server": "dns-direct"
       },
       {
-        "domain_suffix": ".",
+        "domain_suffix": ".ir",
         "server": "dns-direct"
       }
     ],
@@ -70,20 +68,24 @@
         "188.114.98.0",
         "188.114.99.0"
       ]
-    }
+    },
+    "independent_cache": true
   },
   "inbounds": [
     {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
+      "listen_port": 12334,
       "sniff": true,
-      "sniff_override_destination": true
+      "sniff_override_destination": true,
+      "set_system_proxy": true
     },
     {
       "type": "direct",
       "tag": "dns-in",
-      "listen": "127.0.0.1"
+      "listen": "127.0.0.1",
+      "listen_port": 16450
     }
   ],
   "outbounds": [
@@ -92,15 +94,15 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "Domain_1",
-        "Domain_2",
-        "IPv4_1",
-        "IPv4_2",
-        "IPv6_1",
-        "IPv6_2",
-        "IP_1",
-        "IP_2",
-        "IP_3"
+        "Domain_1 :  § 0",
+        "Domain_2 :  § 1",
+        "IPv4_1 :  § 2",
+        "IPv4_2 :  § 3",
+        "IPv6_1 :  § 4",
+        "IPv6_2 :  § 5",
+        "IP_1 :  § 6",
+        "IP_2 :  § 7",
+        "IP_3 :  § 8"
       ],
       "default": "auto"
     },
@@ -108,29 +110,35 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "Domain_1",
-        "Domain_2",
-        "IPv4_1",
-        "IPv4_2",
-        "IPv6_1",
-        "IPv6_2",
-        "IP_1",
-        "IP_2",
-        "IP_3"
+        "Domain_1 :  § 0",
+        "Domain_2 :  § 1",
+        "IPv4_1 :  § 2",
+        "IPv4_2 :  § 3",
+        "IPv6_1 :  § 4",
+        "IPv6_2 :  § 5",
+        "IP_1 :  § 6",
+        "IP_2 :  § 7",
+        "IP_3 :  § 8"
       ],
-      "tolerance": 1
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "tolerance": 1,
+      "idle_timeout": "30m0s"
     },
     {
       "type": "vless",
-      "tag": "Domain_1",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "Domain_1 :  § 0",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "8f637407.new-bpb-worker-panel-4qa.pages.dev",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8f637407.NEw-Bpb-WorkEr-PANeL-4Qa.pAgES.DEV",
-        "alpn": "http/1.1",
+        "server_name": "8f637407.NeW-BpB-WorkER-PANel-4QA.PaGES.deV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -138,26 +146,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Mzc3uonpGEYVUm89",
+        "path": "/6biJxI6QokzDhVZk",
         "headers": {
-          "Host": "8f637407.NEW-bpb-WOrker-PaNEL-4QA.pageS.Dev"
+          "Host": "8F637407.nEW-bPb-WORkeR-PANeL-4Qa.PAgeS.dEV"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "Domain_2",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "Domain_2 :  § 1",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "www.speedtest.net",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.NEW-bpB-woRKEr-PaNEl-4qA.pagEs.DEV",
-        "alpn": "http/1.1",
+        "server_name": "8F637407.New-BPb-wORkeR-panEL-4qA.PagEs.DEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -165,26 +176,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/vEHTEmf0ZQv4ZPJ7",
+        "path": "/PGfNDv5HclDocGp8",
         "headers": {
-          "Host": "8F637407.NEw-bpb-WoRKEr-PANel-4QA.pAGEs.DeV"
+          "Host": "8F637407.nEw-BPB-wOrker-pAnel-4Qa.PAGEs.deV"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IPv4_1",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "IPv4_1 :  § 2",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "172.66.47.3",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.nEW-bPB-Worker-paNEl-4qA.PaGeS.dEv",
-        "alpn": "http/1.1",
+        "server_name": "8F637407.neW-bpb-Worker-pAnEL-4qA.PaGeS.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -192,26 +206,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/wFeNAmYNsr9C4Ngd",
+        "path": "/YcC8T62rNM1jIzNA",
         "headers": {
-          "Host": "8F637407.new-bpb-wORKer-paNEl-4QA.paGEs.DEv"
+          "Host": "8f637407.NEW-bPB-WoRkER-PaNeL-4qA.PAgES.dev"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IPv4_2",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "IPv4_2 :  § 3",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "172.66.44.253",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8f637407.NEw-bpB-WorkEr-panel-4qa.pagEs.dEv",
-        "alpn": "http/1.1",
+        "server_name": "8F637407.new-bPB-WOrkeR-PaneL-4Qa.pAGes.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -219,26 +236,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/4J4Fuin2Z3g6g4Wg",
+        "path": "/qbrpdllRfB3wFxXQ",
         "headers": {
-          "Host": "8f637407.NeW-BpB-WorKEr-pANEl-4Qa.PAgES.DeV"
+          "Host": "8f637407.NeW-BpB-WorKer-pAnel-4qA.pAgES.deV"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IPv6_1",
-      "domain_strategy": "prefer_ipv6",
-      "server": "[2606:4700:310c::ac42:2cfd]",
+      "tag": "IPv6_1 :  § 4",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
+      "server": "2606:4700:310c::ac42:2f03",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.new-bPB-wORKER-PaneL-4QA.PagES.dEV",
-        "alpn": "http/1.1",
+        "server_name": "8f637407.nEW-BPb-WOrKEr-PANel-4qa.Pages.Dev",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -246,26 +266,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/8bphYtgCcIzM3uSj",
+        "path": "/NbdnqMpJBLvlHdNL",
         "headers": {
-          "Host": "8f637407.NeW-bpB-WorKer-pANeL-4qA.pAgEs.deV"
+          "Host": "8F637407.NEw-Bpb-WoRKER-PanEL-4QA.PAGeS.Dev"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IPv6_2",
-      "domain_strategy": "prefer_ipv6",
-      "server": "[2606:4700:310c::ac42:2f03]",
+      "tag": "IPv6_2 :  § 5",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
+      "server": "2606:4700:310c::ac42:2cfd",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.NeW-BPb-Worker-PaneL-4qa.PAges.Dev",
-        "alpn": "http/1.1",
+        "server_name": "8f637407.NEw-bPB-wORKeR-PANel-4qa.PAGES.DEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -273,26 +296,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Dm0HvzMPRQjPKLs7",
+        "path": "/W4fGPT8MXMw2srkr",
         "headers": {
-          "Host": "8f637407.nEw-bPb-WORker-PAnEL-4QA.pageS.dEV"
+          "Host": "8f637407.NEw-BPB-Worker-PAnEl-4Qa.PagEs.Dev"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IP_1",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "IP_1 :  § 6",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "zula.ir",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.NeW-BPb-worKer-pANel-4qa.PAgEs.Dev",
-        "alpn": "http/1.1",
+        "server_name": "8f637407.neW-bPB-wORKer-PaNEL-4QA.pAGEs.Dev",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -300,26 +326,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/uneCHikNhxN2uKwj",
+        "path": "/1Maq8ICluzkEo8Zg",
         "headers": {
-          "Host": "8F637407.nEw-bPB-wOrKeR-PanEL-4QA.paGES.DEV"
+          "Host": "8f637407.NeW-BpB-wOrkER-PANeL-4qa.PAGeS.DEv"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IP_2",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "IP_2 :  § 7",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "digiclassor.ir",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8F637407.New-bpb-WOrKeR-PaNeL-4qa.pAges.Dev",
-        "alpn": "http/1.1",
+        "server_name": "8F637407.NEw-BpB-wOrkEr-PaNEL-4QA.PAges.DEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -327,26 +356,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/F7icB2t7VWbXh08e",
+        "path": "/eWb1bRDOGktIbnRN",
         "headers": {
-          "Host": "8f637407.neW-Bpb-WOrkEr-pANEl-4Qa.PaGes.DEV"
+          "Host": "8f637407.NEW-BpB-WORkeR-PANEl-4QA.pAgES.DEv"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "vless",
-      "tag": "IP_3",
-      "domain_strategy": "prefer_ipv6",
+      "tag": "IP_3 :  § 8",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      },
       "server": "tgju.org",
       "server_port": 443,
       "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
       "tls": {
         "enabled": true,
-        "server_name": "8f637407.NeW-bpb-wORkER-PaNEl-4Qa.pAGEs.deV",
-        "alpn": "http/1.1",
+        "server_name": "8F637407.new-bpB-wORKEr-pAneL-4qa.pages.DEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -354,14 +386,14 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/YhAid4T0ZDwpmVH9",
+        "path": "/fgZc8Pkq3nrCDtxM",
         "headers": {
-          "Host": "8f637407.new-BPb-wOrker-PaNel-4Qa.PaGeS.DeV"
+          "Host": "8F637407.new-bpB-WorKer-paNel-4qa.paGes.DeV"
         },
         "max_early_data": 2560,
         "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "packet_encoding": ""
+      "packet_encoding": "xudp"
     },
     {
       "type": "dns",
@@ -375,7 +407,9 @@
       "type": "direct",
       "tag": "direct-fragment",
       "tls_fragment": {
-        "enabled": true
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
       }
     },
     {
@@ -390,13 +424,13 @@
   "route": {
     "rules": [
       {
-        "domain": ".",
+        "domain": ".ir",
         "outbound": "direct"
       },
       {
         "rule_set": [
-          "geoip-",
-          "geosite-"
+          "geoip-ir",
+          "geosite-ir"
         ],
         "outbound": "direct"
       },
@@ -420,21 +454,31 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "geoip-",
+        "tag": "geoip-ir",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-.srs",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
         "update_interval": "120h0m0s"
       },
       {
         "type": "remote",
-        "tag": "geosite-",
+        "tag": "geosite-ir",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-.srs",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
         "update_interval": "120h0m0s"
       }
     ],
     "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:16756",
+      "secret": "h0E6Kc7k-5y2Udq4"
+    }
   }
 }
