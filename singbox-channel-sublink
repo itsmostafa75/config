@@ -15,7 +15,7 @@
                 "address": "8.8.8.8",
                 "address_resolver": "dns-local",
                 "strategy": "prefer_ipv4",
-                "detour": "direct",
+                "detour": "direc t",
                 "tag": "dns-direct"
             },
             {
@@ -102,6 +102,10 @@
                 "A14",
                 "A15",
 	         	"A16",
+	         	"A17",
+                "A18",
+                "A19",
+	         	"A20",
 	        	"WARP-MAIN",
                 "WARP-WIW"
             ]
@@ -126,6 +130,10 @@
                 "A14",
                 "A15",
 	         	"A16",
+	         	"A17",
+                "A18",
+                "A19",
+	         	"A20",
 	        	"WARP-MAIN",
                 "WARP-WIW"
             ],
@@ -236,34 +244,64 @@
 		  }
 		},
 		{
+			  "type": "hysteria2",
+			  "tag": "A7",
 			  "server": "91.108.241.3",
 			  "server_port": 21213,
+			  "obfs": {
+				"type": "salamander",
+				"password": "c18bc9611e532ced"
+			  },
+			  "password": "c7480fdef414d9ac",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
-			  },
-			  "password": "c18bc9611e532ced",
-			  "obfs": {
-				"type": "salamander",
-				"password": "c7480fdef414d9ac"
-			  },
-			  "tag": "A7",
-			  "type": "hysteria2"
+		  }
 		},
 		{
+			  "type": "hysteria2",
+			  "tag": "A8",
 			  "server": "[2a12:5940:777f::2]",
 			  "server_port": 21213,
+			  "obfs": {
+				"type": "salamander",
+				"password": "c18bc9611e532ced"
+			  },
+			  "password": "c7480fdef414d9ac",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
-			  },
-			  "password": "c18bc9611e532ced",
+		  }
+		},
+		{
+			  "type": "hysteria2",
+			  "tag": "A9",
+			  "server": "77.221.158.52",
+			  "server_port": 7373,
 			  "obfs": {
 				"type": "salamander",
-				"password": "c7480fdef414d9ac"
+				"password": "7d9dff369a11f6e0"
 			  },
-			  "tag": "A8",
-			  "type": "hysteria2"
+			  "password": "81ea378b37931b23",
+			  "tls": {
+				"enabled": true,
+				"insecure": true
+		  }
+		},
+		{
+			  "type": "hysteria2",
+			  "tag": "A10",
+			  "server": "[2a12:5940:72da::2]",
+			  "server_port": 7373,
+			  "obfs": {
+				"type": "salamander",
+				"password": "7d9dff369a11f6e0"
+			  },
+			  "password": "81ea378b37931b23",
+			  "tls": {
+				"enabled": true,
+				"insecure": true
+		  }
 		},
 		{
 			  "server": "77.91.77.27",
@@ -279,7 +317,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A9",
+			  "tag": "A11",
 			  "type": "tuic"
 		},
 		{
@@ -296,7 +334,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A10",
+			  "tag": "A12",
 			  "type": "tuic"
 		},
 		{
@@ -313,7 +351,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A11",
+			  "tag": "A13",
 			  "type": "tuic"
 		},
 		{
@@ -330,7 +368,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A12",
+			  "tag": "A14",
 			  "type": "tuic"
 		},
 		{
@@ -347,7 +385,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A13",
+			  "tag": "A15",
 			  "type": "tuic"
 		},
 		{
@@ -364,7 +402,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A14",
+			  "tag": "A16",
 			  "type": "tuic"
 		},
 		{
@@ -381,7 +419,7 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A15",
+			  "tag": "A17",
 			  "type": "tuic"
 		},
 		{
@@ -398,9 +436,43 @@
 					"spdy/3.1"
 				]
 			  },
-			  "tag": "A16",
+			  "tag": "A18",
 			  "type": "tuic"
         },
+				{
+			  "server": "77.221.158.52",
+			  "server_port": 8922,
+			  "uuid": "2f2dada7-b8af-49e7-a26e-d2d592c82846",
+			  "password": "734da957528baa43",
+			  "congestion_control": "bbr",
+			  "tls": {
+				"enabled": true,
+				"insecure": true,
+				"alpn": [
+					"h3",
+					"spdy/3.1"
+				]
+			  },
+			  "tag": "A19",
+			  "type": "tuic"
+		},
+		{
+			  "server": "[2a12:5940:72da::2]",
+			  "server_port": 8922,
+			  "uuid": "2f2dada7-b8af-49e7-a26e-d2d592c82846",
+			  "password": "734da957528baa43",
+			  "congestion_control": "bbr",
+			  "tls": {
+				"enabled": true,
+				"insecure": true,
+				"alpn": [
+					"h3",
+					"spdy/3.1"
+				]
+			  },
+			  "tag": "A20",
+			  "type": "tuic"
+		},
 		{
 			  "type": "wireguard",
 			  "server": "162.159.192.121",
