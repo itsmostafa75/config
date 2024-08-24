@@ -250,9 +250,9 @@
 			  "server_port": 21213,
 			  "obfs": {
 				"type": "salamander",
-				"password": "c18bc9611e532ced"
+				"password": "c7480fdef414d9ac"
 			  },
-			  "password": "c7480fdef414d9ac",
+			  "password": "c18bc9611e532ced",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
@@ -265,9 +265,9 @@
 			  "server_port": 21213,
 			  "obfs": {
 				"type": "salamander",
-				"password": "c18bc9611e532ced"
+				"password": "c7480fdef414d9ac"
 			  },
-			  "password": "c7480fdef414d9ac",
+			  "password": "c18bc9611e532ced",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
