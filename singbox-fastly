@@ -35,7 +35,9 @@
                     "mostafafilterchi.global.ssl.fastly.net",
                     "fastly.com",
                     "imgur.com",
-                    "theguardian.com"
+                    "theguardian.com",
+					"kayak.com",
+					"fastcompany.com"
                 ]
             },
             {
@@ -90,7 +92,9 @@
                 "Best-Ping 💥",
                 "Domain_1",
                 "Domain_2",
-                "Domain_3"
+                "Domain_3",
+				"Domain_4",
+                "Domain_5"
             ]
         },
         {
@@ -99,7 +103,9 @@
             "outbounds": [
                 "Domain_1",
                 "Domain_2",
-                "Domain_3"
+                "Domain_3",
+				"Domain_4",
+                "Domain_5"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "30s",
@@ -206,7 +212,68 @@
                 "type": "ws"
             },
             "tag": "Domain_3"
+        },
+		{
+            "type": "vless",
+            "server": "kayak.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "Domain_4"
+        },
+		{
+            "type": "vless",
+            "server": "fastcompany.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "Domain_5"
         }
+
     ],
     "route": {
         "rules": [
