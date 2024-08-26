@@ -33,11 +33,21 @@
                 "server": "dns-direct",
                 "domain": [
                     "mostafafilterchi.global.ssl.fastly.net",
-                    "fastly.com",
-                    "imgur.com",
-                    "theguardian.com",
+					"fastly.com",
+					"imgur.com",
+					"theguardian.com",
 					"kayak.com",
-					"fastcompany.com"
+					"fastcompany.com",
+					"trello.com",
+					"atlassian.com",
+					"dev.to",
+					"disqus.com",
+					"databricks.com",
+					"docker.com",
+					"coursera.org",
+					"freshdesk.com",
+					"vercel.com",
+					"mixpanel.com"
                 ]
             },
             {
@@ -90,22 +100,42 @@
             "tag": "proxy",
             "outbounds": [
                 "Best-Ping 💥",
-                "Domain_1",
-                "Domain_2",
-                "Domain_3",
-				"Domain_4",
-                "Domain_5"
+                "fastly.com",
+                "imgur.com",
+                "theguardian.com",
+				"kayak.com",
+                "fastcompany.com",
+				"trello.com",
+				"atlassian.com",
+				"dev.to",
+				"disqus.com",
+				"databricks.com",
+				"docker.com",
+				"coursera.org",
+				"freshdesk.com",
+				"vercel.com",
+				"mixpanel.com"
             ]
         },
         {
             "type": "urltest",
             "tag": "Best-Ping 💥",
             "outbounds": [
-                "Domain_1",
-                "Domain_2",
-                "Domain_3",
-				"Domain_4",
-                "Domain_5"
+                "fastly.com",
+                "imgur.com",
+                "theguardian.com",
+				"kayak.com",
+                "fastcompany.com",
+				"trello.com",
+				"atlassian.com",
+				"dev.to",
+				"disqus.com",
+				"databricks.com",
+				"docker.com",
+				"coursera.org",
+				"freshdesk.com",
+				"vercel.com",
+				"mixpanel.com"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "30s",
@@ -151,7 +181,7 @@
                 "path": "/Mzc3uonpGEYVUm89",
                 "type": "ws"
             },
-            "tag": "Domain_1"
+            "tag": "fastly.com"
         },
         {
             "type": "vless",
@@ -181,7 +211,7 @@
                 "path": "/vEHTEmf0ZQv4ZPJ7",
                 "type": "ws"
             },
-            "tag": "Domain_2"
+            "tag": "imgur.com"
         },
         {
             "type": "vless",
@@ -211,7 +241,7 @@
                 "path": "/wFeNAmYNsr9C4Ngd",
                 "type": "ws"
             },
-            "tag": "Domain_3"
+            "tag": "theguardian.com"
         },
 		{
             "type": "vless",
@@ -241,7 +271,7 @@
                 "path": "/Mzc3uonpGEYVUm89",
                 "type": "ws"
             },
-            "tag": "Domain_4"
+            "tag": "kayak.com"
         },
 		{
             "type": "vless",
@@ -271,7 +301,307 @@
                 "path": "/Mzc3uonpGEYVUm89",
                 "type": "ws"
             },
-            "tag": "Domain_5"
+            "tag": "fastcompany.com"
+        },
+		{
+            "type": "vless",
+            "server": "trello.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "trello.com"
+        },
+        {
+            "type": "vless",
+            "server": "atlassian.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/vEHTEmf0ZQv4ZPJ7",
+                "type": "ws"
+            },
+            "tag": "atlassian.com"
+        },
+        {
+            "type": "vless",
+            "server": "dev.to",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/wFeNAmYNsr9C4Ngd",
+                "type": "ws"
+            },
+            "tag": "dev.to"
+        },
+		{
+            "type": "vless",
+            "server": "disqus.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "disqus.com"
+        },
+		{
+            "type": "vless",
+            "server": "databricks.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "databricks.com"
+        },
+		{
+            "type": "vless",
+            "server": "docker.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "docker.com"
+        },
+        {
+            "type": "vless",
+            "server": "coursera.org",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/vEHTEmf0ZQv4ZPJ7",
+                "type": "ws"
+            },
+            "tag": "coursera.org"
+        },
+        {
+            "type": "vless",
+            "server": "freshdesk.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/wFeNAmYNsr9C4Ngd",
+                "type": "ws"
+            },
+            "tag": "freshdesk.com"
+        },
+		{
+            "type": "vless",
+            "server": "vercel.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "vercel.com"
+        },
+		{
+            "type": "vless",
+            "server": "mixpanel.com",
+            "server_port": 443,
+            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
+            "domain_strategy": "prefer_ipv6",
+            "packet_encoding": "",
+            "tls": {
+                "alpn": [
+                    "http/1.1"
+                ],
+                "enabled": true,
+                "insecure": true,
+                "server_name": "mostafafilterchi.global.ssl.fastly.net",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                }
+            },
+            "transport": {
+                "early_data_header_name": "Sec-WebSocket-Protocol",
+                "max_early_data": 2560,
+                "headers": {
+                    "Host": "mostafafilterchi.global.ssl.fastly.net"
+                },
+                "path": "/Mzc3uonpGEYVUm89",
+                "type": "ws"
+            },
+            "tag": "mixpanel.com"
         }
 
     ],
