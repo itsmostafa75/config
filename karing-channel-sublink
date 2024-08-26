@@ -234,13 +234,13 @@
     {
       "type": "hysteria2",
       "tag": "A7",
-      "server": "91.108.241.3",
+      "server": "217.144.186.88",
       "server_port": 21213,
       "obfs": {
         "type": "salamander",
-        "password": "c7480fdef414d9ac"
+        "password": "4937f23d13af540a"
       },
-      "password": "c18bc9611e532ced",
+      "password": "aa33e18f5b6703f6",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -249,13 +249,13 @@
     {
       "type": "hysteria2",
       "tag": "A8",
-      "server": "[2a12:5940:777f::2]",
+      "server": "[2a12:5940:840b::2]",
       "server_port": 21213,
       "obfs": {
         "type": "salamander",
-        "password": "c7480fdef414d9ac"
+        "password": "4937f23d13af540a"
       },
-      "password": "c18bc9611e532ced",
+      "password": "aa33e18f5b6703f6",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -396,10 +396,10 @@
     {
       "type": "tuic",
       "tag": "A17",
-      "server": "91.108.241.3",
+      "server": "217.144.186.88",
       "server_port": 7483,
-      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
-      "password": "a9eeefea83fd0a6c",
+      "uuid": "123042aa-8720-41fd-8312-2b8e69038e06",
+      "password": "58950eced06667e5",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
@@ -413,10 +413,10 @@
     {
       "type": "tuic",
       "tag": "A18",
-      "server": "[2a12:5940:777f::2]",
+      "server": "[2a12:5940:840b::2]",
       "server_port": 7483,
-      "uuid": "575f3af9-cbaa-427e-b72e-8b8f9eabb9f3",
-      "password": "a9eeefea83fd0a6c",
+      "uuid": "123042aa-8720-41fd-8312-2b8e69038e06",
+      "password": "58950eced06667e5",
       "congestion_control": "bbr",
       "tls": {
         "enabled": true,
