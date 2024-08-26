@@ -252,7 +252,7 @@
 				"type": "salamander",
 				"password": "4937f23d13af540a"
 			  },
-			  "password": "aa33e18f5b6703",
+			  "password": "aa33e18f5b6703f6",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
@@ -267,7 +267,7 @@
 				"type": "salamander",
 				"password": "4937f23d13af540a"
 			  },
-			  "password": "aa33e18f5b6703",
+			  "password": "aa33e18f5b6703f6",
 			  "tls": {
 				"enabled": true,
 				"insecure": true
