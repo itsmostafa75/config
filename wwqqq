@@ -441,7 +441,7 @@
 			  "wnoise": "quic",
 			  "wnoisecount": "15",
 			  "wnoisedelay": "1-2",
-		   	  "wpayloadsize": "5-10"
+		   	  "wpayloadsize": "5-10",
 			  "workers": 2,
 			  "detour": "WARP-MAIN",
 			  "tag": "WARP-WIW"
