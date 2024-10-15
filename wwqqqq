@@ -425,7 +425,6 @@
 			  "type": "wireguard",
 			  "server": "188.114.97.200",
 			  "server_port": 968,
-			  "keepAlive": 5,
 			  "local_address": [
 				  "172.16.0.2/32",
 				  "2606:4700:110:83d5:b153:a1ec:f7a4:7d83/128"
