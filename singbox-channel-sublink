@@ -253,7 +253,7 @@
 		{
 			  "type": "hysteria2",
 			  "tag": "A8",
-			  "server": "[2a12:5940:8e6f::2]  ",
+			  "server": "[2a12:5940:8e6f::2]",
 			  "server_port": 45453,
 			  "obfs": {
 				"type": "salamander",
