@@ -81,20 +81,12 @@
        "outbounds": [
          "auto",
          "direct",
-         "دو",
-         "1.یک",
-         "2.سه",
-         "3.چهار",
-         "4.پنج",
-         "5.شش",
-         "6.هفت",
-         "7.هشت",
-         "8.نه",
-         "9.ده",
-         "10.یازده",
-         "11.دوازده",
-         "12.سیزده",
-         "13.چهارده"
+         "0.🇸🇪",
+         "1.🇸🇪",
+         "2.🇸🇪",
+         "3.🇸🇪",
+         "4.🇸🇪",
+         "5.🇸🇪"
        ],
        "tag": "proxy",
        "type": "selector"
@@ -102,20 +94,12 @@
      {
        "interval": "10m",
        "outbounds": [
-         "دو",
-         "1.یک",
-         "2.سه",
-         "3.چهار",
-         "4.پنج",
-         "5.شش",
-         "6.هفت",
-         "7.هشت",
-         "8.نه",
-         "9.ده",
-         "10.یازده",
-         "11.دوازده",
-         "12.سیزده",
-         "13.چهارده"
+         "0.🇸🇪",
+         "1.🇸🇪",
+         "2.🇸🇪",
+         "3.🇸🇪",
+         "4.🇸🇪",
+         "5.🇸🇪"
        ],
        "tag": "auto",
        "tolerance": 50,
@@ -136,185 +120,29 @@
      },
      {
        "obfs": {
-         "password": "0e0f84615bb9ebf2",
+         "password": "f6d407e645e57cac",
          "type": "salamander"
        },
-       "password": "a4951ecb6bcd7435",
-       "server": "2a12:5940:a650::2",
-       "server_port": 22222,
-       "tag": "دو",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "obfs": {
-         "password": "0e0f84615bb9ebf2",
-         "type": "salamander"
-       },
-       "password": "a4951ecb6bcd7435",
-       "server": "62.60.217.12",
-       "server_port": 22222,
-       "tag": "1.یک",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "obfs": {
-         "password": "f8d276f1c87c2ca7",
-         "type": "salamander"
-       },
-       "password": "48e1982c93244fed",
-       "server": "62.60.217.48",
-       "server_port": 22334,
-       "tag": "2.سه",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "obfs": {
-         "password": "f8d276f1c87c2ca7",
-         "type": "salamander"
-       },
-       "password": "48e1982c93244fed",
-       "server": "2a12:5940:a693::2",
-       "server_port": 22334,
-       "tag": "3.چهار",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "congestion_control": "bbr",
-       "password": "63cd0123c7b46eb1",
-       "server": "62.60.217.48",
-       "server_port": 11223,
-       "tag": "4.پنج",
-       "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "8481b0a8-f20b-4671-8e05-a060efece75b"
-     },
-     {
-       "congestion_control": "bbr",
-       "password": "63cd0123c7b46eb1",
-       "server": "2a12:5940:a693::2",
-       "server_port": 11223,
-       "tag": "5.شش",
-       "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "8481b0a8-f20b-4671-8e05-a060efece75b"
-     },
-     {
-       "obfs": {
-         "password": "fe423861b9da19db",
-         "type": "salamander"
-       },
-       "password": "7eee28f68b06a380",
-       "server": "62.60.237.69",
-       "server_port": 32324,
-       "tag": "6.هفت",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "obfs": {
-         "password": "fe423861b9da19db",
-         "type": "salamander"
-       },
-       "password": "7eee28f68b06a380",
-       "server": "2a12:5940:8e6e::2",
-       "server_port": 32324,
-       "tag": "7.هشت",
-       "tls": {
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "hysteria2"
-     },
-     {
-       "congestion_control": "bbr",
-       "password": "ad207aa31e6da1f1",
-       "server": "62.60.237.69",
+       "password": "a20e411bdcb3f2f1",
+       "server": "94.228.164.226",
        "server_port": 11122,
-       "tag": "8.نه",
+       "tag": "0.🇸🇪",
        "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
          "enabled": true,
          "insecure": true,
          "server_name": "www.google.com"
        },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "7ba09889-5638-4859-8759-38de1e048683"
+       "type": "hysteria2"
      },
      {
-       "congestion_control": "bbr",
-       "password": "ad207aa31e6da1f1",
-       "server": "2a12:5940:8e6e::2",
+       "obfs": {
+         "password": "f6d407e645e57cac",
+         "type": "salamander"
+       },
+       "password": "a20e411bdcb3f2f1",
+       "server": "2a0b:4140:915d::2",
        "server_port": 11122,
-       "tag": "9.ده",
-       "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
-         "enabled": true,
-         "insecure": true,
-         "server_name": "www.google.com"
-       },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "7ba09889-5638-4859-8759-38de1e048683"
-     },
-     {
-       "obfs": {
-         "password": "fe64ada6e199a109",
-         "type": "salamander"
-       },
-       "password": "dd4c82421b357e23",
-       "server": "62.60.237.70",
-       "server_port": 45453,
-       "tag": "10.یازده",
+       "tag": "1.🇸🇪",
        "tls": {
          "enabled": true,
          "insecure": true,
@@ -324,13 +152,13 @@
      },
      {
        "obfs": {
-         "password": "fe64ada6e199a109",
+         "password": "e36216019498c424",
          "type": "salamander"
        },
-       "password": "dd4c82421b357e23",
-       "server": "2a12:5940:8e6f::2",
-       "server_port": 45453,
-       "tag": "11.دوازده",
+       "password": "062c01693a7cc6ac",
+       "server": "150.241.85.155",
+       "server_port": 22211,
+       "tag": "2.🇸🇪",
        "tls": {
          "enabled": true,
          "insecure": true,
@@ -339,42 +167,52 @@
        "type": "hysteria2"
      },
      {
-       "congestion_control": "bbr",
-       "password": "8e0abb1e4c073fb1",
-       "server": "62.60.237.70",
-       "server_port": 22233,
-       "tag": "12.سیزده",
+       "obfs": {
+         "password": "e36216019498c424",
+         "type": "salamander"
+       },
+       "password": "062c01693a7cc6ac",
+       "server": "2a0b:4140:cd98::2",
+       "server_port": 22211,
+       "tag": "3.🇸🇪",
        "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
          "enabled": true,
          "insecure": true,
          "server_name": "www.google.com"
        },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "c5e3cba2-fca2-4d25-8cda-3956a431c981"
+       "type": "hysteria2"
      },
      {
-       "congestion_control": "bbr",
-       "password": "8e0abb1e4c073fb1",
-       "server": "2a12:5940:8e6f::2",
-       "server_port": 22233,
-       "tag": "13.چهارده",
+       "obfs": {
+         "password": "b80d61c718c07f62",
+         "type": "salamander"
+       },
+       "password": "9c8734a9fb5e1344",
+       "server": "150.241.85.156",
+       "server_port": 33311,
+       "tag": "4.🇸🇪",
        "tls": {
-         "alpn": [
-           "h3",
-           " spdy/3.1"
-         ],
          "enabled": true,
          "insecure": true,
          "server_name": "www.google.com"
        },
-       "type": "tuic",
-       "udp_relay_mode": "native",
-       "uuid": "c5e3cba2-fca2-4d25-8cda-3956a431c981"
+       "type": "hysteria2"
+     },
+     {
+       "obfs": {
+         "password": "b80d61c718c07f62",
+         "type": "salamander"
+       },
+       "password": "9c8734a9fb5e1344",
+       "server": "2a0b:4140:cd99::2",
+       "server_port": 33311,
+       "tag": "5.🇸🇪",
+       "tls": {
+         "enabled": true,
+         "insecure": true,
+         "server_name": "www.google.com"
+       },
+       "type": "hysteria2"
      }
    ],
    "route": {
