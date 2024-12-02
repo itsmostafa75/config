@@ -125,7 +125,7 @@
     },
     {
       "flow": "",
-      "server": "tgju.org",
+      "server": "www.tgju.org",
       "server_port": 443,
       "tag": "0",
       "tls": {
@@ -152,7 +152,7 @@
     },
     {
       "flow": "",
-      "server": "zula.ir",
+      "server": "www.zula.ir",
       "server_port": 443,
       "tag": "1.1",
       "tls": {
@@ -206,7 +206,7 @@
     },
     {
       "flow": "",
-      "server": "172.66.47.40",
+      "server": "www.visa.co.jp",
       "server_port": 443,
       "tag": "3.3",
       "tls": {
