@@ -1,138 +1,146 @@
 {
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
   "dns": {
-    "final": "local-dns",
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
     "rules": [
       {
-        "clash_mode": "Global",
-        "server": "proxy-dns",
-        "source_ip_cidr": [
-          "172.19.0.0/30"
-        ]
+        "domain": [
+          "www.tgju.org",
+          "www.zula.ir",
+          "www.speedtest.net",
+          "www.visa.co.jp"
+        ],
+        "server": "dns-direct"
       },
       {
-        "server": "proxy-dns",
-        "source_ip_cidr": [
-          "172.19.0.0/30"
-        ]
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
       },
       {
-        "clash_mode": "Direct",
-        "server": "direct-dns"
+        "domain_suffix": ".ir",
+        "server": "dns-direct"
       },
       {
         "rule_set": [
+          "geoip-ir",
           "geosite-ir"
         ],
-        "server": "direct-dns"
+        "server": "dns-direct"
       }
     ],
-    "servers": [
-      {
-        "address": "tcp://8.8.8.8",
-        "address_resolver": "local-dns",
-        "detour": "proxy",
-        "tag": "proxy-dns"
-      },
-      {
-        "address": "local",
-        "detour": "direct",
-        "tag": "local-dns"
-      },
-      {
-        "address": "rcode://success",
-        "tag": "block"
-      },
-      {
-        "address": "tcp://8.8.8.8",
-        "detour": "direct",
-        "tag": "direct-dns"
-      }
-    ],
-    "strategy": "prefer_ipv4"
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "104.17.148.22",
+        "104.17.147.22",
+        "2a06:98c1:3123::",
+        "2a06:98c1:3122::",
+        "188.114.99.0",
+        "188.114.98.0"
+      ]
+    },
+    "independent_cache": true
   },
   "inbounds": [
     {
-      "address": [
-        "172.19.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
-      "auto_route": true,
-      "endpoint_independent_nat": false,
+      "type": "tun",
+      "tag": "tun-in",
       "mtu": 9000,
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 2080
-        }
-      },
-      "sniff": true,
-      "stack": "system",
-      "strict_route": false,
-      "type": "tun"
+      "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "gvisor",
+      "sniff": true
     },
     {
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
       "type": "mixed",
-      "users": []
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 12334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 16450
     }
   ],
   "outbounds": [
     {
+      "type": "selector",
+      "tag": "select",
       "outbounds": [
         "auto",
-        "direct",
-        "0",
-        "1.1",
-        "2.2",
-        "3.3",
-        "4.4",
-        "5.5",
-        "6.6"
+        "0 § 0",
+        "1 § 1",
+        "2 § 2",
+        "3 § 3",
+        "4 § 4",
+        "5 § 5",
+        "6 § 6"
       ],
-      "tag": "proxy",
-      "type": "selector"
+      "default": "auto",
+      "interrupt_exist_connections": true
     },
     {
-      "interval": "10m",
-      "outbounds": [
-        "0",
-        "1.1",
-        "2.2",
-        "3.3",
-        "4.4",
-        "5.5",
-        "6.6"
-      ],
-      "tag": "auto",
-      "tolerance": 50,
       "type": "urltest",
-      "url": "http://www.gstatic.com/generate_204"
+      "tag": "auto",
+      "outbounds": [
+        "0 § 0",
+        "1 § 1",
+        "2 § 2",
+        "3 § 3",
+        "4 § 4",
+        "5 § 5",
+        "6 § 6"
+      ],
+      "url": "http://cp.cloudflare.com",
+      "interval": "10m0s",
+      "tolerance": 1,
+      "idle_timeout": "30m0s",
+      "interrupt_exist_connections": true
     },
     {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "flow": "",
-      "server": "tgju.org",
+      "type": "vless",
+      "tag": "0 § 0",
+      "server": "www.tgju.org",
       "server_port": 443,
-      "tag": "0",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BackuP-dSw.PAgES.deV",
         "utls": {
@@ -141,25 +149,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/QXnXEnl7mtZ4KgWR",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/QXnXEnl7mtZ4KgWR?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
-      "server": "zula.ir",
+      "type": "vless",
+      "tag": "1 § 1",
+      "server": "www.zula.ir",
       "server_port": 443,
-      "tag": "1.1",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BaCKUP-Dsw.Pages.Dev",
         "utls": {
@@ -168,25 +174,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/xVKeTTmo00RQmvei",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/xVKeTTmo00RQmvei?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
+      "type": "vless",
+      "tag": "2 § 2",
       "server": "www.speedtest.net",
       "server_port": 443,
-      "tag": "2.2",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BaCKUP-dsW.PAGes.dEV",
         "utls": {
@@ -195,25 +199,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/H7TXdGBkYuR2fyxy",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/H7TXdGBkYuR2fyxy?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
-      "server": "172.66.47.40",
+      "type": "vless",
+      "tag": "3 § 3",
+      "server": "www.visa.co.jp",
       "server_port": 443,
-      "tag": "3.3",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BaCKUP-dSW.PaGes.dEv",
         "utls": {
@@ -222,25 +224,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/BBYmqHsRzcKIIW9m",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/BBYmqHsRzcKIIW9m?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
+      "type": "vless",
+      "tag": "4 § 4",
       "server": "172.66.44.216",
       "server_port": 443,
-      "tag": "4.4",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BaCKUp-dSW.PaGes.DEv",
         "utls": {
@@ -249,25 +249,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/xuqelrqw9LMbPeBc",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/xuqelrqw9LMbPeBc?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
+      "type": "vless",
+      "tag": "5 § 5",
       "server": "2606:4700:310c::ac42:2f28",
       "server_port": 443,
-      "tag": "5.5",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "baCKup-dsw.pAgEs.dev",
         "utls": {
@@ -276,25 +274,23 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/6gm0vgnX6iKWct0L",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/6gm0vgnX6iKWct0L?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
     },
     {
-      "flow": "",
+      "type": "vless",
+      "tag": "6 § 6",
       "server": "2606:4700:310c::ac42:2cd8",
       "server_port": 443,
-      "tag": "6.6",
+      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf",
       "tls": {
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
         "enabled": true,
         "server_name": "BackUp-dSW.pages.DEV",
         "utls": {
@@ -303,68 +299,97 @@
         }
       },
       "transport": {
+        "type": "ws",
+        "path": "/frHvhEEfsiUDx42k",
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/frHvhEEfsiUDx42k?ed=2560",
-        "type": "ws"
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
-      "type": "vless",
-      "uuid": "24318cca-f9a3-459f-ab0a-6fe5ccde31bf"
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
     }
   ],
   "route": {
-    "auto_detect_interface": true,
-    "final": "proxy",
-    "rule_set": [
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geosite-ads",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geosite-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geoip-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
-      }
-    ],
     "rules": [
       {
-        "clash_mode": "Direct",
+        "inbound": "tun-in",
+        "package_name": "app.hiddify.com",
+        "outbound": "bypass"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "domain_suffix": ".ir",
         "outbound": "direct"
       },
       {
-        "clash_mode": "Global",
-        "outbound": "proxy"
-      },
-      {
-        "outbound": "dns-out",
-        "protocol": "dns"
-      },
-      {
-        "outbound": "direct",
         "rule_set": [
           "geoip-ir",
           "geosite-ir"
-        ]
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
       },
       {
-        "outbound": "block",
-        "rule_set": [
-          "geosite-ads"
-        ]
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
       }
-    ]
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:16756",
+      "secret": "kpykNPZ3eILSt96N"
+    }
   }
 }
