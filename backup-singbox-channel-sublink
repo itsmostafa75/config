@@ -130,11 +130,10 @@
       "tag": "0",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BackuP-dSw.PAgES.deV",
+        "server_name": "bAcKup-dsW.pagEs.Dev",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -144,7 +143,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/QXnXEnl7mtZ4KgWR?ed=2560",
+        "path": "/3DAjaxZIU2XfSDwD",
         "type": "ws"
       },
       "type": "vless",
@@ -157,11 +156,10 @@
       "tag": "1.1",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BaCKUP-Dsw.Pages.Dev",
+        "server_name": "BaCKup-dSw.PAgEs.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -171,7 +169,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/xVKeTTmo00RQmvei?ed=2560",
+        "path": "/sKdg8PyWJnSuq2HJ",
         "type": "ws"
       },
       "type": "vless",
@@ -184,11 +182,10 @@
       "tag": "2.2",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BaCKUP-dsW.PAGes.dEV",
+        "server_name": "BacKuP-dSW.Pages.DEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -198,7 +195,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/H7TXdGBkYuR2fyxy?ed=2560",
+        "path": "/OLR8PDkC526r3vHO",
         "type": "ws"
       },
       "type": "vless",
@@ -211,11 +208,10 @@
       "tag": "3.3",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BaCKUP-dSW.PaGes.dEv",
+        "server_name": "bacKUp-DSW.PaGeS.dev",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -225,7 +221,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/BBYmqHsRzcKIIW9m?ed=2560",
+        "path": "/L5DUve7WdCMuzQYg",
         "type": "ws"
       },
       "type": "vless",
@@ -238,11 +234,10 @@
       "tag": "4.4",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BaCKUp-dSW.PaGes.DEv",
+        "server_name": "baCkUP-DSw.PaGES.dEv",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -252,7 +247,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/xuqelrqw9LMbPeBc?ed=2560",
+        "path": "/BlfWrB8eNFBx06CZ",
         "type": "ws"
       },
       "type": "vless",
@@ -265,11 +260,10 @@
       "tag": "5.5",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "baCKup-dsw.pAgEs.dev",
+        "server_name": "bACkuP-dsW.PagES.DeV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -279,7 +273,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/6gm0vgnX6iKWct0L?ed=2560",
+        "path": "/Z22f9zylZY6eE7L6",
         "type": "ws"
       },
       "type": "vless",
@@ -292,11 +286,10 @@
       "tag": "6.6",
       "tls": {
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "enabled": true,
-        "server_name": "BackUp-dSW.pages.DEV",
+        "server_name": "backup-DsW.paGES.dEV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -306,7 +299,7 @@
         "headers": {
           "Host": "backup-dsw.pages.dev"
         },
-        "path": "/frHvhEEfsiUDx42k?ed=2560",
+        "path": "/5hjDOuIKxqrA3fcA",
         "type": "ws"
       },
       "type": "vless",
